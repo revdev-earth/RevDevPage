@@ -13,6 +13,8 @@ import { theme } from "./config/theme"
 import { BrowserRouter } from "react-router-dom"
 //* Import styles
 import { GlobalStyle } from "./config/globalStyles"
+import { ThemeProvider } from "styled-components"
+import { theme } from "./config/theme"
 
 ReactDOM.render(
   <React.StrictMode>
