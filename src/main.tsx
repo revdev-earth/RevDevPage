@@ -11,6 +11,8 @@ import { theme } from "./config/theme"
 
 //* Import Router browser
 import { BrowserRouter } from "react-router-dom"
+//* Import styles
+import { GlobalStyle } from "./config/globalStyles"
 
 ReactDOM.render(
   <React.StrictMode>
@@ -21,5 +23,6 @@ ReactDOM.render(
       </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>,
+
   document.getElementById("root")
 )
