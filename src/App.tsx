@@ -1,5 +1,12 @@
+//* Import components
+import Layout from "./Pages/Layout"
+
 function App() {
-  return <div>App</div>
+  return (
+    <>
+      <Layout />
+    </>
+  )
 }
 
 export default App
