@@ -9,12 +9,17 @@ import { GlobalStyle } from "./config/globalStyles"
 import { ThemeProvider } from "styled-components"
 import { theme } from "./config/theme"
 
+//* Import Router browser
+import { BrowserRouter } from "react-router-dom"
+
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
+    <BrowserRouter>
       <GlobalStyle />
       <App />
-    </ThemeProvider>
+    </BrowserRouter>
+      </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")
 )
