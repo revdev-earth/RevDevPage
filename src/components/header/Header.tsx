@@ -1,16 +1,36 @@
 //* Import link from Router
 import { Link } from "react-router-dom"
 
+//* Import styles
+import { Container, MenuMovil, Navigation } from "./styles"
+
+//* Import assets
+import BarMenu from "../../assets/bars-solid.svg"
+
 export default function Header() {
   return (
-    <header>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/services">Services</Link>
-        <Link to="/blog">Blog</Link>
-        <Link to="/case">Case</Link>
-        <Link to="/team">Team</Link>
-      </nav>
-    </header>
+    <Container>
+      <MenuMovil>
+        <Link to="/">RevDev</Link>
+        <img src={BarMenu} alt="" />
+      </MenuMovil>
+
+      <Navigation>
+        <ul>
+          <li>
+            <Link to="/services">Services</Link>
+          </li>
+          <li>
+            <Link to="/blog">Blog</Link>
+          </li>
+          <li>
+            <Link to="/case">Case</Link>
+          </li>
+          <li>
+            <Link to="/team">Team</Link>
+          </li>
+        </ul>
+      </Navigation>
+    </Container>
   )
 }
