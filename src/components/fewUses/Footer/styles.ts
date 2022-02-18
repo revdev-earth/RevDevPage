@@ -37,6 +37,8 @@ export const Container = styled.footer`
     height: 250px;
     border: 1px solid salmon;
     border-radius: 50%;
+
+    
   }
 `
 export const Content = styled.div`
