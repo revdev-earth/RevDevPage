@@ -1,24 +1,24 @@
-import { useState } from "react"
+import { useState } from "react";
 
 //* Import link from Router
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 //* Import styles
-import { Container, MenuMovil, Navigation } from "./styles"
+import { Container, MenuMovil, Navigation } from "./styles";
 
 //* Import assets
-import BarMenu from "../../assets/bars-solid.svg"
+import BarMenu from "../../assets/bars-solid.svg";
 
-export default function Header() {
-  const [isOpen, setIsOpen] = useState(false)
+export function Header() {
+  const [isOpen, setIsOpen] = useState(false);
 
   const closeMenu = () => {
-    setIsOpen(false)
-  }
+    setIsOpen(false);
+  };
 
   const toogleMenu = () => {
-    setIsOpen((s) => !s)
-  }
+    setIsOpen((s) => !s);
+  };
 
   return (
     <Container>
@@ -52,5 +52,5 @@ export default function Header() {
         </ul>
       </Navigation>
     </Container>
-  )
+  );
 }

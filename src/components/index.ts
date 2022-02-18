@@ -1,0 +1,2 @@
+//  fewUses
+export * from "./fewUses";
