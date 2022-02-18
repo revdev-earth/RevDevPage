@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 //* Import link from Router
 import { Link } from "react-router-dom"
 
@@ -8,26 +10,44 @@ import { Container, MenuMovil, Navigation } from "./styles"
 import BarMenu from "../../assets/bars-solid.svg"
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const closeMenu = () => {
+    setIsOpen(false)
+  }
+
+  const toogleMenu = () => {
+    setIsOpen((s) => !s)
+  }
+
   return (
     <Container>
       <MenuMovil>
         <Link to="/">RevDev</Link>
-        <img src={BarMenu} alt="" />
+        <img src={BarMenu} alt="" onClick={toogleMenu} />
       </MenuMovil>
 
-      <Navigation>
+      <Navigation isOpen={isOpen}>
         <ul>
           <li>
-            <Link to="/services">Services</Link>
+            <Link to="/services" onClick={closeMenu}>
+              Services
+            </Link>
           </li>
           <li>
-            <Link to="/blog">Blog</Link>
+            <Link to="/blog" onClick={closeMenu}>
+              Blog
+            </Link>
           </li>
           <li>
-            <Link to="/case">Case</Link>
+            <Link to="/case" onClick={closeMenu}>
+              Case
+            </Link>
           </li>
           <li>
-            <Link to="/team">Team</Link>
+            <Link to="/team" onClick={closeMenu}>
+              Team
+            </Link>
           </li>
         </ul>
       </Navigation>

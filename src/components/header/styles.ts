@@ -64,7 +64,7 @@ export const MenuMovil = styled.div`
   }
 `
 
-export const Navigation = styled.nav`
+export const Navigation = styled.nav<{ isOpen: boolean }>`
   display: flex;
   justify-content: space-evenly;
 
@@ -85,6 +85,10 @@ export const Navigation = styled.nav`
         border-bottom: 1px solid #000;
       }
 
+      &:active {
+        transform: scale(0.95);
+      }
+
       a:visited {
         color: #000;
       }
@@ -99,6 +103,10 @@ export const Navigation = styled.nav`
     left: 100%;
     justify-content: center;
     transition: left 0.5s;
+
+    ${({ isOpen }) => {
+      return isOpen && `left: 0;`
+    }}
 
     ul {
       width: 100%;
