@@ -6,9 +6,15 @@ declare module "styled-components" {
       primary: string
       secondary: string
       text: string
-      gray: string
       success: string
       danger: string
+      red: string
+      grayYellow: string
+      yellow: string
+      whitePrimary: string
+      whiteSecondary: string
+      gray: string
+      grayLight: string
     }
     fonts: {
       h1: string
@@ -18,6 +24,7 @@ declare module "styled-components" {
       h5: string
       h6: string
       txt: string
+      txtBig: string
       txtmd: string
       txtsm: string
     }

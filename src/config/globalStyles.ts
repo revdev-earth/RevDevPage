@@ -26,10 +26,6 @@ ol, ul {
 	list-style: none;
 }
 
-a {
-	font-weight: 600;
-}
-
 blockquote, q {
 	quotes: none;
 }
@@ -45,9 +41,35 @@ table {
 	border-spacing: 0;
 }
 
-a:visited {
-        color: none;
-				
+a {
+	font-weight: 600;
+	color: ${({ theme }) => theme.colors.secondary};
+	&:visited {
+		color: ${({ theme }) => theme.colors.secondary};
+		
+	}
 }
 
+
+h1 { font-size:${({ theme }) => theme.fonts.h1};
+font-weight: bold;}
+h2 { font-size:${({ theme }) => theme.fonts.h2};
+	font-weight: bold;}
+h3 { font-size:${({ theme }) => theme.fonts.h3};
+	font-weight: bold;}
+h4 { font-size:${({ theme }) => theme.fonts.h4};
+	font-weight: bold;}
+h5 { font-size:${({ theme }) => theme.fonts.h5};
+	font-weight: bold;}
+h6 { font-size:${({ theme }) => theme.fonts.h6};
+	font-weight: bold;}
+
+p {
+	font-size:${({ theme }) => theme.fonts.txt};
+
+	@media (max-width: 768px) {
+		font-size:${({ theme }) => theme.fonts.txtmd};
+
+	}
+}
 `
