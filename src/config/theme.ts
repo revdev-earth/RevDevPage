@@ -5,7 +5,7 @@ export const theme = {
     text: "#4E4E4E",
     gray: "#f5f5f5",
     success: "#05B176",
-    danger: "#FF0000"
+    danger: "#FF0000",
   },
   fonts: {
     h1: "91px",
@@ -16,6 +16,6 @@ export const theme = {
     h6: "22px",
     txt: "18px",
     txtmd: "16px",
-    txtsm: "14px"
-  }
+    txtsm: "14px",
+  },
 }

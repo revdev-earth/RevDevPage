@@ -45,5 +45,9 @@ table {
 	border-spacing: 0;
 }
 
+a:visited {
+        color: none;
+				
+}
 
 `
