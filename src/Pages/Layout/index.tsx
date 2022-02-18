@@ -1,6 +1,6 @@
 //** Import Components
 import Router from "../../Router"
-import Header from "../../components/header"
+import { Header } from "@components"
 
 export default function Layout() {
   return (

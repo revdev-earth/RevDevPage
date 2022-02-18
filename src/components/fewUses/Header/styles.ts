@@ -96,7 +96,7 @@ export const Navigation = styled.nav<{ isOpen: boolean }>`
   }
 
   @media (max-width: 768px) {
-    background-color: ;
+    /* background-color: ; */
     width: 100%;
     position: fixed;
     top: 90px;

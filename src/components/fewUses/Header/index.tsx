@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 import { Container, MenuMovil, Navigation } from "./styles"
 
 //* Import assets
-import BarMenu from "../../assets/bars-solid.svg"
+import BarMenu from "@assets/bars-solid.svg"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
