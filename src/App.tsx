@@ -5,7 +5,7 @@ import React, { Suspense } from "react"
 const Layout = React.lazy(() => {
   return Promise.all([
     import("./Pages/Layout"),
-    new Promise((resolve) => setTimeout(resolve, 1000))
+    new Promise((resolve) => setTimeout(resolve, 1000)),
   ]).then(([moduleExport]) => moduleExport)
 })
 
