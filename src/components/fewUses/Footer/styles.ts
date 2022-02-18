@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 export const Container = styled.footer`
+  z-index: 1;
   overflow: hidden;
   position: relative ;
   background color: salmon;
@@ -15,6 +16,15 @@ export const Container = styled.footer`
     height: 150px;
     background-color: salmon;
     border-radius: 100%;
+
+    @media (max-width: 768px) {
+      top: 75%;
+      
+    }
+    @media (max-width: 425px) {
+      top: 85%;
+      left: -60px;
+    }
   }
 
   &:before {
@@ -27,6 +37,8 @@ export const Container = styled.footer`
     height: 250px;
     border: 1px solid salmon;
     border-radius: 50%;
+
+    
   }
 `
 export const Content = styled.div`
@@ -36,13 +48,13 @@ export const Content = styled.div`
 export const Top = styled.div`
   display: flex;
   justify-content: space-between;
+  z-index: 2;
 
   padding: 30px;
   border-bottom: 2px solid gray;
 
   div {
     &:nth-child(1) {
-      z-index: 2;
       p {
         max-width: 300px;
       }
@@ -68,16 +80,25 @@ export const Top = styled.div`
           }
         }
       }
+      @media (max-width: 425px) {
+        flex-direction: column;
+      }
     }
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 30px;
   }
 `
 
 export const Bottom = styled.div`
+  z-index: 3;
   display: flex;
   justify-content: space-between;
   padding: 30px;
 
   div {
+    z-index: 2;
     ul {
       display: flex;
       gap: 20px;
