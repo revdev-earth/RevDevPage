@@ -1,4 +1,8 @@
+//* Import react functions
 import { Children, ReactNode } from "react"
+
+//* Import styles
+import { Container } from "./styles"
 
 export type ButtonProps = {
   type?: "button" | "submit" | "reset" | undefined
@@ -9,12 +13,12 @@ export type ButtonProps = {
   yellow?: boolean
 }
 
-const Button = ({
+export const Button = ({
   type = "button",
   children = "Button",
   ...arg
 }: ButtonProps) => (
-  <button type={type} {...arg}>
+  <Container type={type} {...arg}>
     {children}
-  </button>
+  </Container>
 )

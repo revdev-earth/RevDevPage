@@ -1,7 +1,7 @@
 //** Import Components
 import Router from "../../Router"
 import { Header } from "@components"
-import { Button } from "@components"
+import { Button } from "@components/share/Button"
 
 export default function Layout() {
   return (
@@ -10,6 +10,8 @@ export default function Layout() {
       <hr />
       <Router />
       <Button />
+      <Button primary>Esto es un texto de prueba</Button>
+      <Button secondary />
     </div>
   )
 }
