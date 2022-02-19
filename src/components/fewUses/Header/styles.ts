@@ -88,10 +88,6 @@ export const Navigation = styled.nav<{ isOpen: boolean }>`
       &:active {
         transform: scale(0.95);
       }
-
-      a:visited {
-        color: #000;
-      }
     }
   }
 
