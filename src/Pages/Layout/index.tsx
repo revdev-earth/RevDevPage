@@ -1,7 +1,10 @@
 //** Import Components
 import Router from "../../Router"
 import { Header } from "@components"
+
 import { Footer } from "@components"
+
+import { Button } from "@components"
 
 export default function Layout() {
   return (
@@ -9,6 +12,7 @@ export default function Layout() {
       <Header />
       <hr />
       <Router />
+
       <Footer />
     </div>
   )
