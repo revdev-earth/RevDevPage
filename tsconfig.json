@@ -20,7 +20,9 @@
       "@components/*": ["src/components/*"],
       "@components": ["src/components"],
       "@assets/*": ["src/assets/*"],
-      "@assets": ["src/assets"]
+      "@assets": ["src/assets"],
+      "@data/*": ["src/data/*"],
+      "@data": ["src/data"]
     }
   },
   "include": ["src"],
