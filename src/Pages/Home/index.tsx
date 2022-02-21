@@ -1,13 +1,17 @@
+//* Import asetss
 import ImgHome1 from "../../assets/home/img-home-1.png"
+
+//*Import styles
+import { FirstSection } from "./styles"
 
 export default function Home() {
   return (
     <main>
-      <div>
+      <FirstSection>
         <div>
-          <h2>
+          <h3>
             We helped you create your <span>website</span>
-          </h2>
+          </h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. At ut
             turpis adipiscing tempus, magna elit nunc iaculis sit. Libero velit
@@ -20,7 +24,7 @@ export default function Home() {
           </div>
         </div>
         <img src={ImgHome1} alt="" />
-      </div>
+      </FirstSection>
     </main>
   )
 }
