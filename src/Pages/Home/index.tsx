@@ -1,5 +1,6 @@
 //* Import asetss
-import ImgHome1 from "../../assets/home/img-home-1.png"
+import ImgHome1 from "@assets/home/img-home-1.png"
+import { homeServices } from "../../data"
 
 //*Import styles
 import { FirstSection } from "./styles"
@@ -25,6 +26,19 @@ export default function Home() {
         </div>
         <img src={ImgHome1} alt="" />
       </FirstSection>
+      <section>
+        <h4>Our Services</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore et.
+        </p>
+
+        <ul>
+          {homeServices.map((item) => (
+            <li>item</li>
+          ))}
+        </ul>
+      </section>
     </main>
   )
 }
