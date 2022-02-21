@@ -9,9 +9,9 @@ export default function Home() {
     <main>
       <FirstSection>
         <div>
-          <h3>
+          <h4>
             We helped you create your <span>website</span>
-          </h3>
+          </h4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. At ut
             turpis adipiscing tempus, magna elit nunc iaculis sit. Libero velit
