@@ -2,7 +2,7 @@
 import { Children, ReactNode } from "react"
 
 //* Import styles
-import { Container } from "./styles"
+import { Button as ButonStyle } from "./styles"
 
 export type ButtonProps = {
   type?: "button" | "submit" | "reset" | undefined
@@ -17,8 +17,4 @@ export const Button = ({
   type = "button",
   children = "Button",
   ...arg
-}: ButtonProps) => (
-  <Container type={type} {...arg}>
-    {children}
-  </Container>
-)
+}: ButtonProps) => <ButonStyle type={type} {...arg} />

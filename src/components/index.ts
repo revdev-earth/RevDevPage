@@ -1,3 +1,3 @@
 //  fewUses
 export * from "./fewUses"
-export * from "./share"
+export * from "./common"
