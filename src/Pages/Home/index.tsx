@@ -5,6 +5,9 @@ import { homeServices } from "../../data"
 //*Import styles
 import { FirstSection } from "./styles"
 
+//*Import components
+import { ItemSection } from "@components/common/ItemServices"
+
 export default function Home() {
   return (
     <main>
@@ -35,7 +38,7 @@ export default function Home() {
 
         <ul>
           {homeServices.map((item) => (
-            <li>item</li>
+            <ItemSection item={item} />
           ))}
         </ul>
       </section>
