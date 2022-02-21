@@ -5,6 +5,7 @@ export const Container = styled.footer`
   overflow: hidden;
   position: relative;
   background-color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.primary};
   width: 100%;
 
   &:after {
@@ -14,7 +15,7 @@ export const Container = styled.footer`
     left: -5%;
     width: 150px;
     height: 150px;
-    background-color: ${({ theme }) => theme.colors.whiteSecondary};
+    background-color: #fdfdff63;
     border-radius: 100%;
 
     @media (max-width: 768px) {
@@ -34,7 +35,7 @@ export const Container = styled.footer`
     left: 70px;
     width: 70px;
     height: 250px;
-    border: 1px solid ${({ theme }) => theme.colors.whiteSecondary};
+    border: 1px solid #fdfdff63;
     border-radius: 50%;
   }
 `
@@ -47,7 +48,7 @@ export const Top = styled.div`
   justify-content: space-between;
 
   padding: 30px;
-  border-bottom: 2px solid gray;
+  border-bottom: 2px solid #fdfdff63;
 
   div {
     z-index: 2;
