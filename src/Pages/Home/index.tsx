@@ -20,9 +20,6 @@ import { homeSection4, homeServices } from "@data"
 //* Import sections
 import { ThirdSection } from "./ThirdSection"
 
-//*Import styles
-import { FirstSection } from "./styles"
-
 export default function Home() {
   return (
     <main>
