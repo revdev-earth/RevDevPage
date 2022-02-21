@@ -3,8 +3,8 @@ import styled from "styled-components"
 export const Container = styled.footer`
   z-index: 1;
   overflow: hidden;
-  position: relative ;
-  background color: salmon;
+  position: relative;
+  background-color: ${({ theme }) => theme.colors.secondary};
   width: 100%;
 
   &:after {
@@ -12,14 +12,13 @@ export const Container = styled.footer`
     content: "";
     top: 60%;
     left: -5%;
-    width:150px;
+    width: 150px;
     height: 150px;
-    background-color: salmon;
+    background-color: ${({ theme }) => theme.colors.whiteSecondary};
     border-radius: 100%;
 
     @media (max-width: 768px) {
       top: 75%;
-      
     }
     @media (max-width: 425px) {
       top: 85%;
@@ -35,10 +34,8 @@ export const Container = styled.footer`
     left: 70px;
     width: 70px;
     height: 250px;
-    border: 1px solid salmon;
+    border: 1px solid ${({ theme }) => theme.colors.whiteSecondary};
     border-radius: 50%;
-
-    
   }
 `
 export const Content = styled.div`
@@ -48,12 +45,12 @@ export const Content = styled.div`
 export const Top = styled.div`
   display: flex;
   justify-content: space-between;
-  z-index: 2;
 
   padding: 30px;
   border-bottom: 2px solid gray;
 
   div {
+    z-index: 2;
     &:nth-child(1) {
       p {
         max-width: 300px;
@@ -71,6 +68,7 @@ export const Top = styled.div`
           a {
             font-size: 18px;
             font-weight: 500;
+            color: ${({ theme }) => theme.colors.primary};
           }
           &:nth-child(1) {
             a {
@@ -105,6 +103,7 @@ export const Bottom = styled.div`
       li {
         font-weight: 600;
         a {
+          color: ${({ theme }) => theme.colors.primary};
         }
       }
     }
