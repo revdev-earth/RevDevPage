@@ -18,19 +18,29 @@ export const Container = styled.footer`
     background-color: #fdfdff63;
     border-radius: 100%;
 
-    @media (max-width: 1650px) {
+    @media (max-width: 1700px) {
       left: -10%;
+      width: 350px;
+      height: 350px;
     }
-    @media (max-width: 1380px) {
+    @media (max-width: 1500px) {
       left: -10%;
+      width: 300px;
+      height: 300px;
+    }
+    @media (max-width: 1300px) {
+      top: 50%;
+      width: 200px;
+      height: 200px;
     }
 
     @media (max-width: 768px) {
-      top: 75%;
+      top: 70%;
+      left: -20%;
     }
     @media (max-width: 425px) {
       top: 85%;
-      left: -60px;
+      left: -100px;
     }
   }
 
@@ -53,8 +63,11 @@ export const Content = styled.div`
   @media (max-width: 1700px) {
     padding: 100px 200px;
   }
-  @media (max-width: 1700px) {
-    padding: 100px 200px;
+  @media (max-width: 1500px) {
+    padding: 80px 150px;
+  }
+  @media (max-width: 1300px) {
+    padding: 50px 80px;
   }
   @media (max-width: 1024px) {
     padding: 50px 80px;
@@ -82,6 +95,9 @@ export const Top = styled.div`
       display: flex;
       gap: 80px;
 
+      @media (max-width: 1500px) {
+        gap: 40px;
+      }
       @media (max-width: 1024px) {
         gap: 30px;
       }
