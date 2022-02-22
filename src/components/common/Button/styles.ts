@@ -24,7 +24,7 @@ export const Button = styled.button<ButtonProps>`
 const defaultStyle = css`
   display: inline-block;
   padding: 12px 30px;
-  color: ${({ theme }) => theme.colors.primary};
+
   font-weight: 400;
   text-align: center;
   vertical-align: middle;
