@@ -90,7 +90,22 @@ export const FirstSection = styled.section`
   }
 `
 export const SecondSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
   background: #e9fbf8;
   padding: 50px 200px;
   text-align: center;
+
+  @media (max-width: 1300px) {
+    padding: 50px 100px;
+  }
+
+  ul {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 `
