@@ -14,7 +14,6 @@ export const Container = styled.li`
 
   @media (max-width: 1300px) {
     max-width: 290px;
-
   }
 
   img {
