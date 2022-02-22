@@ -10,7 +10,7 @@ import { Container, MenuMovil, Navigation } from "./styles"
 import BarMenu from "@assets/bars-solid.svg"
 
 //* Import components
-import { Button } from "@components/common"
+import { Button } from "@components"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
