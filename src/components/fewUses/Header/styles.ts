@@ -2,13 +2,16 @@ import styled from "styled-components"
 
 export const Container = styled.header`
   margin: auto;
-  padding: 0 30px;
+  padding: 25px 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
 
-  max-width: 1024px;
+  max-width: 1920px;
+
+  @media (max-width: 1024px) {
+    padding: 10px 30px;
+  }
 
   @media (max-width: 678px) {
     padding: 0 20px;
@@ -28,6 +31,10 @@ export const MenuMovil = styled.div`
     transform: scale(1.05);
   }
 
+  h3 {
+    font-weight: 500;
+    color: ${({ theme }) => theme.colors.primary};
+  }
   img {
     display: none;
   }

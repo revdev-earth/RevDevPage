@@ -9,6 +9,9 @@ import { Container, MenuMovil, Navigation } from "./styles"
 //* Import assets
 import BarMenu from "@assets/bars-solid.svg"
 
+//* Import components
+import { Button } from "@components/common"
+
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -23,7 +26,9 @@ export function Header() {
   return (
     <Container>
       <MenuMovil>
-        <Link to="/">RevDev</Link>
+        <Link to="/">
+          <h3>REVDEV</h3>
+        </Link>
         <img src={BarMenu} alt="" onClick={toogleMenu} />
       </MenuMovil>
 
@@ -49,6 +54,7 @@ export function Header() {
               Team
             </Link>
           </li>
+          <Button>Request a quote</Button>
         </ul>
       </Navigation>
     </Container>
