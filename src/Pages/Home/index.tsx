@@ -7,15 +7,16 @@ import { FirstSection } from "./styles"
 
 //*Import components
 import { HomeServices } from "@components/common/ItemServices"
+import { Button } from "@components/common"
 
 export default function Home() {
   return (
     <main>
       <FirstSection>
         <div>
-          <h4>
-            We helped you create your <span>website</span>
-          </h4>
+          <h3>
+            We help you create your <span>website</span>
+          </h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. At ut
             turpis adipiscing tempus, magna elit nunc iaculis sit. Libero velit
@@ -23,8 +24,8 @@ export default function Home() {
             amet phasellus
           </p>
           <div>
-            <button>Get Started</button>
-            <button>contact Us</button>
+            <Button secondary>Get Started</Button>
+            <Button>contact Us</Button>
           </div>
         </div>
         <img src={ImgHome1} alt="" />
