@@ -3,11 +3,11 @@ import ImgHome1 from "@assets/home/img-home-1.png"
 import { homeServices } from "../../data"
 
 //*Import styles
-import { FirstSection } from "./styles"
+import { FirstSection, SecondSection } from "./styles"
 
 //*Import components
-import { HomeServices } from "@components/common/ItemServices"
-import { Button } from "@components/common"
+import { HomeServices } from "@components"
+import { Button } from "@components"
 
 export default function Home() {
   return (
@@ -30,7 +30,7 @@ export default function Home() {
         </div>
         <img src={ImgHome1} alt="" />
       </FirstSection>
-      <section>
+      <SecondSection>
         <h4>Our Services</h4>
         <p>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
@@ -42,7 +42,7 @@ export default function Home() {
             <HomeServices item={item} />
           ))}
         </ul>
-      </section>
+      </SecondSection>
     </main>
   )
 }

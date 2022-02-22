@@ -8,7 +8,7 @@ export const FirstSection = styled.section`
 
   div {
     margin: center;
-    padding-left: 100px;
+    padding-left: 80px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -47,7 +47,7 @@ export const FirstSection = styled.section`
     max-height: 750px;
   }
 
-  @media (max-width: 1250px) {
+  @media (max-width: 1480px) {
     padding: 50px 80px;
 
     div {
@@ -88,4 +88,9 @@ export const FirstSection = styled.section`
       grid-row: 1;
     }
   }
+`
+export const SecondSection = styled.section`
+  background: #e9fbf8;
+  padding: 50px 200px;
+  text-align: center;
 `
