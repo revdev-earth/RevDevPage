@@ -15,6 +15,11 @@ export const GlobalStyle = createGlobalStyle`
 	vertical-align: baseline;
 }
 
+body {
+	margin: auto;
+	max-width: 1920px;
+}
+
 
 
 article, aside, details, figcaption, figure, 

@@ -11,12 +11,19 @@ export const Container = styled.footer`
   &:after {
     position: absolute;
     content: "";
-    top: 60%;
-    left: -5%;
-    width: 150px;
-    height: 150px;
+    top: 40%;
+    left: -8%;
+    width: 400px;
+    height: 400px;
     background-color: #fdfdff63;
     border-radius: 100%;
+
+    @media (max-width: 1650px) {
+      left: -10%;
+    }
+    @media (max-width: 1380px) {
+      left: -10%;
+    }
 
     @media (max-width: 768px) {
       top: 75%;
@@ -41,25 +48,44 @@ export const Container = styled.footer`
 `
 export const Content = styled.div`
   margin: auto;
-  max-width: 1024px;
+  padding: 100px 250px;
+
+  @media (max-width: 1700px) {
+    padding: 100px 200px;
+  }
+  @media (max-width: 1700px) {
+    padding: 100px 200px;
+  }
+  @media (max-width: 1024px) {
+    padding: 50px 80px;
+  }
 `
 export const Top = styled.div`
   display: flex;
   justify-content: space-between;
 
-  padding: 30px;
+  padding-bottom: 60px;
   border-bottom: 2px solid #fdfdff63;
+
+  @media (max-width: 1024px) {
+    padding-bottom: 30px;
+  }
 
   div {
     z-index: 2;
     &:nth-child(1) {
       p {
-        max-width: 300px;
+        max-width: 360px;
       }
     }
     &:nth-child(2) {
       display: flex;
-      gap: 20px;
+      gap: 80px;
+
+      @media (max-width: 1024px) {
+        gap: 30px;
+      }
+
       ul {
         display: flex;
         flex-direction: column;
@@ -94,7 +120,11 @@ export const Bottom = styled.div`
   z-index: 3;
   display: flex;
   justify-content: space-between;
-  padding: 30px;
+  padding-top: 50px;
+
+  @media (max-width: 1024px) {
+    padding-top: 30px;
+  }
 
   div {
     z-index: 2;
