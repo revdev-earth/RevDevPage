@@ -17,4 +17,8 @@ export const Button = ({
   type = "button",
   children = "Button",
   ...arg
-}: ButtonProps) => <ButonStyle type={type} {...arg} />
+}: ButtonProps) => (
+  <ButonStyle type={type} {...arg}>
+    {children}
+  </ButonStyle>
+)

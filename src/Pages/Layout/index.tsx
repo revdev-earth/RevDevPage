@@ -4,13 +4,19 @@ import { Header } from "@components"
 
 import { Footer } from "@components"
 
+import { Button } from "@components"
+
 export default function Layout() {
   return (
     <div>
       <Header />
       <hr />
       <Router />
-
+      <Button primary />
+      <Button secondary />
+      <Button red />
+      <Button yellow />
+      <Button />
       <Footer />
     </div>
   )
