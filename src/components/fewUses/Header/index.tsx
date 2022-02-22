@@ -54,7 +54,7 @@ export function Header() {
               Team
             </Link>
           </li>
-          <Button>Request a quote</Button>
+          <Button red>Request a quote</Button>
         </ul>
       </Navigation>
     </Container>
