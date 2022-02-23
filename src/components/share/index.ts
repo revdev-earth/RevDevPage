@@ -1,0 +1,2 @@
+//  share
+export * from "./Button"
