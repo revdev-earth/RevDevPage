@@ -1,6 +1,26 @@
 import styled, { css } from "styled-components"
 import type { ButtonProps } from "."
 
+export const Button = styled.button<ButtonProps>`
+  ${({
+    primary: isPrimary,
+    secondary: isSecondary,
+    red: isRed,
+    yellow: isYellow,
+  }) => {
+    //
+    const styles = `
+      ${defaultStyle}
+      ${isPrimary && primary}
+      ${isSecondary && secondary}
+      ${isRed && red}
+      ${isYellow && yellow}
+    `
+
+    return styles
+  }};
+`
+
 const defaultStyle = css`
   display: inline-block;
   padding: 12px 30px;
@@ -51,24 +71,6 @@ const yellow = css`
 `
 
 const red = css`
-  color: #fff;
   background-color: ${({ theme }) => theme.colors.red};
   border-color: ${({ theme }) => theme.colors.red};
-`
-
-export const Button = styled.button<ButtonProps>`
-  ${defaultStyle}
-  ${({
-    primary: isPrimary,
-    secondary: isSecondary,
-    red: isRed,
-    yellow: isYellow,
-  }) => {
-    if (isPrimary) return primary
-    if (isSecondary) return secondary
-    if (isRed) return red
-    if (isYellow) return yellow
-
-    return ""
-  }};
 `
