@@ -1,11 +1,30 @@
 import styled, { css } from "styled-components"
 import type { ButtonProps } from "."
 
+export const Button = styled.button<ButtonProps>`
+  ${({
+    primary: isPrimary,
+    secondary: isSecondary,
+    red: isRed,
+    yellow: isYellow,
+  }) => {
+    //
+    const styles = `
+      ${defaultStyle}
+      ${isPrimary && primary}
+      ${isSecondary && secondary}
+      ${isRed && red}
+      ${isYellow && yellow}
+    `
+
+    return styles
+  }};
+`
+
 const defaultStyle = css`
-  background-color: white;
   display: inline-block;
   padding: 12px 30px;
-  color: ${({ theme }) => theme.colors.primary};
+
   font-weight: 400;
   text-align: center;
   vertical-align: middle;
@@ -32,27 +51,24 @@ const defaultStyle = css`
   }
 `
 
-export const Button = styled.button<ButtonProps>`
-  ${({ primary: isPrimary, secondary: isSecondary }) => {
-    //
-    const styles = `
-      ${defaultStyle}
-      ${isPrimary && primary}
-      ${isSecondary && secondary}
-    `
-
-    return styles
-  }};
-`
-
 const primary = css`
   color: #fff;
-  background-color: #6658dd;
-  border-color: #6658dd;
+  background-color: ${({ theme }) => theme.colors.primary};
+  border-color: ${({ theme }) => theme.colors.primary};
 `
 
 const secondary = css`
   color: #fff;
-  background-color: #4a81d4;
-  border-color: #4a81d4;
+  background-color: ${({ theme }) => theme.colors.secondary};
+  border-color: ${({ theme }) => theme.colors.secondary};
+`
+
+const yellow = css`
+  background-color: ${({ theme }) => theme.colors.yellow};
+  border-color: ${({ theme }) => theme.colors.yellow};
+`
+
+const red = css`
+  background-color: ${({ theme }) => theme.colors.red};
+  border-color: ${({ theme }) => theme.colors.red};
 `
