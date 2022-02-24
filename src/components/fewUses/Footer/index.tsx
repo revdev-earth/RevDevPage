@@ -28,8 +28,8 @@ export const Footer = () => {
                 ))}
               </ul>
             ))}
+            <div>Language</div>
           </div>
-          <div>Language</div>
         </Top>
         <Bottom>
           <div>© RevDev. 2020</div>
