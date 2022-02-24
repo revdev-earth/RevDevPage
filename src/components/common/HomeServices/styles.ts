@@ -13,7 +13,8 @@ export const Container = styled.li`
   border-top: 7px solid ${({ theme }) => theme.colors.secondary};
 
   @media (max-width: 1300px) {
-    max-width: 310px;
+    max-width: 290px;
+
   }
 
   img {
