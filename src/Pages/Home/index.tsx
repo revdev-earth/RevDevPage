@@ -35,6 +35,7 @@ export default function Home() {
       </FirstSection>
       <SecondSection>
         <h3>Our Services</h3>
+
         <p>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et.

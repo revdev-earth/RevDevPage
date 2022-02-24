@@ -117,3 +117,4 @@ export const SecondSection = styled.section`
   }
 `
 export const ThirdSection = styled.section``
+

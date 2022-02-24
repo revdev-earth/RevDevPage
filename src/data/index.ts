@@ -8,6 +8,7 @@ import Img1 from "@assets/home/Image-h-1.png"
 import Img2 from "@assets/home/Image-h-2.png"
 import Img3 from "@assets/home/Image-h-3.png"
 
+
 export const footer: string[][] = [
   ["Work", "Blog", "How We Work", "Testimonials"],
   ["Services", "Marketing Strategy", "Website Optimization", "Email Marketing"],
@@ -117,3 +118,4 @@ export const homeWorks = [
     },
   ],
 ]
+
