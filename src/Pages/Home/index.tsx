@@ -1,6 +1,6 @@
 //* Import asetss
 import ImgHome1 from "@assets/home/img-home-1.png"
-import { homeServices } from "../../data"
+import ImgHome2 from "@assets/home/img-home-2.png"
 
 //*Import styles
 import { FirstSection, SecondSection } from "./styles"
@@ -9,7 +9,11 @@ import { FirstSection, SecondSection } from "./styles"
 import { HomeServices } from "@components"
 import { Button } from "@components"
 
+//* Import data
+import { homeSection4, homeServices } from "@data"
+
 export default function Home() {
+  console.log(homeSection4)
   return (
     <main>
       <FirstSection>
@@ -43,6 +47,31 @@ export default function Home() {
           ))}
         </ul>
       </SecondSection>
+      <section>
+        <h3>
+          Your idea into <span>reality</span>
+        </h3>
+        <p>
+          We start every web development project with a project manager from
+          daCode interviewing you about the goal with the project. This is for
+          us to be able to come up with a solution for your SaaS business,
+          estimate a timeline, and come up with a budget.
+        </p>
+
+        <ul>
+          {homeSection4.map((item) => (
+            <li>
+              {" "}
+              <div>{item.id}</div>
+              <div>
+                <h4>{item.title}</h4>
+                <p>{item.description}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+        <img src={ImgHome2} alt="img section 4" />
+      </section>
     </main>
   )
 }
