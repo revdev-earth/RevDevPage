@@ -43,6 +43,11 @@ export default function Home() {
           ))}
         </ul>
       </SecondSection>
+      <section>
+        <h3>Interested to work with us?</h3>
+        <p>Send a line here get and update daily</p>
+        <Button primary>contact@revdev.com</Button>
+      </section>
     </main>
   )
 }
