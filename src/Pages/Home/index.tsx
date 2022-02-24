@@ -9,6 +9,9 @@ import { FirstSection, SecondSection } from "./styles"
 import { HomeServices } from "@components"
 import { Button } from "@components"
 
+//* Import sections
+import { ThirdSection } from "./ThirdSection"
+
 export default function Home() {
   return (
     <main>
@@ -43,45 +46,7 @@ export default function Home() {
           ))}
         </ul>
       </SecondSection>
-      <section>
-        <h4>Portfolio</h4>
-        <h3>Our Great Work</h3>
-        <ul>
-          <li>Website Optimization</li>
-          <li>Website Redesign</li>
-          <li>Search Engine Optimization</li>
-        </ul>
-        <ul>
-          <li>
-            <img src="" alt="" />
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
-              hic provident molestias totam! Nisi, illo asperiores. Officiis
-              vero nesciunt labore eligendi, ipsam, ea rem, aliquam dolores
-              maiores voluptatem quam. Repudiandae!
-            </p>
-          </li>
-          <li>
-            <img src="" alt="" />
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
-              hic provident molestias totam! Nisi, illo asperiores. Officiis
-              vero nesciunt labore eligendi, ipsam, ea rem, aliquam dolores
-              maiores voluptatem quam. Repudiandae!
-            </p>
-          </li>
-          <li>
-            <img src="" alt="" />
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
-              hic provident molestias totam! Nisi, illo asperiores. Officiis
-              vero nesciunt labore eligendi, ipsam, ea rem, aliquam dolores
-              maiores voluptatem quam. Repudiandae!
-            </p>
-          </li>
-        </ul>
-        <Button primary>See All</Button>
-      </section>
+      <ThirdSection />
     </main>
   )
 }

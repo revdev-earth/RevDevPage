@@ -116,3 +116,4 @@ export const SecondSection = styled.section`
     max-width: 1100px;
   }
 `
+export const ThirdSection = styled.section``
