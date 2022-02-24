@@ -94,6 +94,7 @@ export const SecondSection = styled.section`
   flex-direction: column;
   gap: 50px;
   justify-content: center;
+  align-items: center;
   background: #e9fbf8;
   padding: 50px 200px;
   text-align: center;
@@ -102,13 +103,20 @@ export const SecondSection = styled.section`
     padding: 50px 100px;
   }
 
+  p {
+    max-width: 650px;
+  }
+
   ul {
-    margin: auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
+    margin: auto;
+    max-width: 1100px;
   }
 `
+
 export const HomeSection4 = styled.section`
   position: relative;
   padding: 100px 200px;
@@ -229,3 +237,4 @@ export const HomeSection4 = styled.section`
     }
   }
 `
+

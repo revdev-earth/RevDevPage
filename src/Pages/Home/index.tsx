@@ -9,9 +9,12 @@ import { FirstSection, SecondSection, HomeSection4 } from "./styles"
 import { HomeServices } from "@components"
 import { Button } from "@components"
 
-
 //* Import data
 import { homeSection4, homeServices } from "@data"
+
+//* Import sections
+import { ThirdSection } from "./ThirdSection"
+
 export default function Home() {
                         
   return (
@@ -35,7 +38,8 @@ export default function Home() {
         <img src={ImgHome1} alt="" />
       </FirstSection>
       <SecondSection>
-        <h4>Our Services</h4>
+        <h3>Our Services</h3>
+
         <p>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et.
@@ -47,6 +51,7 @@ export default function Home() {
           ))}
         </ul>
       </SecondSection>
+
       <HomeSection4>
         <h3>
           Your idea into <span>reality</span>
@@ -73,6 +78,9 @@ export default function Home() {
 
         <img src={ImgHome2} alt="img section 4" />
       </HomeSection4>
+
+      <ThirdSection />
+
     </main>
   )
 }
