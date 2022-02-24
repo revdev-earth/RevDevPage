@@ -10,10 +10,6 @@ import {
   FifthSection,
 } from "./styles"
 
-//*Import components
-import { HomeServices } from "@components"
-import { Button } from "@components"
-
 //* Import data
 import { homeSection4, homeServices } from "@data"
 
