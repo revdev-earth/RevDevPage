@@ -3,7 +3,7 @@ import ImgHome1 from "@assets/home/img-home-1.png"
 import ImgHome2 from "@assets/home/img-home-2.png"
 
 //*Import styles
-import { FirstSection, SecondSection } from "./styles"
+import { FirstSection, SecondSection, HomeSection4 } from "./styles"
 
 //*Import components
 import { HomeServices } from "@components"
@@ -47,7 +47,7 @@ export default function Home() {
           ))}
         </ul>
       </SecondSection>
-      <section>
+      <HomeSection4>
         <h3>
           Your idea into <span>reality</span>
         </h3>
@@ -62,7 +62,7 @@ export default function Home() {
           {homeSection4.map((item) => (
             <li>
               {" "}
-              <div>{item.id}</div>
+              <span>{item.id}</span>
               <div>
                 <h4>{item.title}</h4>
                 <p>{item.description}</p>
@@ -70,8 +70,9 @@ export default function Home() {
             </li>
           ))}
         </ul>
+
         <img src={ImgHome2} alt="img section 4" />
-      </section>
+      </HomeSection4>
     </main>
   )
 }
