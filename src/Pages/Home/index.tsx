@@ -9,11 +9,11 @@ import { FirstSection, SecondSection, HomeSection4 } from "./styles"
 import { HomeServices } from "@components"
 import { Button } from "@components"
 
+
 //* Import data
 import { homeSection4, homeServices } from "@data"
-
 export default function Home() {
-  console.log(homeSection4)
+                        
   return (
     <main>
       <FirstSection>
