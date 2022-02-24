@@ -1,0 +1,28 @@
+export const theme = {
+  colors: {
+    primary: "#274864",
+    secondary: "#16C0CB",
+    text: "#4E4E4E",
+    success: "#05B176",
+    danger: "#FF0000",
+    red: "#DF604F",
+    grayYellow: "#E7E2C5",
+    yellow: "#ECB83E",
+    whitePrimary: "#FFFFFF",
+    whiteSecondary: "#FDFDFF",
+    gray: "#CDCACA",
+    grayLight: "#EEEEEE",
+  },
+  fonts: {
+    h1: "64px",
+    h2: "56px",
+    h3: "48px",
+    h4: "28px",
+    h5: "20px",
+    h6: "14px",
+    txt: "18px",
+    txtBig: "20px",
+    txtmd: "16px",
+    txtsm: "14px",
+  },
+}
