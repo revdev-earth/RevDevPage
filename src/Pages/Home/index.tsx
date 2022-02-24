@@ -3,7 +3,7 @@ import ImgHome1 from "@assets/home/img-home-1.png"
 import { homeServices } from "../../data"
 
 //*Import styles
-import { FirstSection, SecondSection } from "./styles"
+import { FirstSection, SecondSection, FifthSection } from "./styles"
 
 //*Import components
 import { HomeServices } from "@components"
@@ -43,11 +43,11 @@ export default function Home() {
           ))}
         </ul>
       </SecondSection>
-      <section>
+      <FifthSection>
         <h3>Interested to work with us?</h3>
         <p>Send a line here get and update daily</p>
         <Button primary>contact@revdev.com</Button>
-      </section>
+      </FifthSection>
     </main>
   )
 }

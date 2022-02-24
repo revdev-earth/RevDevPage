@@ -109,3 +109,12 @@ export const SecondSection = styled.section`
     gap: 20px;
   }
 `
+export const FifthSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 100px 30px;
+  background-color: ${({ theme }) => theme.colors.secondary};
+`
