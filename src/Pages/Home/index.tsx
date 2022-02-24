@@ -9,6 +9,9 @@ import { FirstSection, SecondSection } from "./styles"
 import { HomeServices } from "@components"
 import { Button } from "@components"
 
+//* Import sections
+import { ThirdSection } from "./ThirdSection"
+
 export default function Home() {
   return (
     <main>
@@ -31,7 +34,8 @@ export default function Home() {
         <img src={ImgHome1} alt="" />
       </FirstSection>
       <SecondSection>
-        <h4>Our Services</h4>
+        <h3>Our Services</h3>
+
         <p>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et.
@@ -43,6 +47,7 @@ export default function Home() {
           ))}
         </ul>
       </SecondSection>
+      <ThirdSection />
     </main>
   )
 }
