@@ -85,7 +85,6 @@ export const FirstSection = styled.section`
       grid-row: 2;
     }
     img {
-      grid-row: 1;
     }
   }
 `
@@ -127,6 +126,7 @@ export const FifthSection = styled.section`
 `
 
 export const HomeSection4 = styled.section`
+  overflow: hidden;
   position: relative;
   padding: 100px 200px;
   display: flex;
@@ -134,7 +134,6 @@ export const HomeSection4 = styled.section`
   gap: 50px;
 
   img {
-    z-index: 1;
     position: absolute;
     bottom: -10%;
     right: 0;
@@ -246,4 +245,3 @@ export const HomeSection4 = styled.section`
     }
   }
 `
-export const ThirdSection = styled.section``
