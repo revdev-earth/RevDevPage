@@ -1,16 +1,18 @@
 //* Import asetss
 import ImgHome1 from "@assets/home/img-home-1.png"
 import ImgHome2 from "@assets/home/img-home-2.png"
-import { homeServices } from "../../data"
 
 //*Import styles
-import { FirstSection, SecondSection, HomeSection4, FifthSection } from "./styles"
-
+import {
+  FirstSection,
+  SecondSection,
+  HomeSection4,
+  FifthSection,
+} from "./styles"
 
 //*Import components
 import { HomeServices } from "@components"
 import { Button } from "@components"
-
 
 //* Import data
 import { homeSection4, homeServices } from "@data"
@@ -19,7 +21,6 @@ import { homeSection4, homeServices } from "@data"
 import { ThirdSection } from "./ThirdSection"
 
 export default function Home() {
-
   return (
     <main>
       <FirstSection>
@@ -41,7 +42,6 @@ export default function Home() {
         <img src={ImgHome1} alt="" />
       </FirstSection>
       <SecondSection>
-
         <h3>Our Services</h3>
 
         <p>
@@ -85,14 +85,11 @@ export default function Home() {
         <img src={ImgHome2} alt="img section 4" />
       </HomeSection4>
 
-      
       <FifthSection>
         <h3>Interested to work with us?</h3>
         <p>Send a line here get and update daily</p>
         <Button primary>contact@revdev.com</Button>
       </FifthSection>
-
-
     </main>
   )
 }

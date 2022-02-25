@@ -22,12 +22,14 @@ const defaultStyle = css`
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
       inset 0px 4px 4px rgba(255, 255, 255, 0.25),
       inset 0px -4px 4px rgba(0, 0, 0, 0.25);
+    transform: translateY(1px);
   }
 
   &:active {
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25),
       inset 0px 4px 4px rgba(255, 255, 255, 0.25),
       inset 0px -4px 4px rgba(0, 0, 0, 0.25);
+    transform: translateY(2px);
   }
 `
 
