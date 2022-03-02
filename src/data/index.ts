@@ -1,6 +1,6 @@
 //* Import assets
 import StartUp from "@assets/startup.svg"
-import WordPress from "@assets/wordPress.svg"
+import WordPress from "@assets/wordpress.svg"
 import Layers from "@assets/layers.svg"
 import MagnifyingGlass from "@assets/magnifying-glass.svg"
 import webDesign from "@assets/web-design.svg"
