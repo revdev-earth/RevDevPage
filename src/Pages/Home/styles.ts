@@ -246,4 +246,3 @@ export const HomeSection4 = styled.section`
     }
   }
 `
-export const ThirdSection = styled.section``
