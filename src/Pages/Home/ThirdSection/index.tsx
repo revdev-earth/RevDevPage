@@ -24,7 +24,7 @@ export const ThirdSection = () => {
       </div>
       <ul>
         {homeWorks[pag].map((item) => (
-          <li>
+          <li key={Math.random() * 10}>
             <img src={item.img} alt="img-item" /> <p>{item.description}</p>
           </li>
         ))}

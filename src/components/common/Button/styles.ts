@@ -1,26 +1,6 @@
 import styled, { css } from "styled-components"
 import type { ButtonProps } from "."
 
-export const Button = styled.button<ButtonProps>`
-  ${({
-    primary: isPrimary,
-    secondary: isSecondary,
-    red: isRed,
-    yellow: isYellow,
-  }) => {
-    //
-    const styles = `
-      ${defaultStyle}
-      ${isPrimary && primary}
-      ${isSecondary && secondary}
-      ${isRed && red}
-      ${isYellow && yellow}
-    `
-
-    return styles
-  }};
-`
-
 const defaultStyle = css`
   display: inline-block;
   padding: 12px 30px;
@@ -42,14 +22,12 @@ const defaultStyle = css`
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
       inset 0px 4px 4px rgba(255, 255, 255, 0.25),
       inset 0px -4px 4px rgba(0, 0, 0, 0.25);
-    transform: translateY(1px);
   }
 
   &:active {
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25),
       inset 0px 4px 4px rgba(255, 255, 255, 0.25),
       inset 0px -4px 4px rgba(0, 0, 0, 0.25);
-    transform: translateY(2px);
   }
 `
 
@@ -71,6 +49,24 @@ const yellow = css`
 `
 
 const red = css`
+  color: #fff;
   background-color: ${({ theme }) => theme.colors.red};
   border-color: ${({ theme }) => theme.colors.red};
+`
+
+export const Button = styled.button<ButtonProps>`
+  ${defaultStyle}
+  ${({
+    primary: isPrimary,
+    secondary: isSecondary,
+    red: isRed,
+    yellow: isYellow,
+  }) => {
+    if (isPrimary) return primary
+    if (isSecondary) return secondary
+    if (isRed) return red
+    if (isYellow) return yellow
+
+    return ""
+  }};
 `

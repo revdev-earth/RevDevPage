@@ -16,6 +16,9 @@ import { homeSection4, homeServices } from "@data"
 //* Import sections
 import { ThirdSection } from "./ThirdSection"
 
+import { HomeServices } from "@components"
+import { Button } from "@components"
+
 export default function Home() {
   return (
     <main>
@@ -47,7 +50,7 @@ export default function Home() {
 
         <ul>
           {homeServices.map((item) => (
-            <HomeServices item={item} />
+            <HomeServices item={item} key={Math.random() * 10} />
           ))}
         </ul>
       </SecondSection>
@@ -67,8 +70,7 @@ export default function Home() {
 
         <ul>
           {homeSection4.map((item) => (
-            <li>
-              {" "}
+            <li key={Math.random() * 10}>
               <span>{item.id}</span>
               <div>
                 <h4>{item.title}</h4>
