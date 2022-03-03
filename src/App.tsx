@@ -9,9 +9,11 @@ const Layout = React.lazy(() => {
   ]).then(([moduleExport]) => moduleExport)
 })
 
+import { LoadingPage } from "@components"
+
 function App() {
   return (
-    <Suspense fallback={<>Loading...</>}>
+    <Suspense fallback={<LoadingPage />}>
       <Layout />
     </Suspense>
   )

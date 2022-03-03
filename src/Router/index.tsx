@@ -8,31 +8,31 @@ import { Routes, Route } from "react-router-dom"
 const Home = React.lazy(() => {
   return Promise.all([
     import("../Pages/Home"),
-    new Promise((resolve) => setTimeout(resolve, 1000)),
+    new Promise((resolve) => setTimeout(resolve, 10)),
   ]).then(([moduleExport]) => moduleExport)
 })
 const Services = React.lazy(() => {
   return Promise.all([
     import("../Pages/Services"),
-    new Promise((resolve) => setTimeout(resolve, 1000)),
+    new Promise((resolve) => setTimeout(resolve, 10)),
   ]).then(([moduleExport]) => moduleExport)
 })
 const Blog = React.lazy(() => {
   return Promise.all([
     import("../Pages/Blog"),
-    new Promise((resolve) => setTimeout(resolve, 1000)),
+    new Promise((resolve) => setTimeout(resolve, 10)),
   ]).then(([moduleExport]) => moduleExport)
 })
 const Team = React.lazy(() => {
   return Promise.all([
     import("../Pages/Team"),
-    new Promise((resolve) => setTimeout(resolve, 1000)),
+    new Promise((resolve) => setTimeout(resolve, 10)),
   ]).then(([moduleExport]) => moduleExport)
 })
 const Case = React.lazy(() => {
   return Promise.all([
     import("../Pages/Case"),
-    new Promise((resolve) => setTimeout(resolve, 1000)),
+    new Promise((resolve) => setTimeout(resolve, 10)),
   ]).then(([moduleExport]) => moduleExport)
 })
 
