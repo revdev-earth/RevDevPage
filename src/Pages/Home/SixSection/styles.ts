@@ -19,10 +19,12 @@ export const Slider = styled.div`
 `
 
 export const ContainerSliders = styled.div`
+  box-sizing: content-box;
   position: relative;
+  display: flex;
   margin: auto;
   margin-top: 30px;
-  max-width: 1024px;
+  width: 1024px;
 `
 
 export const Slide = styled.div`
@@ -30,6 +32,7 @@ export const Slide = styled.div`
   flex-direction: column;
   gap: 20px;
   padding: 80px;
+  flex: 1 1 1024px;
   box-shadow: 0px 25px 100px -50px #000;
   border-radius: 24px;
 
@@ -71,6 +74,22 @@ export const Users = styled.div`
         transform: scale(0.9);
       }
 
+      &:nth-child(${({ pos }) => pos}) {
+        &:after {
+          background: transparent;
+        }
+        &:hover {
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
       img {
         background-color: royalBlue;
         width: 100%;
@@ -79,8 +98,8 @@ export const Users = styled.div`
         transition: 0.2s all ease-in;
       }
 
-      &:nth-child(2),
-      &:nth-child(4) {
+      &:nth-child(${({ pos }) => pos - 1}),
+      &:nth-child(${({ pos }) => pos + 1}) {
         background-color: ${({ theme }) => theme.colors.grayLight};
 
         &:after {
@@ -90,9 +109,14 @@ export const Users = styled.div`
           height: 100%;
           border-radius: 100%;
           background: rgb(183 183 183 / 40%);
+          transition: 0.4s all ease-in;
         }
 
         &:hover {
+          &:after {
+            background: transparent;
+          }
+
           img {
             width: 90%;
             height: 90%;
@@ -105,30 +129,32 @@ export const Users = styled.div`
         }
       }
 
-      &:nth-child(1),
-      &:nth-child(5) {
-        background-color: ${({ theme }) => theme.colors.grayLight};
+      background-color: ${({ theme }) => theme.colors.grayLight};
 
+      &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        background: rgb(183 183 183 / 60%);
+        transition: 0.4s all ease-in;
+      }
+
+      &:hover {
         &:after {
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          border-radius: 100%;
-          background: rgb(183 183 183 / 60%);
-        }
-
-        &:hover {
-          img {
-            width: 80%;
-            height: 80%;
-          }
+          background: transparent;
         }
 
         img {
-          width: 60%;
-          height: 60%;
+          width: 80%;
+          height: 80%;
         }
+      }
+
+      img {
+        width: 60%;
+        height: 60%;
       }
     }
   }
