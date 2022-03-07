@@ -54,7 +54,22 @@ export const Arrow = styled.div`
   border-radius: 100%;
   background-color: ${({ theme }) => theme.colors.secondary};
 
-  box-shadow: 0 0 10px #000;
+  box-shadow: 0 5px 15px -5px #000, inset 0px 4px 4px rgba(255, 255, 255, 0.25),
+    inset 0px -4px 4px rgba(0, 0, 0, 0.25);
+
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0px 4px 10px -5px #000,
+      inset 0px 4px 4px rgba(255, 255, 255, 0.25),
+      inset 0px -4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  &:active {
+    box-shadow: 0px 1px 5px -5px rgba(0, 0, 0, 0.25),
+      inset 0px 4px 4px rgba(255, 255, 255, 0.25),
+      inset 0px -4px 4px rgba(0, 0, 0, 0.25);
+  }
 
   img {
     width: 24px;
