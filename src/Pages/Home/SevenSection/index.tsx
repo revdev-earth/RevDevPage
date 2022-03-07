@@ -2,7 +2,11 @@
 import { Button } from "@components"
 
 //* import assets
-import Arrow from "@assets/arrow-right.svg"
+import ArrowLarge from "@assets/arrow-right.svg"
+import ArrowShort from "@assets/Vector.svg"
+
+//* import styles
+import { Container, Content, New, Arrow } from "./styles"
 
 const news = [
   {
@@ -27,27 +31,32 @@ const news = [
 
 export const SevenSection = () => {
   return (
-    <section>
-      <div>
-        <h4>News & Articles</h4>
-        <h3>DaCode Blog</h3>
-        <p>
-          On daCode blog we will review the latest in web development for the
-          SaaS-, tech- and crypto industry.
-        </p>
-        <Button>See all</Button>
-      </div>
-      <ul>
-        {news.map(({ title, desctiprion, link }) => (
-          <li>
-            <h4>{title}</h4>
-            <p>{desctiprion}</p>
-            <a href="#">
-              Read more <img src={Arrow} alt={link} />
-            </a>
-          </li>
-        ))}
-      </ul>
-    </section>
+    <Container>
+      <Content>
+        <div>
+          <h5>News & Articles</h5>
+          <h3>DaCode Blog</h3>
+          <p>
+            On daCode blog we will review the latest in web development for the
+            SaaS-, tech- and crypto industry.
+          </p>
+          <Button transparent>See all</Button>
+        </div>
+        <ul>
+          {news.map(({ title, desctiprion, link }) => (
+            <New key={Math.random() * 10}>
+              <h5>{title}</h5>
+              <p>{desctiprion}</p>
+              <a href="#">
+                Read more <img src={ArrowLarge} alt={link} />
+              </a>
+            </New>
+          ))}
+        </ul>
+      </Content>
+      <Arrow>
+        <img src={ArrowShort} alt="arrow" />
+      </Arrow>
+    </Container>
   )
 }
