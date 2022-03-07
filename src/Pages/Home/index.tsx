@@ -15,6 +15,7 @@ import { homeSection4, homeServices } from "@data"
 
 //* Import sections
 import { ThirdSection } from "./ThirdSection"
+import { SevenSection } from "./SevenSection"
 
 import { HomeServices } from "@components"
 import { Button } from "@components"
@@ -88,6 +89,8 @@ export default function Home() {
         <p>Send a line here get and update daily</p>
         <Button primary>contact@revdev.com</Button>
       </FifthSection>
+
+      <SevenSection />
     </main>
   )
 }
