@@ -11,6 +11,7 @@ export type ButtonProps = {
   secondary?: boolean
   red?: boolean
   yellow?: boolean
+  transparent?: boolean
 }
 
 export const Button = ({

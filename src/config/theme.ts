@@ -3,6 +3,7 @@ export const theme = {
     primary: "#274864",
     secondary: "#16C0CB",
     text: "#4E4E4E",
+    fund: "#E9FBF8",
     success: "#05B176",
     danger: "#FF0000",
     red: "#DF604F",

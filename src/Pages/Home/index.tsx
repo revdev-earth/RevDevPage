@@ -16,6 +16,7 @@ import { homeSection4, homeServices } from "@data"
 //* Import sections
 import { ThirdSection } from "./ThirdSection"
 import { SixSection } from "./SixSection"
+import { SevenSection } from "./SevenSection"
 
 //* Import components
 import { HomeServices } from "@components"
@@ -92,6 +93,7 @@ export default function Home() {
       </FifthSection>
 
       <SixSection />
+      <SevenSection />
     </main>
   )
 }
