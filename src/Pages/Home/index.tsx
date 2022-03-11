@@ -70,7 +70,6 @@ export default function Home() {
           us to be able to come up with a solution for your SaaS business,
           estimate a timeline, and come up with a budget.
         </p>
-
         <ul>
           {homeSection4.map((item) => (
             <li key={Math.random() * 10}>
@@ -82,16 +81,13 @@ export default function Home() {
             </li>
           ))}
         </ul>
-
         <img src={ImgHome2} alt="img section 4" />
       </HomeSection4>
-
       <FifthSection>
         <h3>Interested to work with us?</h3>
         <p>Send a line here get and update daily</p>
         <Button primary>contact@revdev.com</Button>
       </FifthSection>
-
       <SixSection />
       <SevenSection />
     </main>

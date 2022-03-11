@@ -8,15 +8,20 @@ export const Container = styled.section`
 
 export const Content = styled.div`
   display: flex;
-  gap: 150px;
+
+  gap: ${({ slide }) => (slide ? "0" : "150px")};
   padding: 100px 200px;
+  transition: 0.2s all ease-in-out;
 
   div {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    flex: 0 0 530px;
+    flex: 0 0 ${({ slide }) => (slide ? "0px" : "530px")};
+    height: ${({ slide }) => (slide ? "0" : "")};
     align-items: flex-start;
+    overflow: hidden;
+    transition: 0.2s all ease-in-out;
 
     h5 {
       color: ${({ theme }) => theme.colors.secondary};
@@ -26,11 +31,13 @@ export const Content = styled.div`
   ul {
     display: flex;
     gap: 40px;
+    justify-content: ${({ slide }) => (slide ? "center" : "")};
   }
 `
 
 export const New = styled.li`
   flex: 0 0 350px;
+  max-height: 320px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -42,12 +49,17 @@ export const New = styled.li`
   h5 {
     color: ${({ theme }) => theme.colors.primary};
   }
+
+  a {
+    display: flex;
+    gap: 10px;
+  }
 `
 export const Arrow = styled.div`
   position: absolute;
   top: 40%;
   right: 7%;
-  display: flex;
+  display: ${({ slide }) => (slide ? "none" : "flex")};
   justify-content: center;
   align-items: center;
   padding: 20px;

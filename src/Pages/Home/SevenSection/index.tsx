@@ -7,6 +7,7 @@ import ArrowShort from "@assets/Vector.svg"
 
 //* import styles
 import { Container, Content, New, Arrow } from "./styles"
+import { useState } from "react"
 
 const news = [
   {
@@ -30,9 +31,12 @@ const news = [
 ]
 
 export const SevenSection = () => {
+  const [slide, setSlide] = useState(false)
+
+  console.log(slide)
   return (
     <Container>
-      <Content>
+      <Content slide={slide}>
         <div>
           <h5>News & Articles</h5>
           <h3>DaCode Blog</h3>
@@ -54,7 +58,7 @@ export const SevenSection = () => {
           ))}
         </ul>
       </Content>
-      <Arrow>
+      <Arrow onClick={() => setSlide(true)} slide={slide}>
         <img src={ArrowShort} alt="arrow" />
       </Arrow>
     </Container>
