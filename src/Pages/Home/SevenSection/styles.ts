@@ -43,7 +43,7 @@ export const Content = styled.div<{ slide: boolean }>`
 `
 
 export const New = styled.li<{ slide: boolean }>`
-  flex: 0 ${({ slide }) => (slide ? "1" : "0")} 350px;
+  flex: 0 0 350px;
 
   display: flex;
   flex-direction: column;
