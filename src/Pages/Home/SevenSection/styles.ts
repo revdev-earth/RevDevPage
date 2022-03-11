@@ -44,7 +44,6 @@ export const Content = styled.div<{ slide: boolean }>`
 
 export const New = styled.li<{ slide: boolean }>`
   flex: 0 0 350px;
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
