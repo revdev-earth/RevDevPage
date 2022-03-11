@@ -33,7 +33,6 @@ const news = [
 export const SevenSection = () => {
   const [slide, setSlide] = useState(false)
 
-  console.log(slide)
   return (
     <Container>
       <Content slide={slide}>

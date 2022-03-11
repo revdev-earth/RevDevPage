@@ -212,8 +212,6 @@ export const HomeSection4 = styled.section`
   }
 
   @media (max-width: 999px) {
-    padding: 30px;
-
     ul {
       li {
         gap: 50px;

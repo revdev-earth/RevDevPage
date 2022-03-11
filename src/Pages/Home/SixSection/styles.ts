@@ -47,7 +47,7 @@ export const Slide = styled.div`
   }
 `
 
-export const Users = styled.div`
+export const Users = styled.div<{ pos: number }>`
   display: flex;
   flex-direction: column;
   justify-content: center;

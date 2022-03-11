@@ -6,7 +6,7 @@ export const Container = styled.section`
   overflow: hidden;
 `
 
-export const Content = styled.div`
+export const Content = styled.div<{ slide: boolean }>`
   display: flex;
   gap: ${({ slide }) => (slide ? "0" : "150px")};
   padding: 100px 200px;
@@ -42,7 +42,7 @@ export const Content = styled.div`
   }
 `
 
-export const New = styled.li`
+export const New = styled.li<{ slide: boolean }>`
   flex: 0 ${({ slide }) => (slide ? "1" : "0")} 350px;
 
   display: flex;
@@ -62,7 +62,7 @@ export const New = styled.li`
     gap: 10px;
   }
 `
-export const Arrow = styled.div`
+export const Arrow = styled.div<{ slide: boolean }>`
   position: absolute;
   top: 40%;
   right: 7%;
