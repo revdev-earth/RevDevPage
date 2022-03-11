@@ -48,7 +48,7 @@ export const SevenSection = () => {
         </div>
         <ul>
           {news.map(({ title, desctiprion, link }) => (
-            <New key={Math.random() * 10}>
+            <New key={Math.random() * 10} slide={slide}>
               <h5>{title}</h5>
               <p>{desctiprion}</p>
               <a href="#">

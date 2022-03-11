@@ -67,8 +67,8 @@ export const FirstSection = styled.section`
     }
   }
 
-  @media (max-width: 999px) {
-    padding: 50px 30px;
+  @media (max-width: 1024px) {
+    padding: 50px;
 
     grid-template-columns: 4fr 2fr;
 
@@ -114,6 +114,10 @@ export const SecondSection = styled.section`
     margin: auto;
     max-width: 1100px;
   }
+
+  @media (max-width: 1024px) {
+    padding: 50px;
+  }
 `
 export const FifthSection = styled.section`
   display: flex;
@@ -123,6 +127,10 @@ export const FifthSection = styled.section`
   gap: 50px;
   padding: 100px 30px;
   background-color: ${({ theme }) => theme.colors.secondary};
+
+  @media (max-width: 1024px) {
+    padding: 50px;
+  }
 `
 
 export const HomeSection4 = styled.section`
@@ -189,10 +197,12 @@ export const HomeSection4 = styled.section`
   }
 
   @media (max-width: 1024px) {
-    padding: 80px;
+    padding: 50px;
 
+    gap: 20px;
     ul {
       li {
+        gap: 40px;
         span {
           height: 70px;
           min-width: 70px;

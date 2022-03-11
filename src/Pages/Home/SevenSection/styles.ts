@@ -8,10 +8,9 @@ export const Container = styled.section`
 
 export const Content = styled.div`
   display: flex;
-
   gap: ${({ slide }) => (slide ? "0" : "150px")};
   padding: 100px 200px;
-  transition: 0.2s all ease-in-out;
+  transition: 0.6s all ease-in-out;
 
   div {
     display: flex;
@@ -21,7 +20,7 @@ export const Content = styled.div`
     height: ${({ slide }) => (slide ? "0" : "")};
     align-items: flex-start;
     overflow: hidden;
-    transition: 0.2s all ease-in-out;
+    transition: 0.6s all ease-in-out;
 
     h5 {
       color: ${({ theme }) => theme.colors.secondary};
@@ -33,11 +32,19 @@ export const Content = styled.div`
     gap: 40px;
     justify-content: ${({ slide }) => (slide ? "center" : "")};
   }
+
+  @media (max-width: 1024px) {
+    padding: 50px;
+
+    div {
+      flex: 0 0 ${({ slide }) => (slide ? "0px" : "350px")};
+    }
+  }
 `
 
 export const New = styled.li`
-  flex: 0 0 350px;
-  max-height: 320px;
+  flex: 0 ${({ slide }) => (slide ? "1" : "0")} 350px;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;

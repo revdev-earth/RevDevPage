@@ -62,4 +62,12 @@ export const Container = styled.section`
     position: relative;
     bottom: -125px;
   }
+
+  @media (max-width: 1024px) {
+    padding: 50px;
+
+    button {
+      bottom: -75px;
+    }
+  }
 `

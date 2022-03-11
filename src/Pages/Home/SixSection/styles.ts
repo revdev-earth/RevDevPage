@@ -10,6 +10,10 @@ export const Container = styled.section`
   h4 {
     color: ${({ theme }) => theme.colors.secondary};
   }
+
+  @media (max-width: 1024px) {
+    padding: 50px;
+  }
 `
 
 export const Slider = styled.div`
@@ -24,7 +28,8 @@ export const ContainerSliders = styled.div`
   display: flex;
   margin: auto;
   margin-top: 30px;
-  width: 1024px;
+  flex: 1 1 1024px;
+  max-height: 300px;
 `
 
 export const Slide = styled.div`
