@@ -1,13 +1,5 @@
 import styled from "styled-components"
 
-export const ThirdSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  align-items: center;
-  padding: 100px;
-  background-color: ${({ theme }) => theme.colors.secondary};
-`
 export const FourSection = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;

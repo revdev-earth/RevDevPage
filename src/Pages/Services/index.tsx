@@ -13,12 +13,6 @@ export default function Services() {
     <>
       <FirstSection />
 
-      {/*       <ThirdSection>
-        <h3>Interested to work with us ?</h3>
-        <p>Send a line here get and update daily</p>
-        <Button primary>DaCode@example.com</Button>
-      </ThirdSection> */}
-
       {/* <FourSection>
         <div>
           <h3>Establishing online presence</h3>
