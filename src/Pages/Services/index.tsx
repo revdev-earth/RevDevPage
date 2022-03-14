@@ -1,9 +1,13 @@
+//* Import styles
+import { FritstSection, ThirdSection, FourSection } from "./styles"
+
+//* Import components
 import { Button } from "@components"
 
 export default function Services() {
   return (
     <>
-      <section>
+      <FritstSection>
         <h3>What we can offer your SaaS Business</h3>
         <p>
           We have chosen to only collaborate and work with SaaS businesses, this
@@ -11,15 +15,15 @@ export default function Services() {
           value to our clients. Our team has worked with Nordic, European and
           American tech unicorns.
         </p>
-      </section>
+      </FritstSection>
 
-      <section>
+      <ThirdSection>
         <h3>Interested to work with us ?</h3>
         <p>Send a line here get and update daily</p>
         <Button primary>DaCode@example.com</Button>
-      </section>
+      </ThirdSection>
 
-      <section>
+      <FourSection>
         <div>
           <h3>Establishing online presence</h3>
           <p>
@@ -42,9 +46,14 @@ export default function Services() {
         </div>
         <div>
           <h4>Schedule a free session</h4>
-          <img />
+          <div>
+            <label htmlFor="party">
+              Elija la fecha de festejo que prefiera:
+            </label>
+            <input type="date" name="party" id="party" min="" />
+          </div>
         </div>
-      </section>
+      </FourSection>
     </>
   )
 }
