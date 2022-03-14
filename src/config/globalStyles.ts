@@ -71,9 +71,13 @@ h6 { font-size:${({ theme }) => theme.fonts.h6};
 
 p {
 	font-size:${({ theme }) => theme.fonts.txt};
-
-	@media (max-width: 768px) {
+	line-height: 160%;
+	@media (max-width: 1024px) {
 		font-size:${({ theme }) => theme.fonts.txtmd};
+
+	}
+	@media (max-width: 768px) {
+		font-size:${({ theme }) => theme.fonts.txtsm};
 
 	}
 }

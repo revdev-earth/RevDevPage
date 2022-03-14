@@ -67,8 +67,8 @@ export const FirstSection = styled.section`
     }
   }
 
-  @media (max-width: 999px) {
-    padding: 50px 30px;
+  @media (max-width: 1024px) {
+    padding: 50px;
 
     grid-template-columns: 4fr 2fr;
 
@@ -85,7 +85,6 @@ export const FirstSection = styled.section`
       grid-row: 2;
     }
     img {
-      grid-row: 1;
     }
   }
 `
@@ -115,6 +114,10 @@ export const SecondSection = styled.section`
     margin: auto;
     max-width: 1100px;
   }
+
+  @media (max-width: 1024px) {
+    padding: 50px;
+  }
 `
 export const FifthSection = styled.section`
   display: flex;
@@ -124,9 +127,14 @@ export const FifthSection = styled.section`
   gap: 50px;
   padding: 100px 30px;
   background-color: ${({ theme }) => theme.colors.secondary};
+
+  @media (max-width: 1024px) {
+    padding: 50px;
+  }
 `
 
 export const HomeSection4 = styled.section`
+  overflow: hidden;
   position: relative;
   padding: 100px 200px;
   display: flex;
@@ -134,7 +142,6 @@ export const HomeSection4 = styled.section`
   gap: 50px;
 
   img {
-    z-index: 1;
     position: absolute;
     bottom: -10%;
     right: 0;
@@ -190,10 +197,12 @@ export const HomeSection4 = styled.section`
   }
 
   @media (max-width: 1024px) {
-    padding: 80px;
+    padding: 50px;
 
+    gap: 20px;
     ul {
       li {
+        gap: 40px;
         span {
           height: 70px;
           min-width: 70px;
@@ -203,8 +212,6 @@ export const HomeSection4 = styled.section`
   }
 
   @media (max-width: 999px) {
-    padding: 30px;
-
     ul {
       li {
         gap: 50px;
