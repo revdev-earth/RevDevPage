@@ -1,18 +1,5 @@
 import styled from "styled-components"
 
-export const FritstSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  text-align: center;
-  padding: 100px;
-  background-color: ${({ theme }) => theme.colors.secondary};
-
-  p {
-    margin: auto;
-    max-width: 900px;
-  }
-`
 export const ThirdSection = styled.section`
   display: flex;
   flex-direction: column;

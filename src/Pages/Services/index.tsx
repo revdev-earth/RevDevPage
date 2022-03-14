@@ -1,29 +1,25 @@
 //* Import styles
-import { FritstSection, ThirdSection, FourSection } from "./styles"
+import /* , ThirdSection, FourSection */
+"./styles"
 
 //* Import components
 import { Button } from "@components"
 
+//* Import sections
+import { FirstSection } from "./FirstSection"
+
 export default function Services() {
   return (
     <>
-      <FritstSection>
-        <h3>What we can offer your SaaS Business</h3>
-        <p>
-          We have chosen to only collaborate and work with SaaS businesses, this
-          is because our expertise lies and we know that we can provide the most
-          value to our clients. Our team has worked with Nordic, European and
-          American tech unicorns.
-        </p>
-      </FritstSection>
+      <FirstSection />
 
-      <ThirdSection>
+      {/*       <ThirdSection>
         <h3>Interested to work with us ?</h3>
         <p>Send a line here get and update daily</p>
         <Button primary>DaCode@example.com</Button>
-      </ThirdSection>
+      </ThirdSection> */}
 
-      <FourSection>
+      {/* <FourSection>
         <div>
           <h3>Establishing online presence</h3>
           <p>
@@ -53,7 +49,7 @@ export default function Services() {
             <input type="date" name="party" id="party" min="" />
           </div>
         </div>
-      </FourSection>
+      </FourSection> */}
     </>
   )
 }
