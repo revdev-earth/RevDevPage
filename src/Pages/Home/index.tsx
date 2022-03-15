@@ -14,9 +14,7 @@ import {
 import { homeSection4, homeServices } from "@data"
 
 //* Import sections
-import { ThirdSection } from "./ThirdSection"
-import { SixSection } from "./SixSection"
-import { SevenSection } from "./SevenSection"
+import { ThirdSection, SixSection, SevenSection } from "./_components"
 
 //* Import components
 import { HomeServices } from "@components"
@@ -28,7 +26,8 @@ export default function Home() {
       <FirstSection>
         <div>
           <h3>
-            We help you create your <span>website</span>
+            It's <span>our</span> turn to <span>revolutionize</span> the{" "}
+            <span>market</span>
           </h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. At ut
