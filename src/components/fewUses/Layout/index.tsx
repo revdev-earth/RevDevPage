@@ -1,9 +1,9 @@
 //** Import Components
-import Router from "../../Router"
+import Router from "../../../Router"
 import { Header } from "@components"
 import { Footer } from "@components"
 
-export default function Layout() {
+export function Layout() {
   return (
     <div>
       <Header />
@@ -13,3 +13,5 @@ export default function Layout() {
     </div>
   )
 }
+
+export * from "./LayoutLazy"

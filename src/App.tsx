@@ -1,18 +1,11 @@
 //* Import react
-import React, { Suspense } from "react"
-
-//* Import components
-const Layout = React.lazy(() => {
-  return Promise.all([
-    import("./Pages/Layout"),
-    new Promise((resolve) => setTimeout(resolve, 1000)),
-  ]).then(([moduleExport]) => moduleExport)
-})
+import React, { Suspense, lazy } from "react"
+import { DotLoader, LayoutLazy } from "@components"
 
 function App() {
   return (
-    <Suspense fallback={<>Loading...</>}>
-      <Layout />
+    <Suspense fallback={<DotLoader />}>
+      <LayoutLazy />
     </Suspense>
   )
 }

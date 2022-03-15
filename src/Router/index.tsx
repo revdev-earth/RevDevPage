@@ -3,32 +3,32 @@ import React, { Suspense } from "react"
 
 //* Import reac router
 import { Routes, Route } from "react-router-dom"
+import { DotLoader } from "@components"
 
 //* Import components
-const Home = React.lazy(() => {
-  return Promise.all([
-    import("../Pages/Home"),
-    new Promise((resolve) => setTimeout(resolve, 1000)),
-  ]).then(([moduleExport]) => moduleExport)
-})
+const Home = React.lazy(() => import("../Pages/Home"))
+
 const Services = React.lazy(() => {
   return Promise.all([
     import("../Pages/Services"),
     new Promise((resolve) => setTimeout(resolve, 1000)),
   ]).then(([moduleExport]) => moduleExport)
 })
+
 const Blog = React.lazy(() => {
   return Promise.all([
     import("../Pages/Blog"),
     new Promise((resolve) => setTimeout(resolve, 1000)),
   ]).then(([moduleExport]) => moduleExport)
 })
+
 const Team = React.lazy(() => {
   return Promise.all([
     import("../Pages/Team"),
     new Promise((resolve) => setTimeout(resolve, 1000)),
   ]).then(([moduleExport]) => moduleExport)
 })
+
 const Case = React.lazy(() => {
   return Promise.all([
     import("../Pages/Case"),
@@ -42,7 +42,7 @@ export default function Router() {
       <Route
         index
         element={
-          <Suspense fallback={<>Loading...</>}>
+          <Suspense fallback={<DotLoader />}>
             <Home />
           </Suspense>
         }
@@ -50,7 +50,7 @@ export default function Router() {
       <Route
         path="/Services"
         element={
-          <Suspense fallback={<>Loading...</>}>
+          <Suspense fallback={<DotLoader />}>
             <Services />
           </Suspense>
         }
@@ -58,7 +58,7 @@ export default function Router() {
       <Route
         path="/team"
         element={
-          <Suspense fallback={<>Loading...</>}>
+          <Suspense fallback={<DotLoader />}>
             <Team />
           </Suspense>
         }
@@ -66,7 +66,7 @@ export default function Router() {
       <Route
         path="/blog"
         element={
-          <Suspense fallback={<>Loading...</>}>
+          <Suspense fallback={<DotLoader />}>
             <Blog />
           </Suspense>
         }
@@ -74,7 +74,7 @@ export default function Router() {
       <Route
         path="/case"
         element={
-          <Suspense fallback={<>Loading...</>}>
+          <Suspense fallback={<DotLoader />}>
             <Case />
           </Suspense>
         }
