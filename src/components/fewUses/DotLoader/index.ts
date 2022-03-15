@@ -6,6 +6,10 @@ export const DotLoader = styled.div<{
   bottom?: number
   top?: number
 }>`
+  animation: dotFlashing 1.8s infinite ease-in-out;
+  left: -2.5em;
+  margin: 50px auto;
+
   & {
     content: "";
     color: green;
@@ -20,10 +24,6 @@ export const DotLoader = styled.div<{
     animation-fill-mode: both;
     position: relative;
   }
-  margin-top: ${({ top }) => (top ? `${top}px` : 0)};
-  margin-bottom: ${({ bottom }) => (bottom ? `${bottom}px` : 0)};
-  animation: dotFlashing 1.8s infinite ease-in-out;
-  left: -2.5em;
 
   ::before,
   ::after {
