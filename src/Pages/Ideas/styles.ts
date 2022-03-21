@@ -2,30 +2,16 @@ import styled from "styled-components";
 
 export const Container = styled.section``
 
-export const Section1 = styled.section`
-
-
-    p{
-        margin: auto;
-        width: 80%;
-    }
-`
 
 export const Section2 = styled.section`
     padding: 100px 15%;
 
-    ul {
-
-    }
 `
 
-export const Section3 = styled(Section1)`
-
-
-    color: ${({theme}) => theme.colors.whitePrimary};
-
+export const Section3Content = styled.div`
     h2 {
         padding: 20px;
+        color: ${({theme}) => theme.colors.whitePrimary};
     }
     
     a { 
@@ -51,5 +37,41 @@ export const Section3 = styled(Section1)`
             box-shadow: 0px 2px 5px -5px #000;
         }
 
+    }
+`
+export const Section4 = styled.div`
+    padding: 100px 10%;
+    display: flex;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 10px;
+
+        &:nth-child(1){
+            padding-right: 100px;
+        }
+        
+        &:last-child{
+            position: relative;
+
+            h4 {
+                color: ${({theme}) => theme.colors.secondary}
+            }
+
+            img{
+                
+                z-index: 2;
+                
+                &:nth-child(2){
+                    z-index: 1;
+                    position: absolute;
+                    right: 0;
+                    width: 200px;
+                }
+            }
+
+        }
     }
 `
