@@ -7,6 +7,32 @@ import VectorImg1 from "@assets/Vector1.svg"
 import VectorImg2 from "@assets/Vector2.svg"
 //* import components
 import ContainerSection from "@components/common/ContentSection"
+import Idea from "./_components/Idea"
+
+const ideas = [ 
+    {
+        title: "Rev Dev",
+        description: "Nothing more and nothing less than us entered with the necessary papers to play an important role on the field, nothing more and nothing less than the one played with the 10 jersey, has left everything for the team and provide well-being to the world that we are.",
+        image: "" 
+    },
+    {
+        title: "Rev Dev",
+        description: "Nothing more and nothing less than us entered with the necessary papers to play an important role on the field, nothing more and nothing less than the one played with the 10 jersey, has left everything for the team and provide well-being to the world that we are.",
+        image: "" 
+    },
+    {
+        title: "Rev Dev",
+        description: "Nothing more and nothing less than us entered with the necessary papers to play an important role on the field, nothing more and nothing less than the one played with the 10 jersey, has left everything for the team and provide well-being to the world that we are.",
+        image: "" 
+    },
+    {
+        title: "Rev Dev",
+        description: "Nothing more and nothing less than us entered with the necessary papers to play an important role on the field, nothing more and nothing less than the one played with the 10 jersey, has left everything for the team and provide well-being to the world that we are.",
+        image: "" 
+    },
+    
+
+]
 
 const Ideas = ()  => {
     return (
@@ -22,13 +48,7 @@ const Ideas = ()  => {
 
             <Section2>
                 <ul>
-                    <li>
-                        <div></div>
-                        <div>
-                            <h4>Rev Dev</h4>
-                            <p>Nothing more and nothing less than us entered with the necessary papers to play an important role on the field, nothing more and nothing less than the one played with the 10 jersey, has left everything for the team and provide well-being to the world that we are.</p>
-                        </div>
-                    </li>
+                    {ideas.map((idea) => <Idea key={Math.random() * 100} idea={idea}/>)}
                 </ul>
             </Section2>
 
