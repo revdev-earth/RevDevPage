@@ -10,7 +10,7 @@ export const Container = styled.section`
   padding: 100px;
   background-color: ${({ theme }) => theme.colors.secondary};
   color: ${({ theme }) => theme.colors.primary};
-
+  
   &:after {
     position: absolute;
     content: "";
@@ -36,7 +36,7 @@ export const Container = styled.section`
     position: absolute;
 
     &:nth-child(1) {
-      top: 0;
+      top: 0; 
       left: 0;
     }
 
