@@ -15,16 +15,9 @@ const Services = React.lazy(() => {
   ]).then(([moduleExport]) => moduleExport)
 })
 
-const Blog = React.lazy(() => {
+const Ideas = React.lazy(() => {
   return Promise.all([
-    import("../Pages/Blog"),
-    new Promise((resolve) => setTimeout(resolve, 1000)),
-  ]).then(([moduleExport]) => moduleExport)
-})
-
-const Team = React.lazy(() => {
-  return Promise.all([
-    import("../Pages/Team"),
+    import("../Pages/Ideas"),
     new Promise((resolve) => setTimeout(resolve, 1000)),
   ]).then(([moduleExport]) => moduleExport)
 })
@@ -56,18 +49,10 @@ export default function Router() {
         }
       />
       <Route
-        path="/team"
-        element={
-          <Suspense fallback={<DotLoader />}>
-            <Team />
-          </Suspense>
-        }
-      />
-      <Route
         path="/blog"
         element={
           <Suspense fallback={<DotLoader />}>
-            <Blog />
+            <Ideas />
           </Suspense>
         }
       />
