@@ -22,12 +22,6 @@ const Ideas = React.lazy(() => {
   ]).then(([moduleExport]) => moduleExport)
 })
 
-const Case = React.lazy(() => {
-  return Promise.all([
-    import("../Pages/Case"),
-    new Promise((resolve) => setTimeout(resolve, 1000)),
-  ]).then(([moduleExport]) => moduleExport)
-})
 
 export default function Router() {
   return (
@@ -49,18 +43,10 @@ export default function Router() {
         }
       />
       <Route
-        path="/blog"
+        path="/ideas"
         element={
           <Suspense fallback={<DotLoader />}>
             <Ideas />
-          </Suspense>
-        }
-      />
-      <Route
-        path="/case"
-        element={
-          <Suspense fallback={<DotLoader />}>
-            <Case />
           </Suspense>
         }
       />
