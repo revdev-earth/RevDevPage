@@ -1,24 +1,17 @@
 //* Import asetss
 import ImgHome1 from "@assets/home/img-home-1.png"
 import ImgHome2 from "@assets/home/img-home-2.png"
-
+import Circles from "@assets/circles.svg"
 //*Import styles
-import {
-  FirstSection,
-  SecondSection,
-  HomeSection4,
-  FifthSection,
-} from "./styles"
-
+import { FirstSection, SecondSection, HomeSection4 } from "./styles"
 //* Import data
 import { homeSection4, homeServices } from "@data"
-
 //* Import sections
 import { ThirdSection, SixSection, SevenSection } from "./_components"
-
 //* Import components
 import { HomeServices } from "@components"
 import { Button } from "@components"
+import ContainerSection from "@components/common/ContentSection"
 
 export default function Home() {
   return (
@@ -41,6 +34,7 @@ export default function Home() {
           </div>
         </div>
         <img src={ImgHome1} alt="" />
+        <img src={Circles} alt="" />
       </FirstSection>
       <SecondSection>
         <h3>Our Services</h3>
@@ -56,9 +50,7 @@ export default function Home() {
           ))}
         </ul>
       </SecondSection>
-
       <ThirdSection />
-
       <HomeSection4>
         <h3>
           Your idea into <span>reality</span>
@@ -82,11 +74,11 @@ export default function Home() {
         </ul>
         <img src={ImgHome2} alt="img section 4" />
       </HomeSection4>
-      <FifthSection>
+      <ContainerSection>
         <h3>Interested to work with us?</h3>
         <p>Send a line here get and update daily</p>
         <Button primary>contact@revdev.com</Button>
-      </FifthSection>
+      </ContainerSection>
       <SixSection />
       <SevenSection />
     </main>

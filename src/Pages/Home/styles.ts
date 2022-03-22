@@ -1,12 +1,15 @@
 import styled from "styled-components"
 
 export const FirstSection = styled.section`
+  overflow: hidden;
+  position: relative;
   margin: auto;
   padding: 0 100px;
   display: grid;
   grid-template-columns: 3fr 4fr;
 
   div {
+    z-index: 1;
     margin: center;
     padding-left: 80px;
     display: flex;
@@ -45,6 +48,12 @@ export const FirstSection = styled.section`
     padding-right: 50px;
     max-width: 100%;
     max-height: 750px;
+    &:last-child {
+      width: 500px;
+      position: absolute;
+      bottom: -20%;
+      left: -5%;
+    }
   }
 
   @media (max-width: 1480px) {
