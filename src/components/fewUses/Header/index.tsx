@@ -39,19 +39,10 @@ export function Header() {
               Services
             </Link>
           </li>
+
           <li>
-            <Link to="/blog" onClick={closeMenu}>
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link to="/case" onClick={closeMenu}>
-              Case
-            </Link>
-          </li>
-          <li>
-            <Link to="/team" onClick={closeMenu}>
-              Team
+            <Link to="/ideas" onClick={closeMenu}>
+              Ideas
             </Link>
           </li>
           <Button red>Request a quote</Button>
