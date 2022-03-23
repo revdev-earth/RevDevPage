@@ -26,13 +26,12 @@ export const Container = styled.section`
         position: absolute;
         width: 22%;
         
-        &:nth-child(3) {
+        
             top: 0;
             left: 0;
-        }
-        
         &:last-child {
-            
+        top: auto;
+        left: auto;
         right: 0;
         bottom: 0;
         }

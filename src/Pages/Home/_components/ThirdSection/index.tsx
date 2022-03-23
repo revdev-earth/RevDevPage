@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react"
-
 //* Import components
 import { Button } from "@components"
-
 //* Import styles
-import { Container } from "./styles"
-
+import { Container, Circle } from "./styles"
 import { homeWorks } from "@data"
+//* Import assets
+import Circles from "@assets/circles.svg"
 
 export const ThirdSection = () => {
   const [pag, setPag] = useState(0)
@@ -15,6 +14,7 @@ export const ThirdSection = () => {
     <Container>
       <h4>Portfolio</h4>
       <h3>Our Great Work</h3>
+      <Circle src={Circles} alt="" />
       <div>
         <h4 onClick={() => setPag(0)}>Website Optimization</h4>
 

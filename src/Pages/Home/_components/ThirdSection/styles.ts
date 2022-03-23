@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 export const Container = styled.section`
+  position: relative;
   margin: auto;
   padding: 100px 200px;
   max-width: 1920px;
@@ -19,12 +20,14 @@ export const Container = styled.section`
   }
 
   div {
+    
     margin: 40px auto;
     display: flex;
     justify-content: center;
     gap: 30px;
 
     h4 {
+      z-index: 3;
       padding: 20px 40px;
       transition: 0.3s all ease-in;
       border: 1px solid transparent;
@@ -38,11 +41,13 @@ export const Container = styled.section`
   }
 
   ul {
+    
     display: flex;
     justify-content: space-between;
     gap: 40px;
 
     li {
+      z-index: 3;
       display: flex;
       flex-direction: column;
       gap: 40px;
@@ -70,4 +75,10 @@ export const Container = styled.section`
       bottom: -75px;
     }
   }
+`
+export const Circle = styled.img`
+  z-index: 0;
+  position: absolute;
+  top: 200px;
+  left: 30%;
 `

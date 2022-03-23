@@ -56,6 +56,7 @@ export const Users = styled.div<{ pos: number }>`
   gap: 10px;
 
   ul {
+    position: relative;
     padding-bottom: 20px;
     display: flex;
     gap: 50px;
@@ -212,4 +213,11 @@ export const Controls = styled.div`
       }
     }
   }
+`
+
+export const Circle = styled.img`
+position: absolute;
+width: 200px;
+top:-65px;
+left: 34% ;
 `

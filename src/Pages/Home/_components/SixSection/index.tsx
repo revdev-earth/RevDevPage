@@ -7,12 +7,12 @@ import {
   Slider,
   Slide,
   Users,
-  Controls,
+  Circle,
 } from "./styles"
 
 //* Import assets
 import Star from "@assets/star.svg"
-import Arrow from "@assets/Next.svg"
+import Circles from "@assets/circles.svg"
 
 const data = [
   {
@@ -71,6 +71,7 @@ export const SixSection = () => {
         </ContainerSliders>
         <Users pos={testimonial + 1}>
           <ul>
+            <Circle src={Circles} alt="" />
             <li onClick={() => setTestimonial(0)}>
               <img />
             </li>
