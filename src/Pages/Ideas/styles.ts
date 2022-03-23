@@ -39,39 +39,3 @@ export const Section3Content = styled.div`
 
     }
 `
-export const Section4 = styled.div`
-    padding: 100px 10%;
-    display: flex;
-
-    div {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        padding: 10px;
-
-        &:nth-child(1){
-            padding-right: 100px;
-        }
-        
-        &:last-child{
-            position: relative;
-
-            h4 {
-                color: ${({theme}) => theme.colors.secondary}
-            }
-
-            img{
-                
-                z-index: 2;
-                
-                &:nth-child(2){
-                    z-index: 1;
-                    position: absolute;
-                    right: 0;
-                    width: 200px;
-                }
-            }
-
-        }
-    }
-`

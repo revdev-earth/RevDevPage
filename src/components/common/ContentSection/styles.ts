@@ -4,6 +4,7 @@ export const Container = styled.section`
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
     padding: 100px 20%;
     background-color: ${({theme}) => theme.colors.secondary};

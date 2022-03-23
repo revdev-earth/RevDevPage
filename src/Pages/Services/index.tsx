@@ -1,15 +1,8 @@
-//* Import styles
-import /* , ThirdSection, FourSection */
-"./styles"
-
-//* Import components
-import { Button } from "@components"
-
 //* Import sections
 import { FirstSection } from "./components_/FirstSection"
 import { SecondSection } from "./components_/SecondSection"
 import { ThirdSection } from "./components_/ThirdSection"
-import { FourthSection } from "./components_/FourthSection"
+import OurCalendar from "@components/common/OurCalendar"
 
 export default function Services() {
   return (
@@ -17,7 +10,7 @@ export default function Services() {
       <FirstSection />
       <SecondSection />
       <ThirdSection />
-      <FourthSection />
+      <OurCalendar />
     </>
   )
 }
