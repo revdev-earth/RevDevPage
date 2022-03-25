@@ -51,7 +51,7 @@ export const FirstSection = styled.section`
     &:last-child {
       width: 500px;
       position: absolute;
-      bottom: -20%;
+      bottom: -250px;
       left: -5%;
     }
   }
@@ -98,6 +98,7 @@ export const FirstSection = styled.section`
   }
 `
 export const SecondSection = styled.section`
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -116,12 +117,28 @@ export const SecondSection = styled.section`
   }
 
   ul {
+    z-index: 2;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     margin: auto;
     max-width: 1100px;
+  }
+  
+  div {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      flex:0 1 600px;
+    }
   }
 
   @media (max-width: 1024px) {
@@ -186,6 +203,7 @@ export const HomeSection4 = styled.section`
       }
 
       div {
+        position: relative;
         padding-top: 10px;
         z-index: 3;
         display: flex;
@@ -197,6 +215,29 @@ export const HomeSection4 = styled.section`
         h4 {
           color: ${({ theme }) => theme.colors.secondary};
         }
+      }
+    }
+  }
+
+  div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    img {
+      position: absolute;
+      max-width: 400px;
+      
+      top:  -80px;
+      left: -80px;
+      
+      &:last-child{
+        top:  -30px;
+        right: -10px;
+        left: auto;
+        
       }
     }
   }

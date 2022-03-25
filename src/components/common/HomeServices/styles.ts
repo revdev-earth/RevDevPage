@@ -38,12 +38,14 @@ export const Circle = styled.div`
     z-index: 1;
     
     &:before {
-    z-index: 1;
-    position: absolute;
-    content: "";
-    top: 10px;
-    left: 20px;
-    width: 50px;
-    height:  50px;
-    background-color: #e9fbf8;
-    border-radius: 100%;`
+      z-index: 1;
+      position: absolute;
+      content: "";
+      top: 10px;
+      left: 20px;
+      width: 50px;
+      height:  50px;
+      background-color: #e9fbf8;
+      border-radius: 100%;
+    }
+`

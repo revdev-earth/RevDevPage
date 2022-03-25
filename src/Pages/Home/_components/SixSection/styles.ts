@@ -33,6 +33,8 @@ export const ContainerSliders = styled.div`
 `
 
 export const Slide = styled.div`
+  z-index: 2;
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -63,10 +65,11 @@ export const Users = styled.div<{ pos: number }>`
 
     li {
       position: relative;
+      
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 100px;
+      min-width: 100px;
       height: 100px;
       border-radius: 100%;
       transition: 0.2s all ease-in-out;
@@ -97,7 +100,7 @@ export const Users = styled.div<{ pos: number }>`
       }
 
       img {
-        background-color: royalBlue;
+        z-index: 2;
         width: 100%;
         height: 100%;
         border-radius: 100%;
@@ -217,7 +220,8 @@ export const Controls = styled.div`
 
 export const Circle = styled.img`
 position: absolute;
-width: 200px;
-top:-65px;
-left: 34% ;
+z-index: 0;
+min-width: 190px;
+min-height: 190px;
+background-color: transparent;
 `
