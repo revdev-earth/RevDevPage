@@ -71,20 +71,25 @@ export const SixSection = () => {
         </ContainerSliders>
         <Users pos={testimonial + 1}>
           <ul>
-            <Circle src={Circles} alt="" />
             <li onClick={() => setTestimonial(0)}>
+              {testimonial === 0 && <Circle src={Circles} alt="" />}
               <img />
             </li>
             <li onClick={() => setTestimonial(1)}>
+              {testimonial === 1 && <Circle src={Circles} alt="" />}
+
               <img />
             </li>
             <li onClick={() => setTestimonial(2)}>
+              {testimonial === 2 && <Circle src={Circles} alt="" />}
               <img />
             </li>
             <li onClick={() => setTestimonial(3)}>
+              {testimonial === 3 && <Circle src={Circles} alt="" />}
               <img />
             </li>
             <li onClick={() => setTestimonial(4)}>
+              {testimonial === 4 && <Circle src={Circles} alt="" />}
               <img />
             </li>
           </ul>

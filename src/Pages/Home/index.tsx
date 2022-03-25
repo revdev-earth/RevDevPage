@@ -49,6 +49,10 @@ export default function Home() {
             <HomeServices item={item} key={Math.random() * 10} />
           ))}
         </ul>
+
+        <div>
+          <img src={Circles} alt="" />
+        </div>
       </SecondSection>
       <ThirdSection />
       <HomeSection4>
@@ -73,6 +77,10 @@ export default function Home() {
           ))}
         </ul>
         <img src={ImgHome2} alt="img section 4" />
+        <div>
+          <img src={Circles} alt="" />
+          <img src={Circles} alt="" />
+        </div>
       </HomeSection4>
       <ContainerSection>
         <h3>Interested to work with us?</h3>
