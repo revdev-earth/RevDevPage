@@ -36,6 +36,7 @@ export default function Home() {
         <img src={ImgHome1} alt="" />
         <img src={Circles} alt="" />
       </FirstSection>
+      {/*       
       <SecondSection>
         <h3>Our Services</h3>
 
@@ -88,7 +89,7 @@ export default function Home() {
         <Button primary>contact@revdev.com</Button>
       </ContainerSection>
       <SixSection />
-      <SevenSection />
+      <SevenSection /> */}
     </main>
   )
 }

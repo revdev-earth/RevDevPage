@@ -48,24 +48,33 @@ export const FirstSection = styled.section`
     padding-right: 50px;
     max-width: 100%;
     max-height: 750px;
+
     &:last-child {
       width: 500px;
       position: absolute;
       bottom: -250px;
       left: -5%;
+      
     }
   }
 
-  @media (max-width: 1480px) {
+  @media (max-width: 1400px) {
     padding: 50px 80px;
 
     div {
       padding-left: 10px;
     }
+
+    img:last-child {
+      width: 400px;
+      bottom: -150px;
+
+    }
   }
-  @media (max-width: 1024px) {
+
+  @media (max-width: 1200px) {
     padding: 50px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 3fr;
 
     div {
       padding-left: 0px;
@@ -74,26 +83,73 @@ export const FirstSection = styled.section`
         top: -10px;
       }
     }
-  }
-
-  @media (max-width: 1024px) {
-    padding: 50px;
-
-    grid-template-columns: 4fr 2fr;
 
     img {
-      padding-right: 0;
+      padding-right: 0px;
+
+        &:last-child {
+        width: 300px;
+        bottom: -100px;
+        left: -10%;
+        }
     }
   }
 
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+  @media (max-width: 800px) {
+    display: flex;
+    padding: 100px;
 
-    div {
-      grid-row: 2;
+    div{
+      gap: 50px;
+
+      h3 {
+        max-width: 100%
+      }
+      p{
+        max-width: 500px;
+      }
     }
+
     img {
+      position: absolute;
+      width: 40%; 
+      bottom: 0;
+      right: 0;
+
+      &:last-child {
+        width: 200px;
+        height: 200px;
+        left: 10%;
+        bottom: 20px;;
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+    padding: 30px;
+    flex-direction: column;
+    align-items: flex-end;
+
+    > div {
+
+      gap: 30px;
+
+      div {
+        gap: 10px;
+      }
+    }
+
+
+    img {
+      position: relative;
+      left: auto;
+      right: 0;
+      width: 70%;
+
+      &:last-child {
+        position: absolute;
+        width: 100px;
+      }
     }
   }
 `
@@ -108,8 +164,8 @@ export const SecondSection = styled.section`
   padding: 50px 200px;
   text-align: center;
 
-  @media (max-width: 1300px) {
-    padding: 50px 100px;
+  @media (max-width: 1400px) {
+    padding: 50px;
   }
 
   p {
@@ -126,7 +182,7 @@ export const SecondSection = styled.section`
     max-width: 1100px;
   }
   
-  div {
+  > div {
     z-index: 1;
     position: absolute;
     top: 0;

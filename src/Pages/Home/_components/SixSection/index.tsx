@@ -13,6 +13,9 @@ import {
 //* Import assets
 import Star from "@assets/star.svg"
 import Circles from "@assets/circles.svg"
+import Img3 from "@assets/home/testimonials/Image-testimonal-three.png"
+import Img2 from "@assets/home/testimonials/Image-testimonal-two.png"
+import Img1 from "@assets/home/testimonials/image-testimonial-one.png"
 
 const data = [
   {
@@ -73,24 +76,24 @@ export const SixSection = () => {
           <ul>
             <li onClick={() => setTestimonial(0)}>
               {testimonial === 0 && <Circle src={Circles} alt="" />}
-              <img />
+              <img src={Img3} />
             </li>
             <li onClick={() => setTestimonial(1)}>
               {testimonial === 1 && <Circle src={Circles} alt="" />}
 
-              <img />
+              <img src={Img2} />
             </li>
             <li onClick={() => setTestimonial(2)}>
               {testimonial === 2 && <Circle src={Circles} alt="" />}
-              <img />
+              <img src={Img1} />
             </li>
             <li onClick={() => setTestimonial(3)}>
               {testimonial === 3 && <Circle src={Circles} alt="" />}
-              <img />
+              <img src={Img2} />
             </li>
             <li onClick={() => setTestimonial(4)}>
               {testimonial === 4 && <Circle src={Circles} alt="" />}
-              <img />
+              <img src={Img3} />
             </li>
           </ul>
 

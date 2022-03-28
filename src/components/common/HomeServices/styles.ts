@@ -1,6 +1,9 @@
 import styled from "styled-components"
 
 export const Container = styled.li`
+  z-index: auto;
+  position: relative;
+  flex: 1 1 350px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -11,11 +14,6 @@ export const Container = styled.li`
   box-shadow: 0px 10px 20px rgba(7, 0, 59, 0.12);
   border-radius: 12px;
   border-top: 7px solid ${({ theme }) => theme.colors.secondary};
-
-  @media (max-width: 1300px) {
-    max-width: 290px;
-
-  }
 
   img {
     z-index: 2;
