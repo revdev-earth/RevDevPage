@@ -36,28 +36,28 @@ export const homeServices: {
   },
   {
     img: Layers,
-    title: "",
+    title: "WordPress Plugin",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut ",
     link: "#",
   },
   {
     img: MagnifyingGlass,
-    title: "",
+    title: "WordPress Plugin",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut ",
     link: "#",
   },
   {
     img: webDesign,
-    title: "",
+    title: "WordPress Plugin",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut ",
     link: "#",
   },
   {
     img: webDesign,
-    title: "",
+    title: "WordPress Plugin",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut ",
     link: "#",

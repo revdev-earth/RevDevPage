@@ -3,15 +3,20 @@ import ImgHome1 from "@assets/home/img-home-1.png"
 import ImgHome2 from "@assets/home/img-home-2.png"
 import Circles from "@assets/circles.svg"
 //*Import styles
-import { FirstSection, SecondSection, HomeSection4 } from "./styles"
+import { FirstSection, HomeSection4 } from "./styles"
 //* Import data
-import { homeSection4, homeServices } from "@data"
+import { homeSection4 } from "@data"
 //* Import sections
-import { ThirdSection, SixSection, SevenSection } from "./_components"
+import {
+  SecondSection,
+  ThirdSection,
+  SixSection,
+  SevenSection,
+} from "./_components"
 //* Import components
-import { HomeServices } from "@components"
-import { Button } from "@components"
+
 import ContainerSection from "@components/common/ContentSection"
+import { Button } from "@components"
 
 export default function Home() {
   return (
@@ -36,25 +41,9 @@ export default function Home() {
         <img src={ImgHome1} alt="" />
         <img src={Circles} alt="" />
       </FirstSection>
+      <SecondSection />
+
       {/*       
-      <SecondSection>
-        <h3>Our Services</h3>
-
-        <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et.
-        </p>
-
-        <ul>
-          {homeServices.map((item) => (
-            <HomeServices item={item} key={Math.random() * 10} />
-          ))}
-        </ul>
-
-        <div>
-          <img src={Circles} alt="" />
-        </div>
-      </SecondSection>
       <ThirdSection />
       <HomeSection4>
         <h3>

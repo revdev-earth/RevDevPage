@@ -153,54 +153,7 @@ export const FirstSection = styled.section`
     }
   }
 `
-export const SecondSection = styled.section`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  justify-content: center;
-  align-items: center;
-  background: #e9fbf8;
-  padding: 50px 200px;
-  text-align: center;
 
-  @media (max-width: 1400px) {
-    padding: 50px;
-  }
-
-  p {
-    max-width: 650px;
-  }
-
-  ul {
-    z-index: 2;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin: auto;
-    max-width: 1100px;
-  }
-  
-  > div {
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    img{
-      flex:0 1 600px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    padding: 50px;
-  }
-`
 export const FifthSection = styled.section`
   display: flex;
   flex-direction: column;
