@@ -16,11 +16,12 @@ export const Container = styled.section`
   }
 
   ul {
+    position: relative;
     z-index: 1;
     overflow: hidden;
     >div {
             width: 1150px;
-        height: 800px;
+        height: 690px;
 
 
         
@@ -75,4 +76,31 @@ export const Container = styled.section`
       
     }
   } */
+`
+
+export const ControlLeft = styled.img`
+  display: none;
+  z-index: 5;
+  position: absolute;
+  top: calc(320px - 12px);
+  left: 10px;
+  padding: 30px;
+  height: 24px;
+  width: auto;
+  border-radius: 100%;
+  box-shadow: 0px 4px 10px 0px #000;
+  transition: .2s all ease-in-out;
+  
+  &:active{
+    box-shadow: 0px 4px 8px -2px #000;
+  }
+
+  @media (max-width: 800px) {
+    display: block;
+  }
+
+`
+export const ControlRigth = styled(ControlLeft)`
+  right: 10px;
+  left: auto;
 `

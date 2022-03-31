@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const Container = styled.li`
-  z-index: auto;
+  z-index: 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -30,13 +30,6 @@ export const Container = styled.li`
       margin-left: 10px;
     }
   }
-
-
-    &:nth-child(5),
-    &:nth-child(6){
-      background-color: red;
-
-    }
   
 `
 export const Circle = styled.div`
