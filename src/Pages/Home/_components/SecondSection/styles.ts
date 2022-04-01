@@ -18,18 +18,12 @@ export const Container = styled.section`
   ul {
     position: relative;
     z-index: 1;
-    overflow: hidden;
+    display: flex;
+
     >div {
-            width: 1150px;
-        height: 690px;
-
-
-        
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-
-        gap: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
         margin: auto;
 
       }
@@ -63,19 +57,20 @@ export const Container = styled.section`
 
   }
 
-/*   @media (max-width: 800px) {
-    padding: 40px;
-
+  @media (max-width: 800px) {
     ul {
-      display: flex;
       overflow: hidden;
-      flex-wrap: wrap;
-      gap: 20px;
-      width: 100%;
-      height: 670px;
-      
+      div{
+        flex-shrink: 0;
+        width: 1150px;
+        max-height: 690px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
     }
-  } */
+  } 
 `
 
 export const ControlLeft = styled.img`

@@ -11,70 +11,78 @@ import ArrowShort from "@assets/Vector.svg"
 import { Container, ControlLeft, ControlRigth } from "./styles"
 
 export const SecondSection = () => {
-  const slideshow = useRef(null)
+  const slideshow = useRef<HTMLDivElement>(null)
 
   const siguiente = () => {
     //* Comprobando que el slide tenga elementos
-    if (slideshow.current.children.length > 0) {
-      //*Obtener el primer elemento
-      const primerElemento = slideshow.current.children[0]
-      const segundoElemento = slideshow.current.children[1]
-      console.log(":: slide :: " + primerElemento)
-      //* Estableciendo transicion para el slider
-      slideshow.current.style.transition = `3000ms ease-out all`
+    if (slideshow.current !== null) {
+      const { children } = slideshow.current
 
-      //* Tamaño de slider
-      const tamañoSlide = primerElemento?.offsetWidth + 20
-      console.log(":: tamño slide ::", tamañoSlide)
+      if (children.length > 0) {
+        //*Obtener el primer elemento
+        const primerElemento = children[0] as HTMLLIElement
+        const segundoElemento = children[1]
+        console.log(":: slide :: " + primerElemento)
+        //* Estableciendo transicion para el slider
+        slideshow.current.style.transition = `600ms ease-out all`
 
-      //* Movemos el slideshow
-      slideshow.current.style.transform = `translateX(-${tamañoSlide}px)`
+        //* Tamaño de slider
+        const tamañoSlide = primerElemento?.offsetWidth + 20
 
-      const transicion = () => {
-        //* Reiniciamos le posicion del slideshow
-        slideshow.current.style.transition = "none"
-        slideshow.current.style.transform = `translateX(0)`
+        //* Movemos el slideshow
+        slideshow.current.style.transform = `translateX(-${tamañoSlide}px)`
 
-        //* Tomamos el primer elemento y lo mandamos al final
-        slideshow.current.appendChild(primerElemento)
-        slideshow.current.appendChild(segundoElemento)
+        const transicion = () => {
+          if (slideshow.current !== null) {
+            //* Reiniciamos le posicion del slideshow
+            slideshow.current.style.transition = "none"
+            slideshow.current.style.transform = `translateX(0)`
 
-        //* Eliminar listener para que no se pause el slider hacia anterior
-        slideshow.current.removeEventListener("transitionend", transicion)
+            //* Tomamos el primer elemento y lo mandamos al final
+            slideshow.current.appendChild(primerElemento)
+            slideshow.current.appendChild(segundoElemento)
+
+            //* Eliminar listener para que no se pause el slider hacia anterior
+            slideshow.current.removeEventListener("transitionend", transicion)
+          }
+        }
+
+        //* EventListener para cuando termina la animacion
+        slideshow.current.addEventListener("transitionend", transicion)
       }
-
-      //* EventListener para cuando termina la animacion
-      slideshow.current.addEventListener("transitionend", transicion)
     }
   }
 
   const Anterior = () => {
     console.log("Anterior")
+    if (slideshow.current !== null) {
+      const { children } = slideshow.current
 
-    if (slideshow.current.children.length > 0) {
-      //* Identificamos la ultima posición
-      const index = slideshow.current.children.length - 1
+      if (children.length > 0) {
+        //* Identificamos la ultima posición
+        const index = children.length - 1
 
-      const penultimolemento = slideshow.current.children[index - 1]
-      const ultimoElemento = slideshow.current.children[index]
+        const penultimolemento = children[index - 1]
+        const ultimoElemento = children[index]
 
-      slideshow.current.insertBefore(
-        ultimoElemento,
-        slideshow.current.firstChild
-      )
-      slideshow.current.insertBefore(
-        penultimolemento,
-        slideshow.current.firstChild
-      )
+        slideshow.current.insertBefore(
+          ultimoElemento,
+          slideshow.current.firstChild
+        )
+        slideshow.current.insertBefore(
+          penultimolemento,
+          slideshow.current.firstChild
+        )
 
-      slideshow.current.style.transition = "none"
-      const tamañoSlide = slideshow.current.children[0].offsetWidth
-      slideshow.current.style.transform = `translateX(-${tamañoSlide}px)`
+        slideshow.current.style.transition = "none"
+        const tamañoSlide = children[0].offsetWidth
+        slideshow.current.style.transform = `translateX(-${tamañoSlide}px)`
 
-      setTimeout(() => {
-        slideshow.current.style.transition = `3000ms ease-out all`
-        slideshow.current.style.transform = `translateX(0)`
-      }, 30)
+        setTimeout(() => {
+          slideshow.current.style.transition = `600ms ease-out all`
+          slideshow.current.style.transform = `translateX(0)`
+        }, 30)
+      }
     }
   }
 
