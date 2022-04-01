@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 export const Container = styled.section`
+overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -174,6 +175,10 @@ export const Users = styled.div<{ pos: number }>`
   }
   span {
     color: ${({ theme }) => theme.colors.secondary};
+  }
+
+  @media (max-width: 800px){
+    max-width: fit-content;
   }
 `
 

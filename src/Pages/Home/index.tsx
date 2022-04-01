@@ -43,11 +43,10 @@ export default function Home() {
       </FirstSection>
       <SecondSection />
 
-      {/*       
       <ThirdSection />
       <HomeSection4>
         <h3>
-          Your idea into <span>reality</span>
+          how your idea becomes reality with us <span>reality</span>
         </h3>
         <p>
           We start every web development project with a project manager from
@@ -72,13 +71,13 @@ export default function Home() {
           <img src={Circles} alt="" />
         </div>
       </HomeSection4>
+      <SixSection />
       <ContainerSection>
         <h3>Interested to work with us?</h3>
         <p>Send a line here get and update daily</p>
         <Button primary>contact@revdev.com</Button>
       </ContainerSection>
-      <SixSection />
-      <SevenSection /> */}
+      <SevenSection />
     </main>
   )
 }

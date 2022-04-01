@@ -184,6 +184,7 @@ export const HomeSection4 = styled.section`
   }
 
   h3 {
+    color: ${({ theme }) => theme.colors.primary};
     span {
       color: ${({ theme }) => theme.colors.secondary};
       font-size: 48px;
@@ -192,14 +193,15 @@ export const HomeSection4 = styled.section`
   p {
     max-width: 1010px;
   }
-
+  
   ul {
     li {
       padding: 20px;
       display: flex;
       gap: 80px;
-
+      
       span {
+        color: ${({ theme }) => theme.colors.primary};
         display: flex;
         justify-content: center;
         align-items: center;
@@ -256,7 +258,6 @@ export const HomeSection4 = styled.section`
   }
 
   @media (max-width: 1024px) {
-    padding: 50px;
 
     gap: 20px;
     ul {
@@ -282,9 +283,9 @@ export const HomeSection4 = styled.section`
     }
   }
 
-  @media (max-width: 768px) {
-    padding: 30px;
-
+  @media (max-width: 800px) {
+    gap: 50px;
+    padding-bottom: 200px;
     ul {
       li {
         padding: 10px 0px;
@@ -299,6 +300,7 @@ export const HomeSection4 = styled.section`
 
   @media (max-width: 425px) {
     padding: 30px;
+    padding-bottom: 180px;
 
     ul {
       li {
@@ -308,6 +310,21 @@ export const HomeSection4 = styled.section`
           height: 50px;
           min-width: 50px;
         }
+      }
+    }
+
+    img {
+      bottom: 0px;
+    }
+
+    div {
+
+      img:last-child{
+        width: 150px;
+        top:  auto;
+        right: auto;
+        left: 30px;
+        bottom: 10px;
       }
     }
   }

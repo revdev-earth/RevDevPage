@@ -27,25 +27,29 @@ const data = [
   },
   {
     qualification: 4.5,
-    description: "Second Testimonial.",
+    description:
+      "We tried several agencies before we found daCode. Has been a pleasure to work with and will soon start the next project with our second brand.",
     name: "name 2",
     enterprise: "enterprice 2",
   },
   {
     qualification: 4.8,
-    description: "Third testimonial.",
+    description:
+      "We tried several agencies before we found daCode. Has been a pleasure to work with and will soon start the next project with our second brand.",
     name: "name 3",
     enterprise: "enterprice 3",
   },
   {
     qualification: 4.2,
-    description: "four testimonial",
+    description:
+      "We tried several agencies before we found daCode. Has been a pleasure to work with and will soon start the next project with our second brand.",
     name: "name 4",
     enterprise: "enterprice 4",
   },
   {
     qualification: 4.9,
-    description: "five testimonial",
+    description:
+      "We tried several agencies before we found daCode. Has been a pleasure to work with and will soon start the next project with our second brand.",
     name: "name 5",
     enterprise: "enterprice 5",
   },

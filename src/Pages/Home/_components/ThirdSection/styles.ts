@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
-export const Container = styled.section`
+export const Container = styled.section<{ pag: number }>`
+  
   position: relative;
   margin: auto;
   padding: 100px 200px;
@@ -19,11 +20,12 @@ export const Container = styled.section`
     margin-top: 20px;
   }
 
-  div {
+  >div {
     
     margin: 40px auto;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 30px;
 
     h4 {
@@ -33,6 +35,10 @@ export const Container = styled.section`
       border: 1px solid transparent;
       border-radius: 50px;
       cursor: pointer;
+      
+      &:nth-child(${({pag}) => pag + 1}){
+        border: 1px solid ${({ theme }) => theme.colors.secondary};
+      }
 
       &:hover {
         border: 1px solid ${({ theme }) => theme.colors.secondary};
@@ -42,23 +48,25 @@ export const Container = styled.section`
 
   ul {
     
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-
-    li {
-      z-index: 3;
+    
+    div {
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       gap: 40px;
+
+      li {
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
       padding: 5px;
       text-align: start;
-
       img {
         width: 100%;
         max-height: 300px;
         border-radius: 24px;
       }
+    }
     }
   }
 
@@ -68,17 +76,47 @@ export const Container = styled.section`
     bottom: -125px;
   }
 
+  @media (max-width: 1400px) {
+    padding: 100px;
+  }
   @media (max-width: 1024px) {
     padding: 50px;
-
+    
     button {
       bottom: -75px;
+    }
+  }
+  @media (max-width: 800px) {
+    padding: 0;
+    > div {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    ul {
+      overflow: hidden;
+      div {
+        position: relative;
+        left: -200px;
+        
+        width: 1200px;
+      }
+    }
+
+    button {
+      bottom: -25px;
     }
   }
 `
 export const Circle = styled.img`
   z-index: 0;
   position: absolute;
+  width: 200px;
   top: 200px;
   left: 30%;
+
+  @media (max-width){
+    top: calc(50% - 100px);
+    left: 10%;
+  }
 `
