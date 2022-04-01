@@ -22,7 +22,6 @@ export const SecondSection = () => {
         //*Obtener el primer elemento
         const primerElemento = children[0] as HTMLLIElement
         const segundoElemento = children[1]
-        console.log(":: slide :: " + primerElemento)
         //* Estableciendo transicion para el slider
         slideshow.current.style.transition = `600ms ease-out all`
 
@@ -54,7 +53,6 @@ export const SecondSection = () => {
   }
 
   const Anterior = () => {
-    console.log("Anterior")
     if (slideshow.current !== null) {
       const { children } = slideshow.current
 
@@ -101,8 +99,12 @@ export const SecondSection = () => {
             <HomeServices item={item} key={Math.random() * 10} />
           ))}
         </div>
-        <ControlLeft src={ArrowShort} onClick={Anterior} alt="Control left" />
-        <ControlRigth src={ArrowShort} onClick={siguiente} alt="" />
+        <ControlLeft>
+          <img src={ArrowShort} onClick={Anterior} alt="Control left" />
+        </ControlLeft>
+        <ControlRigth>
+          <img src={ArrowShort} onClick={siguiente} alt="" />
+        </ControlRigth>
       </ul>
 
       <div>
