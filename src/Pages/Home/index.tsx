@@ -3,15 +3,20 @@ import ImgHome1 from "@assets/home/img-home-1.png"
 import ImgHome2 from "@assets/home/img-home-2.png"
 import Circles from "@assets/circles.svg"
 //*Import styles
-import { FirstSection, SecondSection, HomeSection4 } from "./styles"
+import { FirstSection, HomeSection4 } from "./styles"
 //* Import data
-import { homeSection4, homeServices } from "@data"
+import { homeSection4 } from "@data"
 //* Import sections
-import { ThirdSection, SixSection, SevenSection } from "./_components"
+import {
+  SecondSection,
+  ThirdSection,
+  SixSection,
+  SevenSection,
+} from "./_components"
 //* Import components
-import { HomeServices } from "@components"
-import { Button } from "@components"
+
 import ContainerSection from "@components/common/ContentSection"
+import { Button } from "@components"
 
 export default function Home() {
   return (
@@ -23,47 +28,28 @@ export default function Home() {
             <span>market</span>
           </h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. At ut
-            turpis adipiscing tempus, magna elit nunc iaculis sit. Libero velit
-            quis leo non. At donec egestas cras in libero pellentesque. Donec
-            amet phasellus
+            Our ideas move the world, and your idea is one of them. We are going
+            to make your idea a reality, welcome
           </p>
           <div>
-            <Button secondary>Get Started</Button>
+            <Button secondary>start now!</Button>
             <Button>contact Us</Button>
           </div>
         </div>
         <img src={ImgHome1} alt="" />
         <img src={Circles} alt="" />
       </FirstSection>
-      <SecondSection>
-        <h3>Our Services</h3>
+      <SecondSection />
 
-        <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et.
-        </p>
-
-        <ul>
-          {homeServices.map((item) => (
-            <HomeServices item={item} key={Math.random() * 10} />
-          ))}
-        </ul>
-
-        <div>
-          <img src={Circles} alt="" />
-        </div>
-      </SecondSection>
       <ThirdSection />
       <HomeSection4>
         <h3>
-          Your idea into <span>reality</span>
+          how your idea becomes reality with us <span>reality</span>
         </h3>
         <p>
-          We start every web development project with a project manager from
-          daCode interviewing you about the goal with the project. This is for
-          us to be able to come up with a solution for your SaaS business,
-          estimate a timeline, and come up with a budget.
+          Let's see your idea and then we will start with the plan of how to
+          plan the development of the idea in reality, we are pleased to know
+          how we will be in the future
         </p>
         <ul>
           {homeSection4.map((item) => (
@@ -82,12 +68,12 @@ export default function Home() {
           <img src={Circles} alt="" />
         </div>
       </HomeSection4>
+      <SixSection />
       <ContainerSection>
         <h3>Interested to work with us?</h3>
         <p>Send a line here get and update daily</p>
         <Button primary>contact@revdev.com</Button>
       </ContainerSection>
-      <SixSection />
       <SevenSection />
     </main>
   )

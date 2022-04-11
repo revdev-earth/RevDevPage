@@ -1,8 +1,7 @@
 //*Import styles
 import { Container, Circle } from "./styles"
-
 //* Import assets
-import ArrowRoght from "../../../assets/arrow-right.svg"
+import ArrowRoght from "@assets/arrow-right.svg"
 
 interface HomeServicesProps {
   item: { img: string; title: string; description: string; link: string }

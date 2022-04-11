@@ -13,6 +13,9 @@ import {
 //* Import assets
 import Star from "@assets/star.svg"
 import Circles from "@assets/circles.svg"
+import Img3 from "@assets/home/testimonials/Image-testimonal-three.png"
+import Img2 from "@assets/home/testimonials/Image-testimonal-two.png"
+import Img1 from "@assets/home/testimonials/image-testimonial-one.png"
 
 const data = [
   {
@@ -24,25 +27,29 @@ const data = [
   },
   {
     qualification: 4.5,
-    description: "Second Testimonial.",
+    description:
+      "We tried several agencies before we found daCode. Has been a pleasure to work with and will soon start the next project with our second brand.",
     name: "name 2",
     enterprise: "enterprice 2",
   },
   {
     qualification: 4.8,
-    description: "Third testimonial.",
+    description:
+      "We tried several agencies before we found daCode. Has been a pleasure to work with and will soon start the next project with our second brand.",
     name: "name 3",
     enterprise: "enterprice 3",
   },
   {
     qualification: 4.2,
-    description: "four testimonial",
+    description:
+      "We tried several agencies before we found daCode. Has been a pleasure to work with and will soon start the next project with our second brand.",
     name: "name 4",
     enterprise: "enterprice 4",
   },
   {
     qualification: 4.9,
-    description: "five testimonial",
+    description:
+      "We tried several agencies before we found daCode. Has been a pleasure to work with and will soon start the next project with our second brand.",
     name: "name 5",
     enterprise: "enterprice 5",
   },
@@ -73,24 +80,24 @@ export const SixSection = () => {
           <ul>
             <li onClick={() => setTestimonial(0)}>
               {testimonial === 0 && <Circle src={Circles} alt="" />}
-              <img />
+              <img src={Img3} />
             </li>
             <li onClick={() => setTestimonial(1)}>
               {testimonial === 1 && <Circle src={Circles} alt="" />}
 
-              <img />
+              <img src={Img2} />
             </li>
             <li onClick={() => setTestimonial(2)}>
               {testimonial === 2 && <Circle src={Circles} alt="" />}
-              <img />
+              <img src={Img1} />
             </li>
             <li onClick={() => setTestimonial(3)}>
               {testimonial === 3 && <Circle src={Circles} alt="" />}
-              <img />
+              <img src={Img2} />
             </li>
             <li onClick={() => setTestimonial(4)}>
               {testimonial === 4 && <Circle src={Circles} alt="" />}
-              <img />
+              <img src={Img3} />
             </li>
           </ul>
 

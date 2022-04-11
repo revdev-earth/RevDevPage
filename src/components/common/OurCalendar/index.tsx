@@ -10,9 +10,11 @@ const OurCalendar = () => (
       <h3>Our Calendar</h3>
       <div>
         <p>
-          We want to know more about you? What is your name? what do you do for
-          a living? What are you thinking about? what is your next step, and
-          more...
+          We want to know more about you?
+          <br />
+          What is your name? what do you do for a living?
+          <br />
+          What are you thinking about? what is your next step, and more...
         </p>
         <p>when would you like to chat?</p>
         <p>

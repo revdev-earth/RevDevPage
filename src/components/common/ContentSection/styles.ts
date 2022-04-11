@@ -37,4 +37,31 @@ export const Container = styled.section`
         bottom: 0;
         }
     }
+
+    @media (max-width: 800px){
+        &:after {
+            width: 200px;
+            height: 200px;
+            top: auto;
+            
+            bottom: -60px;
+        }
+
+        img {
+        width: 30%;
+        }
+    }
+    
+    @media (max-width: 400px){
+        &:after {
+            width: 150px;
+            height: 150px;
+            top: auto;
+            bottom: -50px;
+        }
+        img {
+        width: 50%;
+        }
+        
+    }
 `

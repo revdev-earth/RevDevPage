@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 export const Container = styled.section`
+overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -38,7 +39,8 @@ export const Slide = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 80px;
+  padding: 50px 80px 50px 80px;
+  height: fit-content;
   flex: 1 1 1024px;
   box-shadow: 0px 25px 100px -50px #000;
   border-radius: 24px;
@@ -46,6 +48,11 @@ export const Slide = styled.div`
   span {
     font-size: 38px;
     font-weight: bold;
+  }
+
+  p {
+    max-width: 900px;
+    font-weight: 600;
   }
 `
 
@@ -65,25 +72,46 @@ export const Users = styled.div<{ pos: number }>`
 
     li {
       position: relative;
-      
+      opacity: .3;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-width: 100px;
-      height: 100px;
+      min-width: 90px;
+      height: 90px;
       border-radius: 100%;
       transition: 0.2s all ease-in-out;
       cursor: pointer;
 
+      img {
+        z-index: 2;
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+        transition: 0.2s all ease-in;
+      }
+
       &:hover {
         transform: scale(1.1);
+
+        &:after {
+          background: transparent;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
 
       &:active {
         transform: scale(0.9);
-      }
+      }     
 
       &:nth-child(${({ pos }) => pos}) {
+        opacity: 1;
+        min-width: 100px;
+        height: 100px;
+
         &:after {
           background: transparent;
         }
@@ -99,16 +127,12 @@ export const Users = styled.div<{ pos: number }>`
         }
       }
 
-      img {
-        z-index: 2;
-        width: 100%;
-        height: 100%;
-        border-radius: 100%;
-        transition: 0.2s all ease-in;
-      }
-
+      
       &:nth-child(${({ pos }) => pos - 1}),
       &:nth-child(${({ pos }) => pos + 1}) {
+        opacity: .6;
+        min-width: 100px;
+        height: 100px;
         background-color: ${({ theme }) => theme.colors.grayLight};
 
         &:after {
@@ -127,14 +151,14 @@ export const Users = styled.div<{ pos: number }>`
           }
 
           img {
-            width: 90%;
-            height: 90%;
+            width: 90px;
+            height: 90px;
           }
         }
 
         img {
-          width: 80%;
-          height: 80%;
+          width: 90px;
+          height: 90px;
         }
       }
 
@@ -149,22 +173,6 @@ export const Users = styled.div<{ pos: number }>`
         background: rgb(183 183 183 / 60%);
         transition: 0.4s all ease-in;
       }
-
-      &:hover {
-        &:after {
-          background: transparent;
-        }
-
-        img {
-          width: 80%;
-          height: 80%;
-        }
-      }
-
-      img {
-        width: 60%;
-        height: 60%;
-      }
     }
   }
 
@@ -173,6 +181,10 @@ export const Users = styled.div<{ pos: number }>`
   }
   span {
     color: ${({ theme }) => theme.colors.secondary};
+  }
+
+  @media (max-width: 800px){
+    max-width: fit-content;
   }
 `
 

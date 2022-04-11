@@ -11,7 +11,7 @@ export const ThirdSection = () => {
   const [pag, setPag] = useState(0)
 
   return (
-    <Container>
+    <Container pag={pag}>
       <h4>Portfolio</h4>
       <h3>Our Great Work</h3>
       <Circle src={Circles} alt="" />
@@ -23,11 +23,13 @@ export const ThirdSection = () => {
         <h4 onClick={() => setPag(2)}>Search Engine Optimization</h4>
       </div>
       <ul>
-        {homeWorks[pag].map((item) => (
-          <li key={Math.random() * 10}>
-            <img src={item.img} alt="img-item" /> <p>{item.description}</p>
-          </li>
-        ))}
+        <div>
+          {homeWorks[pag].map((item) => (
+            <li key={Math.random() * 10}>
+              <img src={item.img} alt="img-item" /> <p>{item.description}</p>
+            </li>
+          ))}
+        </div>
       </ul>
       <Button primary>See All</Button>
     </Container>

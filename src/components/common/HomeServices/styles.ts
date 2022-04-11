@@ -1,21 +1,20 @@
 import styled from "styled-components"
 
 export const Container = styled.li`
+  z-index: 0;
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 30px;
   max-width: 350px;
+  height: fit-content;
   background-color: ${({ theme }) => theme.colors.whiteSecondary};
   text-align: start;
   box-shadow: 0px 10px 20px rgba(7, 0, 59, 0.12);
   border-radius: 12px;
   border-top: 7px solid ${({ theme }) => theme.colors.secondary};
-
-  @media (max-width: 1300px) {
-    max-width: 290px;
-
-  }
+  transition: .3s all ease-in-out;
 
   img {
     z-index: 2;
@@ -31,6 +30,7 @@ export const Container = styled.li`
       margin-left: 10px;
     }
   }
+  
 `
 export const Circle = styled.div`
 
