@@ -176,7 +176,7 @@ export const HomeSection4 = styled.section`
   flex-direction: column;
   gap: 50px;
 
-  img {
+  > img {
     position: absolute;
     bottom: -10%;
     right: 0;

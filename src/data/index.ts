@@ -22,44 +22,44 @@ export const homeServices: {
 }[] = [
   {
     img: WordPress,
-    title: "WordPress Site",
+    title: "Software and infrastructure",
     description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut ",
+      "you can opt for knowledge and personnel to shape the ideas proposed for the future",
     link: "#",
   },
   {
     img: StartUp,
-    title: "WordPress Plugin",
+    title: "Digital tools",
     description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut ",
+      "we put at your disposal development tools, to learn more about the products and services and thus aim higher",
     link: "#",
   },
   {
     img: Layers,
-    title: "WordPress Plugin",
+    title: "Company boost",
     description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut ",
+      "To reach more people we need more energy and we all do that impulse together, advancing and adapting to our now",
     link: "#",
   },
   {
     img: MagnifyingGlass,
-    title: "WordPress Plugin",
+    title: "front end",
     description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut ",
+      "What impresses us the most is what we see, so what better than making our clients see that they are at home.",
     link: "#",
   },
   {
     img: webDesign,
-    title: "WordPress Plugin",
+    title: "back end",
     description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut ",
+      "we improve the services that are interconnected to provide better security and response to our customers",
     link: "#",
   },
   {
     img: webDesign,
-    title: "WordPress Plugin",
+    title: "design",
     description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut ",
+      "we draw the best way to see your service, we want everyone to understand what you have for the world",
     link: "#",
   },
 ]
@@ -69,25 +69,25 @@ export const homeSection4 = [
     id: 1,
     title: "Your Idea",
     description:
-      "In order for us at daCode to know that we are a good fit for your project we always start with screening questions in order to make sure that we are a suitable match for your company.",
+      "We are going to talk about the idea and what you expect from it, how you expect it to be built and what your plans are, who is going to participate and how you see yourself in it",
   },
   {
     id: 2,
-    title: "Strategy meeting",
+    title: "Strategy",
     description:
-      "This meeting will be a meeting where we together go over our proposed strategy on how we can reach your website goals. Here we will establish a project update system where you will be able to follow the whole process from start to finish.",
+      "with everything we already know, then we start to plan together and we begin to increase the clarity capacity that we are going to give to the idea until it is stable enough to be maintained over time.",
   },
   {
     id: 3,
-    title: "Agile and Scrum framework",
+    title: "Backlog and Sprints",
     description:
-      "In this step we will have a team meeting with the project manager and the lead developer and designer. Then we will be working using and agile and scrum framework in order to make sure to deliver your project on time and within budget.",
+      "With the ideas come the plans and the planning is immediate, we schedule all the issues that we can see so that we begin to make the idea take shape.",
   },
   {
     id: 4,
     title: "Your website goes live",
     description:
-      "The final checks of the website will happen, we will make sure that all tracking pixels, links and user interface is compatible with all different devices. We will also perform a few different tests to make sure that the website is optimised for user experience.",
+      "It is time for us to give shape to the time of our idea, that each part of itself and our plans are fulfilled, here we are already the idea becoming a reality",
   },
 ]
 export const homeWorks = [
@@ -95,17 +95,17 @@ export const homeWorks = [
     {
       img: Img1,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum.",
+        "Growing up together among the consultations of others, we find that sitting in the window chatting with our neighbor makes us feel good, that is why we have given life to the windows",
     },
     {
       img: Img2,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum.",
+        "Vacations are something that gives us relaxation and also motivates us to spend time as best we can, that's why we're going to air your plans",
     },
     {
       img: Img3,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum.",
+        "Clean air, drinking water, connecting with nature and the now, are skills that we must nurture daily, that's why we make you feel with your daily plans",
     },
   ],
   [

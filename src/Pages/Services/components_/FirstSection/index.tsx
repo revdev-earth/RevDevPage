@@ -8,12 +8,14 @@ export const FirstSection = () => {
   return (
     <section>
       <ContainerSection>
-        <h3>What we can offer your SaaS Business</h3>
+        <h3>Toolbox</h3>
         <p>
-          We have chosen to only collaborate and work with SaaS businesses, this
-          is because our expertise lies and we know that we can provide the most
-          value to our clients. Our team has worked with Nordic, European and
-          American tech unicorns.
+          you are looking for us, and we are looking for you, let's work
+          together to build our dreams.
+        </p>
+        <p>
+          Here you will find a series of options that we have designed with the
+          best solutions in mind to help your business and your ideas grow.
         </p>
       </ContainerSection>
     </section>

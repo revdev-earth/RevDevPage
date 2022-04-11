@@ -39,7 +39,8 @@ export const Slide = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 80px;
+  padding: 50px 80px 50px 80px;
+  height: fit-content;
   flex: 1 1 1024px;
   box-shadow: 0px 25px 100px -50px #000;
   border-radius: 24px;
@@ -47,6 +48,11 @@ export const Slide = styled.div`
   span {
     font-size: 38px;
     font-weight: bold;
+  }
+
+  p {
+    max-width: 900px;
+    font-weight: 600;
   }
 `
 

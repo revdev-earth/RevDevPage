@@ -28,13 +28,11 @@ export default function Home() {
             <span>market</span>
           </h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. At ut
-            turpis adipiscing tempus, magna elit nunc iaculis sit. Libero velit
-            quis leo non. At donec egestas cras in libero pellentesque. Donec
-            amet phasellus
+            Our ideas move the world, and your idea is one of them. We are going
+            to make your idea a reality, welcome
           </p>
           <div>
-            <Button secondary>Get Started</Button>
+            <Button secondary>start now!</Button>
             <Button>contact Us</Button>
           </div>
         </div>
@@ -49,10 +47,9 @@ export default function Home() {
           how your idea becomes reality with us <span>reality</span>
         </h3>
         <p>
-          We start every web development project with a project manager from
-          daCode interviewing you about the goal with the project. This is for
-          us to be able to come up with a solution for your SaaS business,
-          estimate a timeline, and come up with a budget.
+          Let's see your idea and then we will start with the plan of how to
+          plan the development of the idea in reality, we are pleased to know
+          how we will be in the future
         </p>
         <ul>
           {homeSection4.map((item) => (

@@ -10,11 +10,12 @@ import { Container } from "./styles"
 export const SecondSection = () => {
   return (
     <Container>
-      <h3>Our services</h3>
+      <h3>Toolbox</h3>
       <div>
         <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et.
+          We have a series of tools that allow us to provide ideas with the best
+          fuel to make them grow in a big way. Do you want to know more? contact
+          us
         </p>
       </div>
 
