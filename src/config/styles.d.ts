@@ -18,6 +18,7 @@ declare module "styled-components" {
       grayLight: string
     }
     fonts: {
+      header: string
       h1: string
       h2: string
       h3: string
@@ -26,7 +27,6 @@ declare module "styled-components" {
       h6: string
       txt: string
       txtBig: string
-      txtmd: string
       txtsm: string
     }
   }
