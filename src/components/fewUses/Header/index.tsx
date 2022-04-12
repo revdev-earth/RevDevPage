@@ -30,10 +30,7 @@ export function Header() {
     if (locationPath === "/ideas") {
       return setActualLocation(2)
     }
-  }, [actualLocation])
-
-  console.log(":: Estamoe en: ::", locationPath)
-  console.log(":: state ::", actualLocation)
+  }, [locationPath])
 
   const closeMenu = () => {
     setIsOpen(false)
@@ -52,7 +49,7 @@ export function Header() {
         <img src={BarMenu} alt="" onClick={toogleMenu} />
       </MenuMovil>
 
-      <Navigation isOpen={isOpen}>
+      <Navigation isOpen={isOpen} selected={actualLocation}>
         <ul>
           <li>
             <Link to="/" onClick={closeMenu}>

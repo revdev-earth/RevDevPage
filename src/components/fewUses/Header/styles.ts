@@ -75,7 +75,7 @@ export const MenuMovil = styled.div`
   }
 `
 
-export const Navigation = styled.nav<{ isOpen: boolean }>`
+export const Navigation = styled.nav<{ isOpen: boolean, selected: number}>`
   display: flex;
   justify-content: space-evenly;
 
@@ -91,6 +91,7 @@ export const Navigation = styled.nav<{ isOpen: boolean }>`
       list-style: none;
       float: right;
       transition: 0.3s all ease-in-out;
+      
 
       &:hover {
         transform: scale(1.05);
@@ -128,8 +129,15 @@ export const Navigation = styled.nav<{ isOpen: boolean }>`
         display: block;
         padding: 8px 10px;
         width: 100%;
-        a{
 
+        &:nth-child(${({selected})=> selected + 1}){
+          a{
+
+            color: ${({theme}) => theme.colors.primary}
+          }
+        }
+        a{
+          
           font-size: ${({theme}) => theme.fonts.h4};
         }
       }
