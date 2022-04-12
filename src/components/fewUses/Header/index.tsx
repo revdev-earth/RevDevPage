@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 //* Import link from Router
 import { Link } from "react-router-dom"
@@ -12,8 +12,28 @@ import BarMenu from "@assets/bars-solid.svg"
 //* Import components
 import { Button } from "@components"
 
+import { useLocation } from "react-router-dom"
+
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const location = useLocation()
+  const locationPath = location.pathname
+  const [actualLocation, setActualLocation] = useState(0)
+
+  useEffect(() => {
+    if (locationPath === "/") {
+      return setActualLocation(0)
+    }
+    if (locationPath === "/services") {
+      return setActualLocation(1)
+    }
+    if (locationPath === "/ideas") {
+      return setActualLocation(2)
+    }
+  }, [actualLocation])
+
+  console.log(":: Estamoe en: ::", locationPath)
+  console.log(":: state ::", actualLocation)
 
   const closeMenu = () => {
     setIsOpen(false)
@@ -35,6 +55,12 @@ export function Header() {
       <Navigation isOpen={isOpen}>
         <ul>
           <li>
+            <Link to="/" onClick={closeMenu}>
+              Home
+            </Link>
+          </li>
+
+          <li>
             <Link to="/services" onClick={closeMenu}>
               Services
             </Link>
@@ -45,9 +71,9 @@ export function Header() {
               Ideas
             </Link>
           </li>
-          <Button red>Request a quote</Button>
         </ul>
       </Navigation>
+      <Button red>Request a quote</Button>
     </Container>
   )
 }

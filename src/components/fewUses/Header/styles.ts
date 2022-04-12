@@ -13,8 +13,12 @@ export const Container = styled.header`
     padding: 10px 30px;
   }
 
-  @media (max-width: 678px) {
+  @media (max-width: 800px) {
     padding: 0 20px;
+
+    button{
+      display: none;
+    }
   }
 
   @media (max-width: 425px) {
@@ -75,6 +79,7 @@ export const Navigation = styled.nav<{ isOpen: boolean }>`
   display: flex;
   justify-content: space-evenly;
 
+  z-index: 10 ;
   ul {
     gap: 30px;
     display: flex;
@@ -98,29 +103,38 @@ export const Navigation = styled.nav<{ isOpen: boolean }>`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     /* background-color: ; */
-    width: 100%;
     position: fixed;
-    top: 90px;
+    top: 75px;
     left: 100%;
     justify-content: center;
+    width: 100%;
     transition: left 0.5s;
-
+    
     ${({ isOpen }) => {
       return isOpen && `left: 0;`
     }}
 
     ul {
+      padding: 30px;
+      height: 95vh;
       width: 100%;
       flex-direction: column;
       gap: 10px;
+      background-color: ${({theme}) => theme.colors.gray};
 
       li {
         display: block;
-        width: 100%;
         padding: 8px 10px;
+        width: 100%;
+        a{
+
+          font-size: ${({theme}) => theme.fonts.h4};
+        }
       }
     }
+
+
   }
 `

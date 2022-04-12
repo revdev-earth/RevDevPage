@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 export const FirstSection = styled.section`
+  z-index: 0;
   overflow: hidden;
   position: relative;
   margin: auto;
