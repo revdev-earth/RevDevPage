@@ -13,8 +13,8 @@ import {
 //* Import assets
 import Star from "@assets/star.svg"
 import Circles from "@assets/circles.svg"
-import Img3 from "@assets/home/testimonials/Image-testimonal-three.png"
-import Img2 from "@assets/home/testimonials/Image-testimonal-two.png"
+import Img3 from "@assets/home/testimonials/image-testimonal-three.png"
+import Img2 from "@assets/home/testimonials/image-testimonal-two.png"
 import Img1 from "@assets/home/testimonials/image-testimonial-one.png"
 
 const data = [
