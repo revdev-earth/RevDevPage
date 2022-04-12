@@ -73,12 +73,14 @@ export const SecondSection = () => {
         )
 
         slideshow.current.style.transition = "none"
-        const tamañoSlide = children[0].offsetWidth
-        slideshow.current.style.transform = `translateX(-${tamañoSlide}px)`
+        const { offsetWidth } = children[0] as any
+        slideshow.current.style.transform = `translateX(-${offsetWidth}px)`
 
         setTimeout(() => {
-          slideshow.current.style.transition = `600ms ease-out all`
-          slideshow.current.style.transform = `translateX(0)`
+          if (slideshow.current !== null) {
+            slideshow.current.style.transition = `600ms ease-out all`
+            slideshow.current.style.transform = `translateX(0)`
+          }
         }, 30)
       }
     }
