@@ -30,31 +30,20 @@ export const Container = styled.footer`
     }
     @media (max-width: 1300px) {
       top: 50%;
-      width: 200px;
-      height: 200px;
     }
-
+    
     @media (max-width: 800px) {
       top: 70%;
-      left: -20%;
+      left: -2%;
     }
     @media (max-width: 425px) {
-      top: 85%;
-      left: -100px;
+      width: 200px;
+      height: 200px;
+      top: 65%;
+      left: -10px;
     }
   }
 
-  &:before {
-    position: absolute;
-    transform: rotate(-60deg);
-    content: "";
-    top: -80px;
-    left: 70px;
-    width: 70px;
-    height: 250px;
-    border: 1px solid #fdfdff63;
-    border-radius: 50%;
-  }
 `
 export const Content = styled.div`
   margin: auto;
@@ -205,7 +194,7 @@ export const Bottom = styled.div`
   
   @media ( max-width: 400px ){
     padding: 30px 10px;
-
+    
     >div {
       justify-content: center;
       
@@ -216,8 +205,6 @@ export const Bottom = styled.div`
         div {
           position: relative;
           gap:15px;
-
-          
         }
       }
       
@@ -228,6 +215,50 @@ export const Bottom = styled.div`
         margin: 0;
         position: absolute;
         display: none;
+      }
+    }
+  }
+`
+export const Images = styled.div`
+z-index: 1;
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+
+  img {
+    width: 40%;
+    &:first-child {
+      position: absolute;
+      top: 0;
+      left: 0;
+      @media (max-width: 800px){
+        width: 60%;
+        left: -30%;
+      }
+      @media (max-width: 400px){
+        width: 100%;
+        left: -50%;
+
+      }
+    }
+    
+    &:last-child {
+      position: absolute;
+      height: 100%;
+      bottom: 0;
+      right: 0;
+
+      @media (max-width: 800px){
+        width: 60%;
+        height: auto;
+        top: 40%;
+
+      }
+      @media (max-width: 400px){
+        width: 90%;
+  
       }
     }
   }
