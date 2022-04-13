@@ -72,6 +72,12 @@ export const Content = styled.div`
   @media (max-width: 1024px) {
     padding: 50px 80px;
   }
+  
+  @media (max-width: 1024px) {
+    padding: 30px;
+
+  }
+
 `
 export const Top = styled.div`
   display: flex;
@@ -80,19 +86,30 @@ export const Top = styled.div`
   padding-bottom: 60px;
   border-bottom: 2px solid #fdfdff63;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1200px) {
     padding-bottom: 30px;
+    gap: 50px;
   }
 
   div {
     z-index: 2;
+    display: flex;
+
     &:nth-child(1) {
+      flex-direction: column;
+      gap: 15px;
+      
       p {
         max-width: 360px;
       }
+
+      @media (max-width: 800px){
+      padding: 30px;
+      border-bottom: 2px solid #fdfdff63;
+      }
     }
     &:nth-child(2) {
-      display: flex;
+      
       gap: 80px;
 
       @media (max-width: 1500px) {
@@ -100,6 +117,10 @@ export const Top = styled.div`
       }
       @media (max-width: 1024px) {
         gap: 30px;
+      }
+      @media (max-width: 800px){
+      padding: 0 30px 0 30px;
+
       }
 
       ul {
@@ -137,13 +158,33 @@ export const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
   padding-top: 50px;
+  gap: 50px;
 
-  @media (max-width: 1024px) {
-    padding-top: 30px;
-  }
-
-  div {
+  > div{
     z-index: 2;
+    display: flex;
+
+    &:first-child{
+      gap: 30px;
+      div{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        cursor: pointer;
+
+        p {
+          font-weight: 600;
+        }
+
+        img {
+          height: 20px;
+          transform: rotate(90deg);
+        }
+      }
+    }
+    
+    &:last-child {
+      gap: 50px;
     ul {
       display: flex;
       gap: 20px;
@@ -152,6 +193,41 @@ export const Bottom = styled.div`
         a {
           color: ${({ theme }) => theme.colors.primary};
         }
+      }
+    }
+    }
+  }
+
+  @media ( max-width: 800px ){
+    position: relative;
+    
+  }
+  
+  @media ( max-width: 400px ){
+    padding: 30px 10px;
+
+    >div {
+      justify-content: center;
+      
+      &:first-child{
+        width: 100%;
+        gap: 50px;
+        
+        div {
+          position: relative;
+          gap:15px;
+
+          
+        }
+      }
+      
+      &:last-child{
+        overflow: hidden;
+        width: 0;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        display: none;
       }
     }
   }
