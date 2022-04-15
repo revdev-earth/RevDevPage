@@ -21,15 +21,14 @@ export const Container = styled.section`
     display: flex;
 
     div:nth-child(1) {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 20px;
-        margin: auto;
-
-      }
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 20px;
+      margin: auto;
     }
+  }
 
-  > div{
+  > div {
     z-index: 0;
     position: absolute;
     top: 0;
@@ -39,13 +38,11 @@ export const Container = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    img{
-      flex:0 1 600px;
+
+    img {
+      flex: 0 1 600px;
     }
   }
-
-
 
   @media (max-width: 1400px) {
     padding: 50px;
@@ -54,14 +51,13 @@ export const Container = styled.section`
     ul {
       width: 100%;
     }
-
   }
 
   @media (max-width: 800px) {
     ul {
       overflow: hidden;
 
-      div:nth-child(1){
+      div:nth-child(1) {
         flex-shrink: 0;
         width: 1150px;
         max-height: 690px;
@@ -71,7 +67,7 @@ export const Container = styled.section`
         gap: 20px;
       }
     }
-  } 
+  }
 `
 
 export const ControlLeft = styled.div`
@@ -83,16 +79,16 @@ export const ControlLeft = styled.div`
   padding: 30px;
   height: 24px;
   width: 30px;
-  background-color: ${({theme}) => theme.colors.secondary};
+  background-color: ${({ theme }) => theme.colors.secondary};
   border-radius: 100%;
   box-shadow: 0px 4px 10px 0px #000;
-  transition: .2s all ease-in-out;
-  
-  &:active{
+  transition: 0.2s all ease-in-out;
+
+  &:active {
     box-shadow: 0px 4px 8px -2px #000;
   }
 
-  img{
+  img {
     transform: rotate(180deg);
   }
 
@@ -101,13 +97,12 @@ export const ControlLeft = styled.div`
     align-items: center;
     justify-content: center;
   }
-
 `
 export const ControlRigth = styled(ControlLeft)`
   right: 10px;
   left: auto;
 
-  img{
+  img {
     transform: rotate(0);
   }
 `

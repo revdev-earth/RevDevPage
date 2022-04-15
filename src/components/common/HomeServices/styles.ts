@@ -14,7 +14,7 @@ export const Container = styled.li`
   box-shadow: 0px 10px 20px rgba(7, 0, 59, 0.12);
   border-radius: 12px;
   border-top: 7px solid ${({ theme }) => theme.colors.secondary};
-  transition: .3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
 
   img {
     z-index: 2;
@@ -30,22 +30,20 @@ export const Container = styled.li`
       margin-left: 10px;
     }
   }
-  
 `
 export const Circle = styled.div`
+  position: relative;
+  z-index: 1;
 
-    position: relative;
+  &:before {
     z-index: 1;
-    
-    &:before {
-      z-index: 1;
-      position: absolute;
-      content: "";
-      top: 10px;
-      left: 20px;
-      width: 50px;
-      height:  50px;
-      background-color: #e9fbf8;
-      border-radius: 100%;
-    }
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #e9fbf8;
+    border-radius: 100%;
+  }
 `

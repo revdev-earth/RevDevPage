@@ -16,7 +16,7 @@ export const Container = styled.header`
   @media (max-width: 800px) {
     padding: 0 20px;
 
-    button{
+    button {
       display: none;
     }
   }
@@ -75,11 +75,11 @@ export const MenuMovil = styled.div`
   }
 `
 
-export const Navigation = styled.nav<{ isOpen: boolean, selected: number}>`
+export const Navigation = styled.nav<{ isOpen: boolean; selected: number }>`
   display: flex;
   justify-content: space-evenly;
 
-  z-index: 10 ;
+  z-index: 10;
   ul {
     gap: 30px;
     display: flex;
@@ -91,7 +91,6 @@ export const Navigation = styled.nav<{ isOpen: boolean, selected: number}>`
       list-style: none;
       float: right;
       transition: 0.3s all ease-in-out;
-      
 
       &:hover {
         transform: scale(1.05);
@@ -112,7 +111,7 @@ export const Navigation = styled.nav<{ isOpen: boolean, selected: number}>`
     justify-content: center;
     width: 100%;
     transition: left 0.5s;
-    
+
     ${({ isOpen }) => {
       return isOpen && `left: 0;`
     }}
@@ -123,26 +122,22 @@ export const Navigation = styled.nav<{ isOpen: boolean, selected: number}>`
       width: 100%;
       flex-direction: column;
       gap: 10px;
-      background-color: ${({theme}) => theme.colors.gray};
+      background-color: ${({ theme }) => theme.colors.gray};
 
       li {
         display: block;
         padding: 8px 10px;
         width: 100%;
 
-        &:nth-child(${({selected})=> selected + 1}){
-          a{
-
-            color: ${({theme}) => theme.colors.primary}
+        &:nth-child(${({ selected }) => selected + 1}) {
+          a {
+            color: ${({ theme }) => theme.colors.primary};
           }
         }
-        a{
-          
-          font-size: ${({theme}) => theme.fonts.h4};
+        a {
+          font-size: ${({ theme }) => theme.fonts.h4};
         }
       }
     }
-
-
   }
 `

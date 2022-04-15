@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const Container = styled.section`
-overflow: hidden;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -72,7 +72,7 @@ export const Users = styled.div<{ pos: number }>`
 
     li {
       position: relative;
-      opacity: .3;
+      opacity: 0.3;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -105,7 +105,7 @@ export const Users = styled.div<{ pos: number }>`
 
       &:active {
         transform: scale(0.9);
-      }     
+      }
 
       &:nth-child(${({ pos }) => pos}) {
         opacity: 1;
@@ -127,10 +127,9 @@ export const Users = styled.div<{ pos: number }>`
         }
       }
 
-      
       &:nth-child(${({ pos }) => pos - 1}),
       &:nth-child(${({ pos }) => pos + 1}) {
-        opacity: .6;
+        opacity: 0.6;
         min-width: 100px;
         height: 100px;
         background-color: ${({ theme }) => theme.colors.grayLight};
@@ -183,7 +182,7 @@ export const Users = styled.div<{ pos: number }>`
     color: ${({ theme }) => theme.colors.secondary};
   }
 
-  @media (max-width: 800px){
+  @media (max-width: 800px) {
     max-width: fit-content;
   }
 `
@@ -231,9 +230,9 @@ export const Controls = styled.div`
 `
 
 export const Circle = styled.img`
-position: absolute;
-z-index: 0;
-min-width: 190px;
-min-height: 190px;
-background-color: transparent;
+  position: absolute;
+  z-index: 0;
+  min-width: 190px;
+  min-height: 190px;
+  background-color: transparent;
 `
