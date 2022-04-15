@@ -3,7 +3,7 @@ import { Button } from "@components"
 
 //* import assets
 import ArrowLarge from "@assets/arrow-right.svg"
-import ArrowShort from "@assets/Vector.svg"
+import ArrowShort from "@assets/vector.svg"
 
 //* import styles
 import { Container, Content, New, Arrow } from "./styles"

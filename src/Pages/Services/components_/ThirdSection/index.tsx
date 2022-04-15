@@ -2,10 +2,6 @@
 import { Button } from "@components"
 import ContainerSection from "@components/common/ContentSection"
 
-//* Import assets
-import VectorImg1 from "@assets/Vector1.svg"
-import VectorImg2 from "@assets/Vector2.svg"
-
 export const ThirdSection = () => {
   return (
     <section>

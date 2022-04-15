@@ -1,10 +1,12 @@
 import { footer } from "../../../data"
-
 //* Import Links
 import { Link } from "react-router-dom"
-
 //* Import styles
-import { Top, Container, Bottom, Content } from "./styles"
+import { Top, Container, Bottom, Content, Images } from "./styles"
+//* Import assets
+import Arrow from "@assets/vector-black.svg"
+import Img1 from "@assets/vector1.svg"
+import Img2 from "@assets/vector2.svg"
 
 export const Footer = () => {
   return (
@@ -28,11 +30,16 @@ export const Footer = () => {
                 ))}
               </ul>
             ))}
-            <div>Language</div>
           </div>
         </Top>
         <Bottom>
-          <div>© RevDev. 2020</div>
+          <div>
+            <p>© RevDev. 2020</p>
+            <div>
+              <p>Language</p>
+              <img src={Arrow} alt="" />
+            </div>
+          </div>
           <div>
             <ul>
               <li>
@@ -54,6 +61,10 @@ export const Footer = () => {
           </div>
         </Bottom>
       </Content>
+      <Images>
+        <img src={Img1} alt="" />
+        <img src={Img2} alt="" />
+      </Images>
     </Container>
   )
 }

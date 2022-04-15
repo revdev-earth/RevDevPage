@@ -6,7 +6,7 @@ import { HomeServices } from "@components"
 import { homeServices } from "@data"
 //* Import assets
 import Circles from "@assets/circles.svg"
-import ArrowShort from "@assets/Vector.svg"
+import ArrowShort from "@assets/vector.svg"
 //* Import styles
 import { Container, ControlLeft, ControlRigth } from "./styles"
 
