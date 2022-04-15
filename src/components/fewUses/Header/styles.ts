@@ -92,6 +92,12 @@ export const Navigation = styled.nav<{ isOpen: boolean; selected: number }>`
       float: right;
       transition: 0.3s all ease-in-out;
 
+      &:nth-child(${({selected}) => selected + 1}) {
+        a {
+          color: ${({theme}) => theme.colors.primary};
+        }
+      }
+
       &:hover {
         transform: scale(1.05);
         border-bottom: 1px solid #000;
@@ -104,7 +110,6 @@ export const Navigation = styled.nav<{ isOpen: boolean; selected: number }>`
   }
 
   @media (max-width: 800px) {
-    /* background-color: ; */
     position: fixed;
     top: 75px;
     left: 100%;
