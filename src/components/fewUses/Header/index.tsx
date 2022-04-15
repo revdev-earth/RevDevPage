@@ -1,18 +1,18 @@
+// libraries
 import { useEffect, useState } from "react"
-
-//* Import link from Router
 import { Link } from "react-router-dom"
+import { useLocation } from "react-router-dom"
 
-//* Import styles
+// styles
 import { Container, MenuMovil, Navigation } from "./styles"
 
-//* Import assets
+// assets
 import BarMenu from "@assets/bars-solid.svg"
 
-//* Import components
+// components
 import { Button } from "@components"
 
-import { useLocation } from "react-router-dom"
+// JSX
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -21,15 +21,9 @@ export function Header() {
   const [actualLocation, setActualLocation] = useState(0)
 
   useEffect(() => {
-    if (locationPath === "/") {
-      return setActualLocation(0)
-    }
-    if (locationPath === "/services") {
-      return setActualLocation(1)
-    }
-    if (locationPath === "/ideas") {
-      return setActualLocation(2)
-    }
+    if (locationPath === "/") setActualLocation(0)
+    if (locationPath === "/services") setActualLocation(1)
+    if (locationPath === "/ideas") setActualLocation(2)
   }, [locationPath])
 
   const closeMenu = () => {
