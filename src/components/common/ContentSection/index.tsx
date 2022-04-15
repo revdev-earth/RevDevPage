@@ -3,8 +3,8 @@ import { ReactNode } from "react"
 import { Container } from "./styles"
 
 //* import assets
-import VectorImg1 from "@assets/Vector1.svg"
-import VectorImg2 from "@assets/Vector2.svg"
+import VectorImg1 from "@assets/vector1.svg"
+import VectorImg2 from "@assets/vector2.svg"
 
 interface IContainer {
   children?: ReactNode
