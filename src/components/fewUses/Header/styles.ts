@@ -43,7 +43,7 @@ export const MenuMovil = styled.div`
     display: none;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     display: flex;
     justify-content: space-between;
     width: 100%;

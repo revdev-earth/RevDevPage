@@ -34,7 +34,7 @@ export const Container = styled.footer`
       height: 200px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 800px) {
       top: 70%;
       left: -20%;
     }
@@ -126,7 +126,7 @@ export const Top = styled.div`
       }
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     flex-direction: column;
     gap: 30px;
   }
