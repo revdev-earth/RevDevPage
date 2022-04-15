@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 export const Container = styled.section<{ pag: number }>`
-  
   position: relative;
   margin: auto;
   padding: 100px 200px;
@@ -20,8 +19,7 @@ export const Container = styled.section<{ pag: number }>`
     margin-top: 20px;
   }
 
-  >div {
-    
+  > div {
     margin: 40px auto;
     display: flex;
     justify-content: center;
@@ -35,8 +33,8 @@ export const Container = styled.section<{ pag: number }>`
       border: 1px solid transparent;
       border-radius: 50px;
       cursor: pointer;
-      
-      &:nth-child(${({pag}) => pag + 1}){
+
+      &:nth-child(${({ pag }) => pag + 1}) {
         border: 1px solid ${({ theme }) => theme.colors.secondary};
       }
 
@@ -47,8 +45,6 @@ export const Container = styled.section<{ pag: number }>`
   }
 
   ul {
-    
-    
     div {
       display: flex;
       justify-content: space-between;
@@ -59,14 +55,14 @@ export const Container = styled.section<{ pag: number }>`
         display: flex;
         flex-direction: column;
         gap: 40px;
-      padding: 5px;
-      text-align: start;
-      img {
-        width: 100%;
-        max-height: 300px;
-        border-radius: 24px;
+        padding: 5px;
+        text-align: start;
+        img {
+          width: 100%;
+          max-height: 300px;
+          border-radius: 24px;
+        }
       }
-    }
     }
   }
 
@@ -81,7 +77,7 @@ export const Container = styled.section<{ pag: number }>`
   }
   @media (max-width: 1024px) {
     padding: 50px;
-    
+
     button {
       bottom: -75px;
     }
@@ -98,7 +94,7 @@ export const Container = styled.section<{ pag: number }>`
       div {
         position: relative;
         left: -200px;
-        
+
         width: 1200px;
       }
     }
@@ -115,7 +111,7 @@ export const Circle = styled.img`
   top: 200px;
   left: 30%;
 
-  @media (max-width){
+  @media (max-width) {
     top: calc(50% - 100px);
     left: 10%;
   }

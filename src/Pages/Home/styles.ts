@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 export const FirstSection = styled.section`
+  z-index: 0;
   overflow: hidden;
   position: relative;
   margin: auto;
@@ -54,7 +55,6 @@ export const FirstSection = styled.section`
       position: absolute;
       bottom: -250px;
       left: -5%;
-      
     }
   }
 
@@ -68,7 +68,6 @@ export const FirstSection = styled.section`
     img:last-child {
       width: 400px;
       bottom: -150px;
-
     }
   }
 
@@ -87,11 +86,11 @@ export const FirstSection = styled.section`
     img {
       padding-right: 0px;
 
-        &:last-child {
+      &:last-child {
         width: 300px;
         bottom: -100px;
         left: -10%;
-        }
+      }
     }
   }
 
@@ -99,20 +98,20 @@ export const FirstSection = styled.section`
     display: flex;
     padding: 100px;
 
-    div{
+    div {
       gap: 50px;
 
       h3 {
-        max-width: 100%
+        max-width: 100%;
       }
-      p{
+      p {
         max-width: 500px;
       }
     }
 
     img {
       position: absolute;
-      width: 40%; 
+      width: 40%;
       bottom: 0;
       right: 0;
 
@@ -120,7 +119,7 @@ export const FirstSection = styled.section`
         width: 200px;
         height: 200px;
         left: 10%;
-        bottom: 20px;;
+        bottom: 20px;
       }
     }
   }
@@ -131,14 +130,12 @@ export const FirstSection = styled.section`
     align-items: flex-end;
 
     > div {
-
       gap: 30px;
 
       div {
         gap: 10px;
       }
     }
-
 
     img {
       position: relative;
@@ -193,13 +190,13 @@ export const HomeSection4 = styled.section`
   p {
     max-width: 1010px;
   }
-  
+
   ul {
     li {
       padding: 20px;
       display: flex;
       gap: 80px;
-      
+
       span {
         color: ${({ theme }) => theme.colors.primary};
         display: flex;
@@ -240,15 +237,14 @@ export const HomeSection4 = styled.section`
     img {
       position: absolute;
       max-width: 400px;
-      
-      top:  -80px;
+
+      top: -80px;
       left: -80px;
-      
-      &:last-child{
-        top:  -30px;
+
+      &:last-child {
+        top: -30px;
         right: -10px;
         left: auto;
-        
       }
     }
   }
@@ -258,7 +254,6 @@ export const HomeSection4 = styled.section`
   }
 
   @media (max-width: 1024px) {
-
     gap: 20px;
     ul {
       li {
@@ -318,10 +313,9 @@ export const HomeSection4 = styled.section`
     }
 
     div {
-
-      img:last-child{
+      img:last-child {
         width: 150px;
-        top:  auto;
+        top: auto;
         right: auto;
         left: 30px;
         bottom: 10px;

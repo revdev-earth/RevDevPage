@@ -22,7 +22,6 @@ const Ideas = React.lazy(() => {
   ]).then(([moduleExport]) => moduleExport)
 })
 
-
 export default function Router() {
   return (
     <Routes>

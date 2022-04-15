@@ -1,19 +1,30 @@
-import { useState } from "react"
-
-//* Import link from Router
+// libraries
+import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+import { useLocation } from "react-router-dom"
 
-//* Import styles
+// styles
 import { Container, MenuMovil, Navigation } from "./styles"
 
-//* Import assets
+// assets
 import BarMenu from "@assets/bars-solid.svg"
 
-//* Import components
+// components
 import { Button } from "@components"
+
+// JSX
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const location = useLocation()
+  const locationPath = location.pathname
+  const [actualLocation, setActualLocation] = useState(0)
+
+  useEffect(() => {
+    if (locationPath === "/") setActualLocation(0)
+    if (locationPath === "/services") setActualLocation(1)
+    if (locationPath === "/ideas") setActualLocation(2)
+  }, [locationPath])
 
   const closeMenu = () => {
     setIsOpen(false)
@@ -32,8 +43,14 @@ export function Header() {
         <img src={BarMenu} alt="" onClick={toogleMenu} />
       </MenuMovil>
 
-      <Navigation isOpen={isOpen}>
+      <Navigation isOpen={isOpen} selected={actualLocation}>
         <ul>
+          <li>
+            <Link to="/" onClick={closeMenu}>
+              Home
+            </Link>
+          </li>
+
           <li>
             <Link to="/services" onClick={closeMenu}>
               Services
@@ -45,9 +62,9 @@ export function Header() {
               Ideas
             </Link>
           </li>
-          <Button red>Request a quote</Button>
         </ul>
       </Navigation>
+      <Button red>Request a quote</Button>
     </Container>
   )
 }

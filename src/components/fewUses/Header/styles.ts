@@ -13,8 +13,12 @@ export const Container = styled.header`
     padding: 10px 30px;
   }
 
-  @media (max-width: 678px) {
+  @media (max-width: 800px) {
     padding: 0 20px;
+
+    button {
+      display: none;
+    }
   }
 
   @media (max-width: 425px) {
@@ -39,7 +43,7 @@ export const MenuMovil = styled.div`
     display: none;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -71,10 +75,11 @@ export const MenuMovil = styled.div`
   }
 `
 
-export const Navigation = styled.nav<{ isOpen: boolean }>`
+export const Navigation = styled.nav<{ isOpen: boolean; selected: number }>`
   display: flex;
   justify-content: space-evenly;
 
+  z-index: 10;
   ul {
     gap: 30px;
     display: flex;
@@ -87,6 +92,12 @@ export const Navigation = styled.nav<{ isOpen: boolean }>`
       float: right;
       transition: 0.3s all ease-in-out;
 
+      &:nth-child(${({selected}) => selected + 1}) {
+        a {
+          color: ${({theme}) => theme.colors.primary};
+        }
+      }
+
       &:hover {
         transform: scale(1.05);
         border-bottom: 1px solid #000;
@@ -98,13 +109,12 @@ export const Navigation = styled.nav<{ isOpen: boolean }>`
     }
   }
 
-  @media (max-width: 768px) {
-    /* background-color: ; */
-    width: 100%;
+  @media (max-width: 800px) {
     position: fixed;
-    top: 90px;
+    top: 75px;
     left: 100%;
     justify-content: center;
+    width: 100%;
     transition: left 0.5s;
 
     ${({ isOpen }) => {
@@ -112,14 +122,26 @@ export const Navigation = styled.nav<{ isOpen: boolean }>`
     }}
 
     ul {
+      padding: 30px;
+      height: 95vh;
       width: 100%;
       flex-direction: column;
       gap: 10px;
+      background-color: ${({ theme }) => theme.colors.gray};
 
       li {
         display: block;
-        width: 100%;
         padding: 8px 10px;
+        width: 100%;
+
+        &:nth-child(${({ selected }) => selected + 1}) {
+          a {
+            color: ${({ theme }) => theme.colors.primary};
+          }
+        }
+        a {
+          font-size: ${({ theme }) => theme.fonts.h4};
+        }
       }
     }
   }
