@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 //* Import styles
 import { Top, Container, Bottom, Content, Images } from "./styles"
 //* Import assets
-import Arrow from "@assets/vector-black.svg"
+import Arrow from "@assets/vector-black.svg-"
 import Img1 from "@assets/vector1.svg"
 import Img2 from "@assets/vector2.svg"
 
