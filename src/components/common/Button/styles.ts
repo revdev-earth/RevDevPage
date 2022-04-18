@@ -10,6 +10,7 @@ const defaultStyle = css`
   vertical-align: middle;
   text-decoration: none;
   outline: none;
+  background-color: ${({theme}) => theme.colors.whitePrimary};
   color: ${({ theme }) => theme.colors.secondary};
   transition: all 0.15s linear;
   cursor: pointer;
@@ -34,7 +35,6 @@ const defaultStyle = css`
 
 const trasnparent = css`
   border: 1px solid ${({ theme }) => theme.colors.secondary};
-
   box-shadow: none;
   &:hover {
     box-shadow: none;

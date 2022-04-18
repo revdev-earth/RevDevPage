@@ -27,8 +27,8 @@ export const FirstSection = styled.section`
         content: "";
         position: absolute;
         top: -30px;
-        width: 200px;
-        height: 5px;
+        width: 110px;
+        height: 3px;
         background-color: ${({ theme }) => theme.colors.secondary};
       }
 
@@ -103,6 +103,10 @@ export const FirstSection = styled.section`
 
       h3 {
         max-width: 100%;
+
+        &:hover{
+          width: 130px;
+        }
       }
       p {
         max-width: 500px;
