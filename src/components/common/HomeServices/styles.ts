@@ -7,7 +7,9 @@ export const Container = styled.li`
   flex-direction: column;
   gap: 20px;
   padding: 30px;
+  padding-top: 10px;
   max-width: 350px;
+  min-height: 350px;
   height: fit-content;
   background-color: ${({ theme }) => theme.colors.whiteSecondary};
   text-align: start;
@@ -29,6 +31,10 @@ export const Container = styled.li`
     img {
       margin-left: 10px;
     }
+  }
+
+  @media (max-width: 400px){
+    max-width: 290px;
   }
 `
 export const Circle = styled.div`

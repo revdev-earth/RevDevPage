@@ -11,10 +11,6 @@ export const Container = styled.section`
   padding: 50px 200px;
   text-align: center;
 
-  > p {
-    max-width: 650px;
-  }
-
   ul {
     position: relative;
     z-index: 1;
@@ -60,7 +56,7 @@ export const Container = styled.section`
       div:nth-child(1) {
         flex-shrink: 0;
         width: 1150px;
-        max-height: 690px;
+        max-height: 800px;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
