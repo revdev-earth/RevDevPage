@@ -54,6 +54,10 @@ export const Slide = styled.div`
     max-width: 900px;
     font-weight: 600;
   }
+
+  @media (max-width: 400px){
+    padding: 30px;
+  }
 `
 
 export const Users = styled.div<{ pos: number }>`
@@ -184,6 +188,14 @@ export const Users = styled.div<{ pos: number }>`
 
   @media (max-width: 800px) {
     max-width: fit-content;
+  }
+  @media (max-width: 400px) {
+    max-width: -webkit-fill-available;
+
+    ul {
+      position: relative;
+      left: -60%;
+    }
   }
 `
 
