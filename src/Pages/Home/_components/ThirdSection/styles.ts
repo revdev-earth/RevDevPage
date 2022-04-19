@@ -106,6 +106,19 @@ export const Container = styled.section<{ pag: number }>`
       bottom: -25px;
     }
   }
+
+  @media (max-width: 400px){
+    ul {
+      overflow: hidden;
+      
+      div:nth-child(1) {
+        position: relative;
+        left: -400px;
+
+        width: 1200px;
+      }
+    }
+  }
 `
 export const Circle = styled.img`
   z-index: 0;
@@ -147,6 +160,10 @@ export const ControlLeft = styled.div`
     align-items: center;
     justify-content: center;
   } 
+
+  @media (max-width: 400px){
+    top: calc(66% - 12px);
+  }
 `
 export const ControlRigth = styled(ControlLeft)`
   right: 10px;
