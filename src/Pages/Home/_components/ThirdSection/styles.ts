@@ -45,10 +45,11 @@ export const Container = styled.section<{ pag: number }>`
   }
 
   ul {
-    div {
-      display: flex;
-      justify-content: space-between;
-      gap: 40px;
+    div:nth-child(1)  {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 40px;
 
       li {
         z-index: 3;
@@ -57,9 +58,10 @@ export const Container = styled.section<{ pag: number }>`
         gap: 40px;
         padding: 5px;
         text-align: start;
+
         img {
           width: 100%;
-          max-height: 300px;
+          height: 200px;
           border-radius: 24px;
         }
       }
@@ -73,7 +75,7 @@ export const Container = styled.section<{ pag: number }>`
   }
 
   @media (max-width: 1400px) {
-    padding: 100px;
+    padding: 50px 100px;
   }
   @media (max-width: 1024px) {
     padding: 50px;
@@ -91,7 +93,8 @@ export const Container = styled.section<{ pag: number }>`
 
     ul {
       overflow: hidden;
-      div {
+      
+      div:nth-child(1) {
         position: relative;
         left: -200px;
 
@@ -114,5 +117,42 @@ export const Circle = styled.img`
   @media (max-width) {
     top: calc(50% - 100px);
     left: 10%;
+  }
+`
+
+export const ControlLeft = styled.div`
+  display: none;
+  z-index: 5;
+  position: absolute;
+  top: calc(60% - 12px);
+  left: 10px;
+  padding: 30px;
+  height: 24px;
+  width: 30px;
+  background-color: ${({ theme }) => theme.colors.secondary};
+  border-radius: 100%;
+  box-shadow: 0px 4px 10px 0px #000;
+  transition: 0.2s all ease-in-out;
+
+  &:active {
+    box-shadow: 0px 4px 8px -2px #000;
+  }
+
+  img {
+    transform: rotate(180deg);
+  }
+
+  @media (max-width: 800px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } 
+`
+export const ControlRigth = styled(ControlLeft)`
+  right: 10px;
+  left: auto;
+
+  img {
+    transform: rotate(0);
   }
 `
