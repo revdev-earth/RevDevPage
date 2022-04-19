@@ -1,22 +1,24 @@
-//* Import asetss
+// asetss
 import ImgHome1 from "@assets/home/img-home-1.png"
 import ImgHome2 from "@assets/home/img-home-2.png"
 import Circles from "@assets/circles.svg"
-//*Import styles
+
+// styles
 import { FirstSection, HomeSection4 } from "./styles"
-//* Import data
+
+// data
 import { homeSection4 } from "@data"
-//* Import sections
+
+// components
+import { Button, ContainerSection } from "@components"
 import {
   SecondSection,
   ThirdSection,
   SixSection,
   SevenSection,
 } from "./_components"
-//* Import components
 
-import ContainerSection from "@components/common/ContentSection"
-import { Button } from "@components"
+// JSX
 
 export default function Home() {
   return (
