@@ -1,5 +1,5 @@
 //* import components
-import ContainerSection from "@components/common/ContentSection"
+import { ContainerSection } from "@components"
 
 export const FirstSection = () => {
   return (

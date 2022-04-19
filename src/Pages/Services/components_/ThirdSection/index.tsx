@@ -1,6 +1,6 @@
 //* Import components
 import { Button } from "@components"
-import ContainerSection from "@components/common/ContentSection"
+import { ContainerSection } from "@components"
 
 export const ThirdSection = () => {
   return (
