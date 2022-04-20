@@ -88,11 +88,11 @@ export const SecondSection = () => {
 
   return (
     <Container>
-      <h3>Our Services</h3>
+      <h3>The Toolbox</h3>
 
       <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et.
+        We take care of ourselves to make your life easier, since we move with
+        ideas, you put the ideas here, take a look
       </p>
 
       <ul>

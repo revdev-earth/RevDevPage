@@ -88,7 +88,7 @@ export const ThirdSection = () => {
 
   return (
     <Container pag={pag}>
-      <h3>where to find us</h3>
+      <h3>Where to find us</h3>
       <Circle src={Circles} alt="" />
       <div>
         <h5 onClick={() => setPag(0)}>Digital tools</h5>

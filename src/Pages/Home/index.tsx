@@ -73,7 +73,7 @@ export default function Home() {
       <SixSection />
       <ContainerSection>
         <h3>Do you want to be part?</h3>
-        <Button primary>Check here more</Button>
+        <Button primary>More information</Button>
       </ContainerSection>
       <SevenSection />
     </main>
