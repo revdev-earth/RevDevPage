@@ -21,7 +21,7 @@ export const homeServices: {
   link: string
 }[] = [
   {
-    img: WordPress,
+    img: StartUp,
     title: "Software and infrastructure",
     description:
       "you can opt for knowledge and personnel to shape the ideas proposed for the future.",
@@ -35,28 +35,28 @@ export const homeServices: {
     link: "#",
   },
   {
-    img: Layers,
+    img: StartUp,
     title: "Company boost",
     description:
       "To reach more people we need more energy and we all do that impulse together, advancing and adapting to our now.",
     link: "#",
   },
   {
-    img: MagnifyingGlass,
+    img: StartUp,
     title: "Front end",
     description:
       "What impresses us the most is what we see, so what better than making our clients see that they are at home.",
     link: "#",
   },
   {
-    img: webDesign,
+    img: StartUp,
     title: "Back end",
     description:
       "we improve the services that are interconnected to provide better security and response to our customers.",
     link: "#",
   },
   {
-    img: webDesign,
+    img: StartUp,
     title: "Design",
     description:
       "we draw the best way to see your service, we want everyone to understand what you have for the world.",
