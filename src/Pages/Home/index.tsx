@@ -51,7 +51,7 @@ export default function Home() {
         <p>
           Let's see your idea and then we will start with the plan of how to
           plan the development of the idea in reality, we are pleased to know
-          how we will be in the future
+          how we will be in the future.
         </p>
         <ul>
           {homeSection4.map((item) => (

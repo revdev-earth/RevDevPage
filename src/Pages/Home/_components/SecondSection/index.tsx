@@ -92,7 +92,7 @@ export const SecondSection = () => {
 
       <p>
         We take care of ourselves to make your life easier, since we move with
-        ideas, you put the ideas here, take a look
+        ideas, you put the ideas here, take a look.
       </p>
 
       <ul>

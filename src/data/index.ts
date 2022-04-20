@@ -24,21 +24,21 @@ export const homeServices: {
     img: WordPress,
     title: "Software and infrastructure",
     description:
-      "you can opt for knowledge and personnel to shape the ideas proposed for the future",
+      "you can opt for knowledge and personnel to shape the ideas proposed for the future.",
     link: "#",
   },
   {
     img: StartUp,
     title: "Digital tools",
     description:
-      "we put at your disposal development tools, to learn more about the products and services and thus aim higher",
+      "we put at your disposal development tools, to learn more about the products and services and thus aim higher.",
     link: "#",
   },
   {
     img: Layers,
     title: "Company boost",
     description:
-      "To reach more people we need more energy and we all do that impulse together, advancing and adapting to our now",
+      "To reach more people we need more energy and we all do that impulse together, advancing and adapting to our now.",
     link: "#",
   },
   {
@@ -52,14 +52,14 @@ export const homeServices: {
     img: webDesign,
     title: "Back end",
     description:
-      "we improve the services that are interconnected to provide better security and response to our customers",
+      "we improve the services that are interconnected to provide better security and response to our customers.",
     link: "#",
   },
   {
     img: webDesign,
     title: "Design",
     description:
-      "we draw the best way to see your service, we want everyone to understand what you have for the world",
+      "we draw the best way to see your service, we want everyone to understand what you have for the world.",
     link: "#",
   },
 ]

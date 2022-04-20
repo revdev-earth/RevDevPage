@@ -13,19 +13,19 @@ const news = [
   {
     title: "Why Your SaaS Business should use WordPress",
     desctiprion:
-      "A content management system like WordPress can help you build a highly engaging website for your SaaS business, with little to no effort",
+      "A content management system like WordPress can help you build a highly engaging website for your SaaS business, with little to no effort.",
     link: "",
   },
   {
     title: "Why Your SaaS Business should use WordPress",
     desctiprion:
-      "A content management system like WordPress can help you build a highly engaging website for your SaaS business, with little to no effort",
+      "A content management system like WordPress can help you build a highly engaging website for your SaaS business, with little to no effort.",
     link: "",
   },
   {
     title: "Why Your SaaS Business should use WordPress",
     desctiprion:
-      "A content management system like WordPress can help you build a highly engaging website for your SaaS business, with little to no effort",
+      "A content management system like WordPress can help you build a highly engaging website for your SaaS business, with little to no effort.",
     link: "",
   },
 ]
