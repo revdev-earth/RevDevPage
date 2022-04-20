@@ -196,13 +196,27 @@ export const HomeSection4 = styled.section`
   }
 
   ul {
+    position: relative;
+
+    &:after{
+      z-index: auto;
+      position: absolute;
+      top: 10%;
+      left: 70px;
+      content: "";
+      height: 80%;
+      width: 1px;
+      border-left: 1px solid transparent;
+    }
+    
     li {
       padding: 20px;
       display: flex;
       gap: 80px;
-
+      
       span {
-        color: ${({ theme }) => theme.colors.primary};
+        z-index: 5;
+        color: ${({ theme }) => theme.colors.secondary};
         display: flex;
         justify-content: center;
         align-items: center;

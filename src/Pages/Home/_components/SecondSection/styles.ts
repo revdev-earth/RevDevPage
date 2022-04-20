@@ -70,7 +70,7 @@ export const ControlLeft = styled.div`
   display: none;
   z-index: 5;
   position: absolute;
-  top: calc(320px - 12px);
+  top: calc(340px - 12px);
   left: 10px;
   padding: 30px;
   height: 24px;

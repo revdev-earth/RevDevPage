@@ -248,3 +248,40 @@ export const Circle = styled.img`
   min-height: 190px;
   background-color: transparent;
 `
+export const ControlLeft = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  position: absolute;
+  top: calc(50% - 12px);
+  left: -30px;
+  padding: 30px;
+  height: 24px;
+  width: 30px;
+  background-color: ${({ theme }) => theme.colors.whitePrimary};
+  border-radius: 100%;
+  box-shadow: 0px 4px 10px -4px #000;
+  transition: 0.2s all ease-in-out;
+
+  &:active {
+    box-shadow: 0px 4px 8px -8px #000;
+  }
+
+  img {
+    transform: rotate(180deg);
+  }
+
+  @media (max-width: 800px) {
+    
+
+  }
+`
+export const ControlRigth = styled(ControlLeft)`
+  right: -30px;
+  left: auto;
+
+  img {
+    transform: rotate(0);
+  }
+`

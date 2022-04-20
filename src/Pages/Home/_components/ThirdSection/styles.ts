@@ -161,7 +161,7 @@ export const ControlLeft = styled.div`
   } 
 
   @media (max-width: 400px){
-    top: calc(62% - 12px);
+    top: calc(56% - 12px);
   }
 `
 export const ControlRigth = styled(ControlLeft)`

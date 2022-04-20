@@ -17,7 +17,7 @@ export const Footer = () => {
             <h3>Logo</h3>
             <p>
               Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia
+              Vokalia and Consonantia.
             </p>
           </div>
           <div>
