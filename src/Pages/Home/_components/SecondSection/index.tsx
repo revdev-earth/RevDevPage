@@ -1,13 +1,13 @@
-//* Import hooks
+// hooks
 import { useRef } from "react"
-//* Import components
+// components
 import { HomeServices } from "@components"
-//* Import Data
+// Data
 import { homeServices } from "@data"
-//* Import assets
+// assets
 import Circles from "@assets/circles.svg"
 import ArrowShort from "@assets/vector.svg"
-//* Import styles
+// styles
 import { Container, ControlLeft, ControlRigth } from "./styles"
 
 export const SecondSection = () => {

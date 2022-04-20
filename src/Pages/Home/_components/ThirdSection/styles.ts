@@ -11,12 +11,8 @@ export const Container = styled.section<{ pag: number }>`
     ${({ theme }) => theme.colors.secondary} 45%
   );
 
-  h4 {
-    color: ${({ theme }) => theme.colors.secondary};
-  }
-
   h3 {
-    margin-top: 20px;
+    margin-top: 50px;
   }
 
   > div {
@@ -26,13 +22,14 @@ export const Container = styled.section<{ pag: number }>`
     align-items: center;
     gap: 30px;
 
-    h4 {
+    h5 {
       z-index: 3;
       padding: 20px 40px;
       transition: 0.3s all ease-in;
       border: 1px solid transparent;
       border-radius: 50px;
       cursor: pointer;
+      color:  ${({ theme }) => theme.colors.secondary};
 
       &:nth-child(${({ pag }) => pag + 1}) {
         border: 1px solid ${({ theme }) => theme.colors.secondary};
@@ -85,7 +82,7 @@ export const Container = styled.section<{ pag: number }>`
     }
   }
   @media (max-width: 800px) {
-    padding: 0;
+    padding:  0;
     > div {
       flex-direction: column;
       gap: 0;
@@ -114,8 +111,10 @@ export const Container = styled.section<{ pag: number }>`
       div:nth-child(1) {
         position: relative;
         left: -400px;
-
+        padding-bottom: 100px;
         width: 1200px;
+
+        
       }
     }
   }
@@ -162,7 +161,7 @@ export const ControlLeft = styled.div`
   } 
 
   @media (max-width: 400px){
-    top: calc(66% - 12px);
+    top: calc(62% - 12px);
   }
 `
 export const ControlRigth = styled(ControlLeft)`

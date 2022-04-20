@@ -14,8 +14,6 @@ export const ThirdSection = () => {
   const slideshowThirdSection = useRef<HTMLDivElement>(null)
   const [pag, setPag] = useState(0)
 
-  console.log(":: Slider ::", slideshowThirdSection)
-
   const siguiente = () => {
     //* Comprobando que el slide tenga elementos
     if (slideshowThirdSection.current !== null) {
@@ -90,15 +88,14 @@ export const ThirdSection = () => {
 
   return (
     <Container pag={pag}>
-      <h4>Portfolio</h4>
-      <h3>Our Great Work</h3>
+      <h3>where to find us</h3>
       <Circle src={Circles} alt="" />
       <div>
-        <h4 onClick={() => setPag(0)}>Website Optimization</h4>
+        <h5 onClick={() => setPag(0)}>Digital tools</h5>
 
-        <h4 onClick={() => setPag(1)}>Website Redesign</h4>
+        <h5 onClick={() => setPag(1)}>Company boost</h5>
 
-        <h4 onClick={() => setPag(2)}>Search Engine Optimization</h4>
+        <h5 onClick={() => setPag(2)}>Software and infrastructure</h5>
       </div>
       <ul>
         <div ref={slideshowThirdSection}>

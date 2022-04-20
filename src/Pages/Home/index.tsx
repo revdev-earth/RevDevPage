@@ -31,7 +31,7 @@ export default function Home() {
           </h3>
           <p>
             Our ideas move the world, and your idea is one of them. We are going
-            to make your idea a reality, welcome
+            to make your idea a reality, welcome.
           </p>
           <div>
             <Button secondary>start now!</Button>
@@ -72,9 +72,8 @@ export default function Home() {
       </HomeSection4>
       <SixSection />
       <ContainerSection>
-        <h3>Interested to work with us?</h3>
-        <p>Send a line here get and update daily</p>
-        <Button primary>contact@revdev.com</Button>
+        <h3>Do you want to be part?</h3>
+        <Button primary>Check here more</Button>
       </ContainerSection>
       <SevenSection />
     </main>

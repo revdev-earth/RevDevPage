@@ -6,9 +6,9 @@ export const ThirdSection = () => {
   return (
     <section>
       <ContainerSection>
-        <h3>Interested to work with us ?</h3>
-        <p>Send a line here get and update daily</p>
-        <Button primary>DaCode@example.com</Button>
+        <h3>Do you want to be part?</h3>
+
+        <Button primary>Click here more</Button>
       </ContainerSection>
     </section>
   )
