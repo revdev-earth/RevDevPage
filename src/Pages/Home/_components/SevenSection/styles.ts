@@ -4,6 +4,10 @@ export const Container = styled.section`
   position: relative;
   background-color: ${({ theme }) => theme.colors.fund};
   overflow: hidden;
+
+  @media (max-width: 800px){
+    padding-bottom: 50px;
+  }
 `
 
 export const Content = styled.div<{ slide: boolean }>`
@@ -12,7 +16,7 @@ export const Content = styled.div<{ slide: boolean }>`
   padding: 100px 200px;
   transition: 0.6s all ease-in-out;
 
-  div {
+  > div {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -28,16 +32,28 @@ export const Content = styled.div<{ slide: boolean }>`
   }
 
   ul {
-    display: flex;
-    gap: 40px;
+    > div{
+      display: flex;
+      gap: 40px;
+    }
+
     justify-content: ${({ slide }) => (slide ? "center" : "")};
   }
 
   @media (max-width: 1024px) {
     padding: 50px;
 
-    div {
+    > div {
       flex: 0 0 ${({ slide }) => (slide ? "0px" : "350px")};
+    }
+  }
+
+  @media (max-width: 800px){
+    flex-direction: column;
+    gap: 20px;
+
+    > div {
+      flex: 0 0 auto;
     }
   }
 `
@@ -61,7 +77,7 @@ export const New = styled.li<{ slide: boolean }>`
     gap: 10px;
   }
 `
-export const Arrow = styled.div<{ slide: boolean }>`
+export const Arrowrigth = styled.div<{ slide: boolean }>`
   position: absolute;
   top: 40%;
   right: 7%;
@@ -93,4 +109,21 @@ export const Arrow = styled.div<{ slide: boolean }>`
     width: 24px;
     padding-left: 6px;
   }
+
+  @media (max-width: 800px){
+    top: 55%;
+  }
+`
+
+export const SeeAll = styled.div`
+position: absolute;
+bottom: 100px;
+@media (max-width: 800px){
+  bottom: 25px;
+  left: calc(50% - 65px);
+}
+`
+
+export const Slider = styled.div`
+
 `

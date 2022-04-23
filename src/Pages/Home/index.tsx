@@ -46,7 +46,7 @@ export default function Home() {
       <ThirdSection />
       <HomeSection4>
         <h3>
-          how your idea becomes reality with us <span>reality</span>
+          How your idea becomes reality with us <span>reality</span>
         </h3>
         <p>
           Let's see your idea and then we will start with the plan of how to

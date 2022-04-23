@@ -6,7 +6,7 @@ import ArrowLarge from "@assets/arrow-right.svg"
 import ArrowShort from "@assets/vector.svg"
 
 //* import styles
-import { Container, Content, New, Arrow } from "./styles"
+import { Container, Content, New, Arrowrigth, SeeAll, Slider } from "./styles"
 import { useState } from "react"
 
 const news = [
@@ -33,6 +33,13 @@ const news = [
 export const SevenSection = () => {
   const [slide, setSlide] = useState(false)
 
+  const slideSection = () => {
+    if (screen.width > 800) {
+      setSlide(true)
+    }
+  }
+  console.log(screen.width)
+
   return (
     <Container>
       <Content slide={slide}>
@@ -43,23 +50,27 @@ export const SevenSection = () => {
             On daCode blog we will review the latest in web development for the
             SaaS-, tech- and crypto industry.
           </p>
-          <Button transparent>See all</Button>
         </div>
+        <SeeAll>
+          <Button transparent>See all</Button>
+        </SeeAll>
         <ul>
-          {news.map(({ title, desctiprion, link }) => (
-            <New key={Math.random() * 10} slide={slide}>
-              <h5>{title}</h5>
-              <p>{desctiprion}</p>
-              <a href="#">
-                Read more <img src={ArrowLarge} alt={link} />
-              </a>
-            </New>
-          ))}
+          <Slider>
+            {news.map(({ title, desctiprion, link }) => (
+              <New key={Math.random() * 10} slide={slide}>
+                <h5>{title}</h5>
+                <p>{desctiprion}</p>
+                <a href="#">
+                  Read more <img src={ArrowLarge} alt={link} />
+                </a>
+              </New>
+            ))}
+          </Slider>
         </ul>
       </Content>
-      <Arrow onClick={() => setSlide(true)} slide={slide}>
+      <Arrowrigth onClick={slideSection} slide={slide}>
         <img src={ArrowShort} alt="arrow" />
-      </Arrow>
+      </Arrowrigth>
     </Container>
   )
 }
