@@ -194,7 +194,50 @@ export const Users = styled.div<{ pos: number }>`
 
     ul {
       position: relative;
-      left: -60%;
+      left: -13%;
+      gap: 20px;
+
+      li {
+      min-width: 60px;
+      height: 60px;
+
+      img {
+        width: 45px;
+        height: 45px;
+      }
+
+      &:nth-child(${({ pos }) => pos}) {
+        opacity: 1;
+        min-width: 60px;
+        height: 60px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &:nth-child(${({ pos }) => pos - 1}),
+      &:nth-child(${({ pos }) => pos + 1}) {
+        opacity: 0.6;
+        min-width: 60px;
+        height: 60px;
+        background-color: ${({ theme }) => theme.colors.grayLight};
+
+        &:hover {
+
+          img {
+            width: 90%;
+            height: 90%;
+          }
+        }
+
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
     }
   }
 `
@@ -247,6 +290,12 @@ export const Circle = styled.img`
   min-width: 190px;
   min-height: 190px;
   background-color: transparent;
+  
+  @media (max-width: 400px){
+    min-width: 100px;
+    min-height: 100px;
+    
+  }
 `
 export const ControlLeft = styled.div`
   display: flex;
