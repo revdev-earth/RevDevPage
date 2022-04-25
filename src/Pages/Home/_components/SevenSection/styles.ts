@@ -32,6 +32,7 @@ export const Content = styled.div<{ slide: boolean }>`
   }
 
   ul {
+    overflow: hidden;
     > div{
       display: flex;
       gap: 40px;
@@ -55,6 +56,14 @@ export const Content = styled.div<{ slide: boolean }>`
     > div {
       flex: 0 0 auto;
     }
+
+    ul {
+      div {
+        li {
+
+        }
+      }
+    }
   }
 `
 
@@ -75,6 +84,13 @@ export const New = styled.li<{ slide: boolean }>`
   a {
     display: flex;
     gap: 10px;
+  }
+
+  @media (max-width: 800px){
+    flex: 0 0 325px;
+  }
+  @media (max-width: 400px){
+    flex: 0 0 300px;
   }
 `
 export const Arrowrigth = styled.div<{ slide: boolean }>`
@@ -112,6 +128,7 @@ export const Arrowrigth = styled.div<{ slide: boolean }>`
 
   @media (max-width: 800px){
     top: 55%;
+    right: 2%;
   }
 `
 
@@ -125,5 +142,18 @@ bottom: 100px;
 `
 
 export const Slider = styled.div`
+`
 
+export const ArrowLeft = styled(Arrowrigth)`
+display: none;
+
+@media (max-width: 800px){
+  display: block;
+  right: auto;
+  left: 2%;
+  img{
+    
+    transform: rotate(180deg);
+  }
+}
 `

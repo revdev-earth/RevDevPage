@@ -1,13 +1,21 @@
-//* import components
+import { useState, useRef } from "react"
+// components
 import { Button } from "@components"
 
-//* import assets
+// assets
 import ArrowLarge from "@assets/arrow-right.svg"
 import ArrowShort from "@assets/vector.svg"
 
-//* import styles
-import { Container, Content, New, Arrowrigth, SeeAll, Slider } from "./styles"
-import { useState } from "react"
+// styles
+import {
+  Container,
+  Content,
+  New,
+  Arrowrigth,
+  ArrowLeft,
+  SeeAll,
+  Slider,
+} from "./styles"
 
 const news = [
   {
@@ -33,12 +41,83 @@ const news = [
 export const SevenSection = () => {
   const [slide, setSlide] = useState(false)
 
-  const slideSection = () => {
+  const sliderContainer = useRef<HTMLDivElement>(null)
+
+  const slideRightSection = () => {
     if (screen.width > 800) {
       setSlide(true)
     }
+    if (screen.width <= 800) {
+      if (sliderContainer !== null) {
+        const { children } = sliderContainer.current
+
+        //obtenemos el primer elemento
+        const primerElemento = children[0]
+
+        //* Tamaño de slider
+        const tamañoSlide = primerElemento?.offsetWidth + 40
+        //* Estableciendo transicion para el slider
+        sliderContainer.current.style.transition = `600ms ease-out all`
+
+        //* Movemos el sliderContainer
+        sliderContainer.current.style.transform = `translateX(-${tamañoSlide}px)`
+
+        const transicion = () => {
+          if (sliderContainer.current !== null) {
+            //* Reiniciamos le posicion del sliderContainer
+            sliderContainer.current.style.transition = "none"
+            sliderContainer.current.style.transform = `translateX(0)`
+
+            //* Tomamos el primer elemento y lo mandamos al final
+            sliderContainer.current.appendChild(primerElemento)
+
+            //* Eliminar listener para que no se pause el slider hacia anterior
+            sliderContainer.current.removeEventListener(
+              "transitionend",
+              transicion
+            )
+          }
+        }
+
+        //* EventListener para cuando termina la animacion
+        sliderContainer.current.addEventListener("transitionend", transicion)
+      }
+    }
   }
-  console.log(screen.width)
+
+  const slideLeftSection = () => {
+    if (sliderContainer.current !== null) {
+      const { children } = sliderContainer.current
+
+      if (children.length > 0) {
+        //* Identificamos la ultima posición
+        const index = children.length - 1
+
+        const penultimolemento = children[index - 1]
+        const ultimoElemento = children[index]
+
+        sliderContainer.current.insertBefore(
+          ultimoElemento,
+          sliderContainer.current.firstChild
+        )
+        sliderContainer.current.insertBefore(
+          penultimolemento,
+          sliderContainer.current.firstChild
+        )
+
+        sliderContainer.current.style.transition = "none"
+        const { offsetWidth } = children[0] as any
+        sliderContainer.current.style.transform = `translateX(-${offsetWidth}px)`
+
+        setTimeout(() => {
+          if (sliderContainer.current !== null) {
+            sliderContainer.current.style.transition = `600ms ease-out all`
+            sliderContainer.current.style.transform = `translateX(0)`
+          }
+        }, 30)
+      }
+    }
+  }
 
   return (
     <Container>
@@ -55,7 +134,7 @@ export const SevenSection = () => {
           <Button transparent>See all</Button>
         </SeeAll>
         <ul>
-          <Slider>
+          <Slider ref={sliderContainer}>
             {news.map(({ title, desctiprion, link }) => (
               <New key={Math.random() * 10} slide={slide}>
                 <h5>{title}</h5>
@@ -68,9 +147,12 @@ export const SevenSection = () => {
           </Slider>
         </ul>
       </Content>
-      <Arrowrigth onClick={slideSection} slide={slide}>
+      <Arrowrigth onClick={slideRightSection} slide={slide}>
         <img src={ArrowShort} alt="arrow" />
       </Arrowrigth>
+      <ArrowLeft onClick={slideLeftSection} slide={slide}>
+        <img src={ArrowShort} alt="arrow" />
+      </ArrowLeft>
     </Container>
   )
 }

@@ -66,11 +66,17 @@ export const SixSection = () => {
     if (testimonial >= 1) {
       setTestimonial(testimonial - 1)
     }
+    if (testimonial === 0) {
+      setTestimonial(maximo + 1)
+    }
   }
 
   const siguiente = () => {
     if (testimonial <= maximo) {
       setTestimonial(testimonial + 1)
+    }
+    if (testimonial === maximo + 1) {
+      setTestimonial(0)
     }
   }
 
