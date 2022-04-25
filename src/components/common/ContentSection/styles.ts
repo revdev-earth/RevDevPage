@@ -62,7 +62,11 @@ export const Container = styled.section`
     }
   }
 
+  @media (max-width: 1200px) {
+    padding: 100px;
+  }
   @media (max-width: 800px) {
+    padding: 50px;
     &:after {
       width: 200px;
       height: 200px;
