@@ -53,10 +53,11 @@ export const Container = styled.section`
     ul {
       overflow: hidden;
 
-      div:nth-child(1) {
+      > div:nth-child(1) {
+        position: relative;
         flex-shrink: 0;
-        width: 1150px;
-        max-height: 800px;
+        width: 1070px;
+        height: 750px;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;

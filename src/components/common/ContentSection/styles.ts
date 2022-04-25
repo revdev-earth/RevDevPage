@@ -9,7 +9,7 @@ export const Container = styled.section`
   padding: 100px 20%;
   background-color: ${({ theme }) => theme.colors.secondary};
   text-align: center;
-  color: ${({ theme }) => theme.colors.primary};
+  
 
   &:after {
     position: absolute;
@@ -34,6 +34,31 @@ export const Container = styled.section`
       left: auto;
       right: 0;
       bottom: 0;
+    }
+  }
+
+  h3{
+    color: ${({ theme }) => theme.colors.whitePrimary};
+    border-bottom: 1px solid${({ theme }) => theme.colors.whitePrimary};
+  }
+  
+  button{
+    position: relative;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    color: ${({ theme }) => theme.colors.whitePrimary};
+    
+    &:after{
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      left:20%;
+      width: 60%;
+      height: 1px;
+      background-color: ${({ theme }) => theme.colors.whitePrimary};
+      
     }
   }
 

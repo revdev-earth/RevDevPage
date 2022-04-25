@@ -48,11 +48,11 @@ export const SevenSection = () => {
       setSlide(true)
     }
     if (screen.width <= 800) {
-      if (sliderContainer !== null) {
+      if (sliderContainer !== null && sliderContainer?.current?.children) {
         const { children } = sliderContainer.current
 
         //obtenemos el primer elemento
-        const primerElemento = children[0]
+        const primerElemento = children[0] as any
 
         //* Tamaño de slider
         const tamañoSlide = primerElemento?.offsetWidth + 40
@@ -86,35 +86,40 @@ export const SevenSection = () => {
   }
 
   const slideLeftSection = () => {
-    if (sliderContainer.current !== null) {
-      const { children } = sliderContainer.current
+    if (screen.width > 800) {
+      setSlide(false)
+    }
+    if (screen.width <= 800) {
+      if (sliderContainer.current !== null) {
+        const { children } = sliderContainer.current
 
-      if (children.length > 0) {
-        //* Identificamos la ultima posición
-        const index = children.length - 1
+        if (children.length > 0) {
+          //* Identificamos la ultima posición
+          const index = children.length - 1
 
-        const penultimolemento = children[index - 1]
-        const ultimoElemento = children[index]
+          const penultimolemento = children[index - 1]
+          const ultimoElemento = children[index]
 
-        sliderContainer.current.insertBefore(
-          ultimoElemento,
-          sliderContainer.current.firstChild
-        )
-        sliderContainer.current.insertBefore(
-          penultimolemento,
-          sliderContainer.current.firstChild
-        )
+          sliderContainer.current.insertBefore(
+            ultimoElemento,
+            sliderContainer.current.firstChild
+          )
+          sliderContainer.current.insertBefore(
+            penultimolemento,
+            sliderContainer.current.firstChild
+          )
 
-        sliderContainer.current.style.transition = "none"
-        const { offsetWidth } = children[0] as any
-        sliderContainer.current.style.transform = `translateX(-${offsetWidth}px)`
+          sliderContainer.current.style.transition = "none"
+          const { offsetWidth } = children[0] as any
+          sliderContainer.current.style.transform = `translateX(-${offsetWidth}px)`
 
-        setTimeout(() => {
-          if (sliderContainer.current !== null) {
-            sliderContainer.current.style.transition = `600ms ease-out all`
-            sliderContainer.current.style.transform = `translateX(0)`
-          }
-        }, 30)
+          setTimeout(() => {
+            if (sliderContainer.current !== null) {
+              sliderContainer.current.style.transition = `600ms ease-out all`
+              sliderContainer.current.style.transform = `translateX(0)`
+            }
+          }, 30)
+        }
       }
     }
   }

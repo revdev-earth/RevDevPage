@@ -33,6 +33,9 @@ export const Container = styled.li`
     }
   }
 
+  @media (max-width: 800px){
+    max-width: 325px;
+  }
   @media (max-width: 400px){
     max-width: 290px;
   }

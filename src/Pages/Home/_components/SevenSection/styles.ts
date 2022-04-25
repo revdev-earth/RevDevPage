@@ -32,7 +32,7 @@ export const Content = styled.div<{ slide: boolean }>`
   }
 
   ul {
-    overflow: hidden;
+    
     > div{
       display: flex;
       gap: 40px;
@@ -58,11 +58,7 @@ export const Content = styled.div<{ slide: boolean }>`
     }
 
     ul {
-      div {
-        li {
-
-        }
-      }
+      overflow: hidden;
     }
   }
 `
@@ -144,16 +140,17 @@ bottom: 100px;
 export const Slider = styled.div`
 `
 
-export const ArrowLeft = styled(Arrowrigth)`
-display: none;
+export const ArrowLeft = styled(Arrowrigth)<{ slide: boolean }>`
+display: ${({ slide }) => (slide ? "flex" : "none")};
+right: auto;
+left: 10%;
+
+img{
+  transform: rotate(180deg);
+}
 
 @media (max-width: 800px){
-  display: block;
-  right: auto;
+  display: flex;
   left: 2%;
-  img{
-    
-    transform: rotate(180deg);
-  }
 }
 `

@@ -112,34 +112,34 @@ export const homeWorks = [
     {
       img: Img1,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum.",
-    },
-    {
-      img: "",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum.",
-    },
-    {
-      img: Img3,
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum.",
-    },
-  ],
-  [
-    {
-      img: Img1,
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum.",
+        "Growing up together among the consultations of others, we find that sitting in the window chatting with our neighbor makes us feel good, that is why we have given life to the windows.",
     },
     {
       img: Img2,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum.",
+        "Vacations are something that gives us relaxation and also motivates us to spend time as best we can, that's why we're going to air your plans.",
     },
     {
       img: Img3,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum.",
+        "Clean air, drinking water, connecting with nature and the now, are skills that we must nurture daily, that's why we make you feel with your daily plans.",
+    },
+  ],  
+  [
+    {
+      img: Img1,
+      description:
+        "Growing up together among the consultations of others, we find that sitting in the window chatting with our neighbor makes us feel good, that is why we have given life to the windows.",
+    },
+    {
+      img: Img2,
+      description:
+        "Vacations are something that gives us relaxation and also motivates us to spend time as best we can, that's why we're going to air your plans.",
+    },
+    {
+      img: Img3,
+      description:
+        "Clean air, drinking water, connecting with nature and the now, are skills that we must nurture daily, that's why we make you feel with your daily plans.",
     },
   ],
 ]
