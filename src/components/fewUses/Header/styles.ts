@@ -28,7 +28,7 @@ export const Container = styled.header`
 
 export const MenuMovil = styled.div`
   border: none;
-
+  z-index: 2;
   transition: 0.3s all ease-in-out;
 
   &:hover {
@@ -37,6 +37,7 @@ export const MenuMovil = styled.div`
 
   h3 {
     font-weight: 500;
+    font-size: 36px;
     color: ${({ theme }) => theme.colors.primary};
   }
   img {
@@ -76,12 +77,13 @@ export const MenuMovil = styled.div`
 `
 
 export const Navigation = styled.nav<{ isOpen: boolean; selected: number }>`
+  z-index: 1;
   display: flex;
   justify-content: space-evenly;
 
   z-index: 10;
   ul {
-    gap: 30px;
+    gap: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -111,14 +113,14 @@ export const Navigation = styled.nav<{ isOpen: boolean; selected: number }>`
 
   @media (max-width: 800px) {
     position: fixed;
-    top: 75px;
-    left: 100%;
+    left: 0;
+    top: -100%;;
     justify-content: center;
     width: 100%;
-    transition: left 0.5s;
+    transition: all 0.5s;
 
     ${({ isOpen }) => {
-      return isOpen && `left: 0;`
+      return isOpen && `top: 65px;`
     }}
 
     ul {

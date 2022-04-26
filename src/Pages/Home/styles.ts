@@ -51,10 +51,10 @@ export const FirstSection = styled.section`
     max-height: 750px;
 
     &:last-child {
-      width: 500px;
-      position: absolute;
-      bottom: -250px;
-      left: -5%;
+      width: 900px;
+    position: absolute;
+    bottom: -355px;
+    left: -20%;
     }
   }
 
