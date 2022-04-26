@@ -95,19 +95,21 @@ export const SecondSection = () => {
         ideas, you put the ideas here, take a look.
       </p>
 
-      <ul>
-        <div ref={slideshow}>
-          {homeServices.map((item) => (
-            <HomeServices item={item} key={Math.random() * 10} />
-          ))}
-        </div>
+      <div>
+        <ul>
+          <div ref={slideshow}>
+            {homeServices.map((item) => (
+              <HomeServices item={item} key={Math.random() * 10} />
+            ))}
+          </div>
+        </ul>
         <ControlLeft>
           <img src={ArrowShort} onClick={Anterior} alt="Control left" />
         </ControlLeft>
         <ControlRigth>
           <img src={ArrowShort} onClick={siguiente} alt="" />
         </ControlRigth>
-      </ul>
+      </div>
 
       <div>
         <img src={Circles} alt="" />

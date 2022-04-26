@@ -89,6 +89,7 @@ export const New = styled.li<{ slide: boolean }>`
     flex: 0 0 300px;
   }
 `
+
 export const Arrowrigth = styled.div<{ slide: boolean }>`
   position: absolute;
   top: 40%;
@@ -97,6 +98,8 @@ export const Arrowrigth = styled.div<{ slide: boolean }>`
   justify-content: center;
   align-items: center;
   padding: 20px;
+  width: 60px;
+  height: 60px;
   border-radius: 100%;
   background-color: ${({ theme }) => theme.colors.secondary};
 
