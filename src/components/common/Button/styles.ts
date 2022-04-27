@@ -5,7 +5,7 @@ const defaultStyle = css`
   box-sizing: border-box;
   display: inline-block;
   padding: 20px 30px;
-  width: 200px;
+  width: 210px;
   background-color: transparent;
   font-weight: 600;
   text-align: center;

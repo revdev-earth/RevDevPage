@@ -49,7 +49,6 @@ export const MenuMovil = styled.div`
     justify-content: space-between;
     width: 100%;
     color: white;
-
     padding: 10px;
     cursor: pointer;
 
@@ -58,9 +57,7 @@ export const MenuMovil = styled.div`
       cursor: pointer;
       margin-right: 30px;
       width: 40px;
-
       background: transparent;
-
       color: white;
     }
     svg {

@@ -1,5 +1,5 @@
 // asetss
-import ImgHome1 from "@assets/home/img-home-1.png"
+import ImgHome1 from "@assets/home/img-home-1.svg"
 import ImgHome2 from "@assets/home/img-home-2.png"
 import Circles from "@assets/circles.svg"
 
