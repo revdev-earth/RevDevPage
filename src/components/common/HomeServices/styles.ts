@@ -5,9 +5,9 @@ export const Container = styled.li`
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 20px;
-  padding: 30px;
-  padding-top: 10px;
+  padding:   30px;
   max-width: 350px;
   min-height: 350px;
   height: fit-content;
@@ -19,9 +19,11 @@ export const Container = styled.li`
   transition: 0.3s all ease-in-out;
 
   img {
+    position: relative;
+    top: 15px;
     z-index: 2;
     display: block;
-    margin-left: 30px;
+    margin: 20px 0;
     width: 48px;
   }
 
@@ -41,15 +43,15 @@ export const Container = styled.li`
   }
 `
 export const Circle = styled.div`
-  position: relative;
+  position: absolute;
   z-index: 1;
+  display: flex;
 
   &:before {
     z-index: 1;
     position: absolute;
     content: "";
-    top: 10px;
-    left: 20px;
+
     width: 50px;
     height: 50px;
     background-color: #e9fbf8;

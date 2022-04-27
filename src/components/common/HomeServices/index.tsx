@@ -13,8 +13,5 @@ export const HomeServices = ({ item }: HomeServicesProps) => (
     <img src={item.img} alt={item.img} />
     <h4>{item.title}</h4>
     <p>{item.description}</p>
-    <a href={item.link}>
-      Read More <img src={ArrowRoght} alt="arrow right" />
-    </a>
   </Container>
 )
