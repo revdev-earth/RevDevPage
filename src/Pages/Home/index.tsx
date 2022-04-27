@@ -4,7 +4,7 @@ import ImgHome2 from "@assets/home/img-home-2.png"
 import Circles from "@assets/circles.svg"
 
 // styles
-import { FirstSection, HomeSection4 } from "./styles"
+import { HomeSection4 } from "./styles"
 
 // data
 import { homeSection4 } from "@data"
@@ -12,6 +12,7 @@ import { homeSection4 } from "@data"
 // components
 import { Button, ContainerSection } from "@components"
 import {
+  FirstSection,
   SecondSection,
   ThirdSection,
   SixSection,
@@ -23,24 +24,7 @@ import {
 export default function Home() {
   return (
     <main>
-      <FirstSection>
-        <div>
-          <h3>
-            It's <span>our</span> turn to <span>revolutionize</span> the{" "}
-            <span>market</span>
-          </h3>
-          <p>
-            Our ideas move the world, and your idea is one of them. We are going
-            to make your idea a reality, welcome.
-          </p>
-          <div>
-            <Button secondary>start now!</Button>
-            <Button>contact Us</Button>
-          </div>
-        </div>
-        <img src={ImgHome1} alt="" />
-        <img src={Circles} alt="" />
-      </FirstSection>
+      <FirstSection />
       <SecondSection />
 
       <ThirdSection />

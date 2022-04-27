@@ -126,7 +126,7 @@ export const Circle = styled.img`
   top: 200px;
   left: 30%;
 
-  @media (max-width) {
+  @media (max-width:800px) {
     top: calc(50% - 100px);
     left: 10%;
   }
@@ -136,7 +136,7 @@ export const ControlLeft = styled.div`
   display: none;
   z-index: 5;
   position: absolute;
-  top: calc(60% - 12px);
+  top: calc(55% - 12px);
   left: 10px;
   padding: 30px;
   height: 24px;
@@ -161,7 +161,7 @@ export const ControlLeft = styled.div`
   } 
 
   @media (max-width: 400px){
-    top: calc(56% - 12px);
+    top: calc(48% - 12px);
   }
 `
 export const ControlRigth = styled(ControlLeft)`
