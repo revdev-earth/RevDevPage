@@ -41,7 +41,16 @@ export const Container = styled.section`
       align-items: center;
       
       img {
-        flex: 0 1 600px;
+        max-width: 600px;
+        
+        @media (max-width:800px){
+          max-width: 400px;
+
+        }
+        @media (max-width:400px){
+          max-width: 300px;
+
+        }
       }
     }
   }
@@ -86,7 +95,7 @@ export const ControlLeft = styled.div`
   display: none;
   z-index: 5;
   position: absolute;
-  top: calc(55% );
+  top: 55% ;
   left: 10px;
   padding: 30px;
   height: 24px;
@@ -111,7 +120,7 @@ export const ControlLeft = styled.div`
   }
 
   @media (max-width: 400px){
-    top: 59%;
+    top: 55%;
   }
 `
 export const ControlRigth = styled(ControlLeft)`
