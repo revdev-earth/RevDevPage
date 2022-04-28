@@ -11,7 +11,7 @@ import {
   ThirdSection,
   FourthSection,
   FivethSection,
-  SevenSection,
+  SixthSection,
 } from "./_components"
 
 // JSX
@@ -29,7 +29,7 @@ export default function Home() {
         <h2>Do you want to be part?</h2>
         <Button primary>More information</Button>
       </ContainerSection>
-      <SevenSection />
+      <SixthSection />
     </main>
   )
 }

@@ -38,7 +38,7 @@ const news = [
   },
 ]
 
-export const SevenSection = () => {
+export const SixthSection = () => {
   const [slide, setSlide] = useState(false)
 
   const sliderContainer = useRef<HTMLDivElement>(null)

@@ -1,4 +1,4 @@
-export * from "./SevenSection"
+export * from "./SixthSection"
 export * from "./FivethSection"
 export * from "./FourthSection"
 export * from "./ThirdSection"
