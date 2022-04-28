@@ -36,6 +36,10 @@ export const Container = styled.li`
     }
   }
 
+  p {
+    font-size: 16px;
+  }
+
   @media (max-width: 800px){
     max-width: 325px;
   }

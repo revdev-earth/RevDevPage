@@ -27,7 +27,6 @@ export const Container = styled.section`
       }
     }
     &:last-child {
-
       z-index: 0;
       position: absolute;
       top: 0;
@@ -40,14 +39,11 @@ export const Container = styled.section`
       
       img {
         max-width: 450px;
-        
         @media (max-width:800px){
           max-width: 400px;
-
         }
         @media (max-width:400px){
           max-width: 300px;
-
         }
       }
     }
@@ -67,12 +63,10 @@ export const Container = styled.section`
   }
 
   @media (max-width: 800px) {
-
     > div {
       &:nth-of-type(1){
         ul {
           overflow: hidden;
-          
           > div:nth-child(1) {
             position: relative;
             flex-shrink: 0;
