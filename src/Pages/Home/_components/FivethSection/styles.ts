@@ -4,8 +4,10 @@ export const Container = styled.section`
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 15px;
-  padding: 100px;
+  height: 1000px;
   text-align: center;
 
   h4 {
@@ -42,7 +44,7 @@ export const Slide = styled.div`
   padding: 50px 80px 50px 80px;
   height: fit-content;
   flex: 1 1 1024px;
-  box-shadow: 0px 25px 100px -50px #000;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
   border-radius: 24px;
 
   span {
@@ -242,48 +244,6 @@ export const Users = styled.div<{ pos: number }>`
   }
 `
 
-export const Controls = styled.div`
-  position: absolute;
-  top: 50%;
-  left: -8.5%;
-  display: flex;
-  justify-content: space-between;
-  margin: auto;
-  width: 1200px;
-
-  button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    border-radius: 100%;
-    background-color: ${({ theme }) => theme.colors.whiteSecondary};
-    cursor: pointer;
-    transition: 0.2s all ease-in;
-    box-shadow: 0px 2px 8px -2px #000;
-
-    &:hover {
-      transform: scale(1.1);
-    }
-    &:nth-of-type(1) {
-      img {
-        transform: rotate(180deg);
-
-        &:hover {
-          transform: scale(1.1);
-          transform: rotate(180deg);
-        }
-      }
-    }
-
-    img {
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
-  }
-`
-
 export const Circle = styled.img`
   position: absolute;
   z-index: 0;
@@ -304,13 +264,13 @@ export const ControlLeft = styled.div`
   z-index: 5;
   position: absolute;
   top: calc(50% - 12px);
-  left: -30px;
+  left: -100px;
   padding: 30px;
   height: 24px;
   width: 30px;
   background-color: ${({ theme }) => theme.colors.whitePrimary};
   border-radius: 100%;
-  box-shadow: 0px 4px 10px -4px #000;
+  box-shadow: 0px 24px 32px rgba(59, 59, 59, 0.12);
   transition: 0.2s all ease-in-out;
 
   &:active {
@@ -327,7 +287,7 @@ export const ControlLeft = styled.div`
   }
 `
 export const ControlRigth = styled(ControlLeft)`
-  right: -30px;
+  right: -100px;
   left: auto;
 
   img {
