@@ -21,7 +21,7 @@ export const Container = styled.section`
         div:nth-child(1) {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
-          grid-gap: 20px;
+          grid-gap: 50px;
           margin: auto;
         }
       }
@@ -39,7 +39,7 @@ export const Container = styled.section`
       align-items: center;
       
       img {
-        max-width: 600px;
+        max-width: 450px;
         
         @media (max-width:800px){
           max-width: 400px;
