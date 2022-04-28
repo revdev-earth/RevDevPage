@@ -4,9 +4,11 @@ export const Container = styled.section`
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 20px;
   padding: 100px 20%;
+  height: 500px;
   background-color: ${({ theme }) => theme.colors.secondary};
   text-align: center;
   
@@ -22,18 +24,21 @@ export const Container = styled.section`
     border-radius: 100%;
   }
 
-  img {
+  >img {
     z-index: 1;
     position: absolute;
-    width: 22%;
-
     top: 0;
     left: 0;
+    height: 270px;
+    width: 560px;
+
     &:last-child {
       top: auto;
       left: auto;
       right: 0;
       bottom: 0;
+      height: 470px;
+      width: 740px;
     }
   }
 
