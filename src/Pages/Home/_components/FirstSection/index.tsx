@@ -10,10 +10,10 @@ import { ContainerFirstSection } from "./styles"
 export const FirstSection = () => (
   <ContainerFirstSection>
     <div>
-      <h3>
+      <h1>
         It's <span>our</span> turn to <span>revolutionize</span> the{" "}
         <span>market</span>
-      </h3>
+      </h1>
       <p>
         Our ideas move the world, and your idea is one of them. We are going to
         make your idea a reality, welcome.
