@@ -7,8 +7,8 @@ export const Container = styled.section`
   gap: 50px;
   justify-content: center;
   align-items: center;
+  height: 1200px;
   background: #e9fbf8;
-  padding: 50px 200px;
   text-align: center;
 
   
