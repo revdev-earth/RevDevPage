@@ -37,7 +37,7 @@ export const MenuMovil = styled.div`
 
   h3 {
     font-weight: 500;
-    font-size: 36px;
+    font-size: 46px;
     color: ${({ theme }) => theme.colors.primary};
   }
   img {
