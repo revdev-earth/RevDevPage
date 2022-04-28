@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const Container = styled.header`
   margin: auto;
-  padding: 25px 80px;
+  padding: 26px 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -91,6 +91,9 @@ export const Navigation = styled.nav<{ isOpen: boolean; selected: number }>`
       float: right;
       transition: 0.3s all ease-in-out;
 
+      a{
+        font-size: 28px;
+      }
       &:nth-child(${({selected}) => selected + 1}) {
         a {
           color: ${({theme}) => theme.colors.primary};
