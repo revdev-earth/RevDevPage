@@ -88,7 +88,7 @@ export const SecondSection = () => {
 
   return (
     <Container>
-      <h3>The Toolbox</h3>
+      <h2>The Toolbox</h2>
 
       <p>
         We take care of ourselves to make your life easier, since we move with

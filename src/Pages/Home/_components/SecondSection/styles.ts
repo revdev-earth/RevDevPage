@@ -11,8 +11,6 @@ export const Container = styled.section`
   background: #e9fbf8;
   text-align: center;
 
-  
-
   > div {
     &:nth-of-type(1){
       ul {
