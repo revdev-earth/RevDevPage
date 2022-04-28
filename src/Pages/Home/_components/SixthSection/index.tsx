@@ -3,8 +3,8 @@ import { useState, useRef } from "react"
 import { Button } from "@components"
 
 // assets
-import ArrowLarge from "@assets/arrow-right.svg"
 import ArrowShort from "@assets/vector.svg"
+import Circles from "@assets/circles.svg"
 
 // styles
 import {
@@ -15,6 +15,7 @@ import {
   ArrowLeft,
   SeeAll,
   Slider,
+  CirclesContent,
 } from "./styles"
 
 const news = [
@@ -126,6 +127,11 @@ export const SixthSection = () => {
 
   return (
     <Container>
+      <CirclesContent>
+        <img src={Circles} alt="" />
+        <img src={Circles} alt="" />
+        <img src={Circles} alt="" />
+      </CirclesContent>
       <Content slide={slide}>
         <div>
           <h4>News & Articles</h4>

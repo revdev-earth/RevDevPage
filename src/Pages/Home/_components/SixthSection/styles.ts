@@ -69,6 +69,7 @@ export const Content = styled.div<{ slide: boolean }>`
 `
 
 export const New = styled.li<{ slide: boolean }>`
+  z-index: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -171,5 +172,34 @@ img{
 @media (max-width: 800px){
   display: flex;
   left: 2%;
+}
+`
+
+export const CirclesContent = styled.div`
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+
+img{
+  position: absolute;
+  width: 370px;
+
+  z-index: 0;
+
+  &:nth-of-type(1){
+    bottom: -140px;
+    left: -130px;
+  }
+  &:nth-of-type(2){
+    top: calc(50% - 185px);
+    left: calc(50% - 185px);
+    
+  }
+  &:nth-of-type(3){
+    right: -160px;
+    top: -200px;
+  }
 }
 `
