@@ -35,6 +35,7 @@ const defaultStyle = css`
 
 const trasnparent = css`
   border: 1px solid ${({ theme }) => theme.colors.secondary};
+  background-color: transparent;
   box-shadow: none;
   &:hover {
     box-shadow: none;

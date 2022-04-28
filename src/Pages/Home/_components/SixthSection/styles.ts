@@ -4,6 +4,10 @@ export const Container = styled.section`
   position: relative;
   background-color: ${({ theme }) => theme.colors.fund};
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 780px;
+
 
   @media (max-width: 800px){
     padding-bottom: 50px;
@@ -12,21 +16,22 @@ export const Container = styled.section`
 
 export const Content = styled.div<{ slide: boolean }>`
   display: flex;
-  gap: ${({ slide }) => (slide ? "0" : "150px")};
-  padding: 100px 200px;
+  gap: ${({ slide }) => (slide ? "0" : "355px")};
+  padding: 100px;
   transition: 0.6s all ease-in-out;
+  justify-content: ${({ slide }) => (slide ? "center" : "")} ;
 
   > div {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
     flex: 0 0 ${({ slide }) => (slide ? "0px" : "530px")};
     height: ${({ slide }) => (slide ? "0" : "")};
     align-items: flex-start;
     overflow: hidden;
     transition: 0.6s all ease-in-out;
 
-    h5 {
+    h4 {
       color: ${({ theme }) => theme.colors.secondary};
     }
   }
@@ -64,22 +69,33 @@ export const Content = styled.div<{ slide: boolean }>`
 `
 
 export const New = styled.li<{ slide: boolean }>`
-  flex: 0 0 350px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  height: 350px;
+  width: 350px;
   gap: 20px;
-  padding: 35px;
+  padding: 60px 30px ;
   background-color: ${({ theme }) => theme.colors.whiteSecondary};
   border-radius: 22px;
+  text-align: center;
 
-  h5 {
+
+  > h4 {
+    text-align: initial;
     color: ${({ theme }) => theme.colors.primary};
   }
 
   a {
     display: flex;
     gap: 10px;
+  }
+
+  p{
+    font-size: 16px;
+    text-align: justify;
+    line-height: 160%;
+    color: ${({ theme }) => theme.colors.primary};
   }
 
   @media (max-width: 800px){
@@ -92,7 +108,7 @@ export const New = styled.li<{ slide: boolean }>`
 
 export const Arrowrigth = styled.div<{ slide: boolean }>`
   position: absolute;
-  top: 40%;
+  top: calc(50%-30px);
   right: 7%;
   display: ${({ slide }) => (slide ? "none" : "flex")};
   justify-content: center;
@@ -133,7 +149,7 @@ export const Arrowrigth = styled.div<{ slide: boolean }>`
 
 export const SeeAll = styled.div`
 position: absolute;
-bottom: 100px;
+bottom: 250px;
 @media (max-width: 800px){
   bottom: 25px;
   left: calc(50% - 65px);

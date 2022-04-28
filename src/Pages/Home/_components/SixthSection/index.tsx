@@ -128,8 +128,8 @@ export const SixthSection = () => {
     <Container>
       <Content slide={slide}>
         <div>
-          <h5>News & Articles</h5>
-          <h3>DaCode Blog</h3>
+          <h4>News & Articles</h4>
+          <h2>DaCode Blog</h2>
           <p>
             On daCode blog we will review the latest in web development for the
             SaaS-, tech- and crypto industry.
@@ -142,11 +142,8 @@ export const SixthSection = () => {
           <Slider ref={sliderContainer}>
             {news.map(({ title, desctiprion, link }) => (
               <New key={Math.random() * 10} slide={slide}>
-                <h5>{title}</h5>
+                <h4>{title}</h4>
                 <p>{desctiprion}</p>
-                <a href="#">
-                  Read more <img src={ArrowLarge} alt={link} />
-                </a>
               </New>
             ))}
           </Slider>
