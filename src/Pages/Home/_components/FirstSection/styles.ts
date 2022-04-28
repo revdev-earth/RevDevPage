@@ -56,10 +56,10 @@ export const ContainerFirstSection = styled.section`
   img {
 
     &:nth-of-type(1){
-
       padding-right: 50px;
-      max-width: 100%;
-      max-height: 750px;
+    position: relative;
+    bottom: -236px;
+    left: -50px;
     }
 
     &:last-child {
