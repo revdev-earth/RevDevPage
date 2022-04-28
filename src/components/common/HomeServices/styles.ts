@@ -20,7 +20,8 @@ export const Container = styled.li`
 
   img {
     position: relative;
-    top: 15px;
+    top: 5px;
+    left: 6px;
     z-index: 2;
     display: block;
     margin: 20px 0;
