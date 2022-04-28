@@ -128,9 +128,9 @@ export const SixthSection = () => {
   return (
     <Container>
       <CirclesContent>
-        <img src={Circles} alt="" />
-        <img src={Circles} alt="" />
-        <img src={Circles} alt="" />
+        <img src={Circles} alt="circle" />
+        <img src={Circles} alt="circle" />
+        <img src={Circles} alt="circle" />
       </CirclesContent>
       <Content slide={slide}>
         <div>
@@ -141,7 +141,7 @@ export const SixthSection = () => {
             SaaS-, tech- and crypto industry.
           </p>
         </div>
-        <SeeAll>
+        <SeeAll slide={slide}>
           <Button transparent>See all</Button>
         </SeeAll>
         <ul>

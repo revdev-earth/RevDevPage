@@ -20,13 +20,14 @@ export const Content = styled.div<{ slide: boolean }>`
   padding: 100px;
   transition: 0.6s all ease-in-out;
   justify-content: ${({ slide }) => (slide ? "center" : "")} ;
-
+  
   > div {
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     gap: 25px;
     flex: 0 0 ${({ slide }) => (slide ? "0px" : "530px")};
-    height: ${({ slide }) => (slide ? "0" : "")};
+    height: ${({ slide }) => (slide ? "0" : "350px")};
     align-items: flex-start;
     overflow: hidden;
     transition: 0.6s all ease-in-out;
@@ -148,9 +149,9 @@ export const Arrowrigth = styled.div<{ slide: boolean }>`
   }
 `
 
-export const SeeAll = styled.div`
+export const SeeAll = styled.div<{ slide: boolean }>`
 position: absolute;
-bottom: 250px;
+bottom: -50px;
 @media (max-width: 800px){
   bottom: 25px;
   left: calc(50% - 65px);
