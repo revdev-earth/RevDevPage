@@ -11,7 +11,7 @@ export const Container = styled.section<{ pag: number }>`
     ${({ theme }) => theme.colors.secondary} 45%
   );
 
-  h3 {
+  h2 {
     margin-top: 50px;
   }
 
@@ -58,7 +58,8 @@ export const Container = styled.section<{ pag: number }>`
 
         img {
           width: 100%;
-          height: 200px;
+          height: 297px;
+          width: 481px;
           border-radius: 24px;
         }
       }
