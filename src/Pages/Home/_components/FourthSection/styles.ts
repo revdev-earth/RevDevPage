@@ -3,10 +3,11 @@ import styled from "styled-components"
 export const FourthSectionContainer = styled.section`
   overflow: hidden;
   position: relative;
-  padding: 100px 200px;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 20px;
+  padding: 200px;
+  height: 1300px;
 
   > img {
     z-index: 5;
@@ -16,15 +17,12 @@ export const FourthSectionContainer = styled.section`
     max-width: 50%;
   }
 
-  h3 {
+  h2 {
     color: ${({ theme }) => theme.colors.primary};
     span {
       color: ${({ theme }) => theme.colors.secondary};
       font-size: 48px;
     }
-  }
-  p {
-    max-width: 1010px;
   }
   
   > div:nth-of-type(1){
@@ -36,6 +34,7 @@ export const FourthSectionContainer = styled.section`
     }
     ul {
       position: relative;
+      margin-top: 90px;
       
       li {
         padding: 20px;
@@ -48,8 +47,8 @@ export const FourthSectionContainer = styled.section`
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100px;
-        min-width: 100px;
+        height: 80px;
+        min-width: 80px;
         font-size: 32px;
         font-weight: 600;
         border-radius: 100%;
@@ -66,7 +65,7 @@ export const FourthSectionContainer = styled.section`
         max-width: 550px;
         gap: 10px;
         
-        h4 {
+        h3 {
           color: ${({ theme }) => theme.colors.secondary};
         }
       }
@@ -84,14 +83,13 @@ export const FourthSectionContainer = styled.section`
     img {
       z-index: 1;
       position: absolute;
-      max-width: 400px;
-
-      top: -80px;
-      left: -80px;
+      max-width: 450px;
+      top: -220px;
+      left: -181px;
 
       &:last-child {
-        top: -30px;
-        right: -10px;
+        top: -100px;
+        right: -44px;
         left: auto;
       }
     }
@@ -185,8 +183,8 @@ export const FourthSectionContainer = styled.section`
   }
 `
 export const VerticalLine = styled.div`
-z-index: 0;
+  z-index: 0;
   position: absolute;
   top: 360px;
-    left: 270px;
+  left: 270px;
 `
