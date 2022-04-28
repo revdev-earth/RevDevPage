@@ -10,7 +10,7 @@ import {
   SecondSection,
   ThirdSection,
   FourthSection,
-  SixSection,
+  FivethSection,
   SevenSection,
 } from "./_components"
 
@@ -24,7 +24,7 @@ export default function Home() {
 
       <ThirdSection />
       <FourthSection />
-      <SixSection />
+      <FivethSection />
       <ContainerSection>
         <h3>Do you want to be part?</h3>
         <Button primary>More information</Button>

@@ -58,7 +58,7 @@ const data = [
   },
 ]
 
-export const SixSection = () => {
+export const FivethSection = () => {
   const [testimonial, setTestimonial] = useState(2)
   const maximo = data.length - 2
 
