@@ -91,11 +91,11 @@ export const ThirdSection = () => {
       <h2>Where to find us</h2>
       <Circle src={Circles} alt="" />
       <div>
-        <h5 onClick={() => setPag(0)}>Digital tools</h5>
+        <h4 onClick={() => setPag(0)}>Digital tools</h4>
 
-        <h5 onClick={() => setPag(1)}>Company boost</h5>
+        <h4 onClick={() => setPag(1)}>Company boost</h4>
 
-        <h5 onClick={() => setPag(2)}>Software and infrastructure</h5>
+        <h4 onClick={() => setPag(2)}>Software and infrastructure</h4>
       </div>
       <ul>
         <div ref={slideshowThirdSection}>

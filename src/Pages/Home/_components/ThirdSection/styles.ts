@@ -16,15 +16,15 @@ export const Container = styled.section<{ pag: number }>`
   }
 
   > div {
-    margin: 40px auto;
+    margin: 80px auto;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
 
-    h5 {
+    h4 {
       z-index: 3;
-      padding: 20px 40px;
+      padding: 15px 50px;
       transition: 0.3s all ease-in;
       border: 1px solid transparent;
       border-radius: 50px;
@@ -123,9 +123,9 @@ export const Container = styled.section<{ pag: number }>`
 export const Circle = styled.img`
   z-index: 0;
   position: absolute;
-  width: 200px;
-  top: 200px;
-  left: 30%;
+  width: 450px;
+  top: 85px;
+  left: 386px;
 
   @media (max-width:800px) {
     top: calc(50% - 100px);
