@@ -9,9 +9,10 @@ export const FourthSectionContainer = styled.section`
   gap: 50px;
 
   > img {
+    z-index: 5;
     position: absolute;
-    bottom: -10%;
-    right: 0;
+    bottom: -15%;
+    right: -15px;
     max-width: 50%;
   }
 
@@ -25,28 +26,24 @@ export const FourthSectionContainer = styled.section`
   p {
     max-width: 1010px;
   }
-
-  ul {
-    position: relative;
-
-    &:after{
-      z-index: auto;
-      position: absolute;
-      top: 10%;
-      left: 70px;
-      content: "";
-      height: 80%;
-      width: 1px;
-      border-left: 1px solid transparent;
+  
+  > div:nth-of-type(1){
+    > div{
+      img {
+        z-index: 2;
+        
+      }
     }
-    
-    li {
-      padding: 20px;
-      display: flex;
-      gap: 80px;
+    ul {
+      position: relative;
       
-      span {
-        z-index: 5;
+      li {
+        padding: 20px;
+        display: flex;
+        gap: 80px;
+        
+        span {
+          z-index: 5;
         color: ${({ theme }) => theme.colors.secondary};
         display: flex;
         justify-content: center;
@@ -58,7 +55,7 @@ export const FourthSectionContainer = styled.section`
         border-radius: 100%;
         box-shadow: 0px 32px 41px rgba(0, 0, 0, 0.13);
       }
-
+      
       div {
         position: relative;
         padding-top: 10px;
@@ -68,15 +65,16 @@ export const FourthSectionContainer = styled.section`
         text-align: start;
         max-width: 550px;
         gap: 10px;
-
+        
         h4 {
           color: ${({ theme }) => theme.colors.secondary};
         }
       }
     }
   }
-
-  div {
+  }
+    
+  > div:nth-of-type(2) {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -84,6 +82,7 @@ export const FourthSectionContainer = styled.section`
     right: 0;
 
     img {
+      z-index: 1;
       position: absolute;
       max-width: 400px;
 
@@ -104,24 +103,30 @@ export const FourthSectionContainer = styled.section`
 
   @media (max-width: 1024px) {
     gap: 20px;
-    ul {
-      li {
-        gap: 40px;
-        span {
-          height: 70px;
-          min-width: 70px;
+    > div:nth-of-type(1){
+      
+      ul {
+        li {
+          gap: 40px;
+          span {
+            height: 70px;
+            min-width: 70px;
+          }
         }
       }
     }
   }
 
   @media (max-width: 999px) {
-    ul {
-      li {
-        gap: 50px;
-        span {
-          height: 70px;
-          min-width: 70px;
+    > div:nth-of-type(1){
+
+      ul {
+        li {
+          gap: 50px;
+          span {
+            height: 70px;
+            min-width: 70px;
+          }
         }
       }
     }
@@ -130,13 +135,17 @@ export const FourthSectionContainer = styled.section`
   @media (max-width: 800px) {
     gap: 50px;
     padding-bottom: 200px;
-    ul {
-      li {
-        padding: 10px 0px;
-        gap: 20px;
-        span {
-          height: 70px;
-          min-width: 70px;
+
+    > div:nth-of-type(1){
+
+      ul {
+        li {
+          padding: 10px 0px;
+          gap: 20px;
+          span {
+            height: 70px;
+            min-width: 70px;
+          }
         }
       }
     }
@@ -145,14 +154,17 @@ export const FourthSectionContainer = styled.section`
   @media (max-width: 425px) {
     padding: 30px;
     padding-bottom: 180px;
+    
+    > div:nth-of-type(1){
 
-    ul {
-      li {
-        padding: 10px 0px;
-        gap: 20px;
-        span {
-          height: 50px;
-          min-width: 50px;
+      ul {
+        li {
+          padding: 10px 0px;
+          gap: 20px;
+          span {
+            height: 50px;
+            min-width: 50px;
+          }
         }
       }
     }
@@ -171,4 +183,10 @@ export const FourthSectionContainer = styled.section`
       }
     }
   }
+`
+export const VerticalLine = styled.div`
+z-index: 0;
+  position: absolute;
+  top: 360px;
+    left: 270px;
 `
