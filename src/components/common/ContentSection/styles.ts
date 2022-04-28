@@ -12,6 +12,11 @@ export const Container = styled.section`
   background-color: ${({ theme }) => theme.colors.secondary};
   text-align: center;
   
+  h2, h3{
+    color: ${({ theme }) => theme.colors.whitePrimary};
+    border-bottom: 1px solid${({ theme }) => theme.colors.whitePrimary};
+  }
+    
 
   &:after {
     position: absolute;
@@ -42,10 +47,7 @@ export const Container = styled.section`
     }
   }
 
-  h3{
-    color: ${({ theme }) => theme.colors.whitePrimary};
-    border-bottom: 1px solid${({ theme }) => theme.colors.whitePrimary};
-  }
+  
   
   button{
     position: relative;
@@ -54,6 +56,8 @@ export const Container = styled.section`
     border-radius: 0;
     box-shadow: none;
     color: ${({ theme }) => theme.colors.whitePrimary};
+    font-size: 28px;
+    width: 300px;
     
     &:after{
       content: "";

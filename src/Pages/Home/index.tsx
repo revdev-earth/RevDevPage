@@ -26,7 +26,7 @@ export default function Home() {
       <FourthSection />
       <FivethSection />
       <ContainerSection>
-        <h3>Do you want to be part?</h3>
+        <h2>Do you want to be part?</h2>
         <Button primary>More information</Button>
       </ContainerSection>
       <SevenSection />
