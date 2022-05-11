@@ -1,13 +1,13 @@
-//* Import hooks
+// hooks
 import { useRef } from "react"
-//* Import components
+// components
 import { HomeServices } from "@components"
-//* Import Data
+// Data
 import { homeServices } from "@data"
-//* Import assets
+// assets
 import Circles from "@assets/circles.svg"
 import ArrowShort from "@assets/vector.svg"
-//* Import styles
+// styles
 import { Container, ControlLeft, ControlRigth } from "./styles"
 
 export const SecondSection = () => {
@@ -88,26 +88,28 @@ export const SecondSection = () => {
 
   return (
     <Container>
-      <h3>Our Services</h3>
+      <h2>The Toolbox</h2>
 
       <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et.
+        We take care of ourselves to make your life easier, since we move with
+        ideas, you put the ideas here, take a look.
       </p>
 
-      <ul>
-        <div ref={slideshow}>
-          {homeServices.map((item) => (
-            <HomeServices item={item} key={Math.random() * 10} />
-          ))}
-        </div>
+      <div>
+        <ul>
+          <div ref={slideshow}>
+            {homeServices.map((item) => (
+              <HomeServices item={item} key={Math.random() * 10} />
+            ))}
+          </div>
+        </ul>
         <ControlLeft>
           <img src={ArrowShort} onClick={Anterior} alt="Control left" />
         </ControlLeft>
         <ControlRigth>
           <img src={ArrowShort} onClick={siguiente} alt="" />
         </ControlRigth>
-      </ul>
+      </div>
 
       <div>
         <img src={Circles} alt="" />

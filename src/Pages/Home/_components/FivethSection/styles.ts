@@ -4,8 +4,10 @@ export const Container = styled.section`
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 15px;
-  padding: 100px;
+  height: 1000px;
   text-align: center;
 
   h4 {
@@ -42,7 +44,7 @@ export const Slide = styled.div`
   padding: 50px 80px 50px 80px;
   height: fit-content;
   flex: 1 1 1024px;
-  box-shadow: 0px 25px 100px -50px #000;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
   border-radius: 24px;
 
   span {
@@ -53,6 +55,10 @@ export const Slide = styled.div`
   p {
     max-width: 900px;
     font-weight: 600;
+  }
+
+  @media (max-width: 400px){
+    padding: 30px;
   }
 `
 
@@ -185,46 +191,55 @@ export const Users = styled.div<{ pos: number }>`
   @media (max-width: 800px) {
     max-width: fit-content;
   }
-`
+  @media (max-width: 400px) {
+    max-width: -webkit-fill-available;
 
-export const Controls = styled.div`
-  position: absolute;
-  top: 50%;
-  left: -8.5%;
-  display: flex;
-  justify-content: space-between;
-  margin: auto;
-  width: 1200px;
+    ul {
+      position: relative;
+      left: -13%;
+      gap: 20px;
 
-  button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    border-radius: 100%;
-    background-color: ${({ theme }) => theme.colors.whiteSecondary};
-    cursor: pointer;
-    transition: 0.2s all ease-in;
-    box-shadow: 0px 2px 8px -2px #000;
+      li {
+      min-width: 60px;
+      height: 60px;
 
-    &:hover {
-      transform: scale(1.1);
-    }
-    &:nth-of-type(1) {
       img {
-        transform: rotate(180deg);
+        width: 45px;
+        height: 45px;
+      }
+
+      &:nth-child(${({ pos }) => pos}) {
+        opacity: 1;
+        min-width: 60px;
+        height: 60px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &:nth-child(${({ pos }) => pos - 1}),
+      &:nth-child(${({ pos }) => pos + 1}) {
+        opacity: 0.6;
+        min-width: 60px;
+        height: 60px;
+        background-color: ${({ theme }) => theme.colors.grayLight};
 
         &:hover {
-          transform: scale(1.1);
-          transform: rotate(180deg);
+
+          img {
+            width: 90%;
+            height: 90%;
+          }
+        }
+
+        img {
+          width: 40px;
+          height: 40px;
         }
       }
     }
-
-    img {
-      &:hover {
-        transform: scale(1.1);
-      }
     }
   }
 `
@@ -235,4 +250,47 @@ export const Circle = styled.img`
   min-width: 190px;
   min-height: 190px;
   background-color: transparent;
+  
+  @media (max-width: 400px){
+    min-width: 100px;
+    min-height: 100px;
+    
+  }
+`
+export const ControlLeft = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  position: absolute;
+  top: calc(50% - 12px);
+  left: -100px;
+  padding: 30px;
+  height: 24px;
+  width: 30px;
+  background-color: ${({ theme }) => theme.colors.whitePrimary};
+  border-radius: 100%;
+  box-shadow: 0px 24px 32px rgba(59, 59, 59, 0.12);
+  transition: 0.2s all ease-in-out;
+
+  &:active {
+    box-shadow: 0px 4px 8px -8px #000;
+  }
+
+  img {
+    transform: rotate(180deg);
+  }
+
+  @media (max-width: 800px) {
+    
+
+  }
+`
+export const ControlRigth = styled(ControlLeft)`
+  right: -100px;
+  left: auto;
+
+  img {
+    transform: rotate(0);
+  }
 `

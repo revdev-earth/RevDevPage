@@ -4,7 +4,8 @@ import { Children, ReactNode } from "react"
 //* Import styles
 import { Button as ButonStyle } from "./styles"
 
-export type ButtonProps = {
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   type?: "button" | "submit" | "reset" | undefined
   children?: ReactNode | undefined
   primary?: boolean

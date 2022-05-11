@@ -5,9 +5,11 @@ export const Container = styled.li`
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 20px;
-  padding: 30px;
+  padding:   30px;
   max-width: 350px;
+  min-height: 350px;
   height: fit-content;
   background-color: ${({ theme }) => theme.colors.whiteSecondary};
   text-align: start;
@@ -17,9 +19,12 @@ export const Container = styled.li`
   transition: 0.3s all ease-in-out;
 
   img {
+    position: relative;
+    top: 5px;
+    left: 6px;
     z-index: 2;
     display: block;
-    margin-left: 30px;
+    margin: 20px 0;
     width: 48px;
   }
 
@@ -30,17 +35,28 @@ export const Container = styled.li`
       margin-left: 10px;
     }
   }
+
+  p {
+    font-size: 16px;
+  }
+
+  @media (max-width: 800px){
+    max-width: 325px;
+  }
+  @media (max-width: 400px){
+    max-width: 290px;
+  }
 `
 export const Circle = styled.div`
-  position: relative;
+  position: absolute;
   z-index: 1;
+  display: flex;
 
   &:before {
     z-index: 1;
     position: absolute;
     content: "";
-    top: 10px;
-    left: 20px;
+
     width: 50px;
     height: 50px;
     background-color: #e9fbf8;

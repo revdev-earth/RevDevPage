@@ -2,22 +2,23 @@ import styled, { css } from "styled-components"
 import type { ButtonProps } from "."
 
 const defaultStyle = css`
+  box-sizing: border-box;
   display: inline-block;
-  padding: 12px 30px;
+  padding: 20px 30px;
+  width: 210px;
   background-color: transparent;
-  font-weight: 400;
+  font-weight: 600;
   text-align: center;
   vertical-align: middle;
   text-decoration: none;
   outline: none;
+  background-color: ${({theme}) => theme.colors.whitePrimary};
   color: ${({ theme }) => theme.colors.secondary};
   transition: all 0.15s linear;
   cursor: pointer;
-  box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25),
-    inset 0px 4px 4px rgba(255, 255, 255, 0.25),
-    inset 0px -4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25), inset 0px -4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(255, 255, 255, 0.25);
   border-radius: 50px;
-  border: 1px solid ${({ theme }) => theme.colors.secondary};
+  border: 1px solid ${({ theme }) => theme.colors.gray};
 
   &:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
@@ -34,7 +35,7 @@ const defaultStyle = css`
 
 const trasnparent = css`
   border: 1px solid ${({ theme }) => theme.colors.secondary};
-
+  background-color: transparent;
   box-shadow: none;
   &:hover {
     box-shadow: none;
@@ -65,6 +66,8 @@ const red = css`
   color: #fff;
   background-color: ${({ theme }) => theme.colors.red};
   border-color: ${({ theme }) => theme.colors.red};
+  font-size: 18px;
+  font-weight: 400;
 `
 
 export const Button = styled.button<ButtonProps>`

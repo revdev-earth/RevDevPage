@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 //* import styles
 import { Container, Section2, Section3Content } from "./styles"
 //* import components
-import ContainerSection from "@components/common/ContentSection"
+import { ContainerSection } from "@components"
 import Idea from "./_components/Idea"
 //* import sections
 import OurCalendar from "@components/common/OurCalendar"

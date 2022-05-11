@@ -64,7 +64,9 @@ export function Header() {
           </li>
         </ul>
       </Navigation>
-      <Button red>Request a quote</Button>
+      <Button red style={{ height: "59px", width: "284px" }}>
+        Request a quote
+      </Button>
     </Container>
   )
 }

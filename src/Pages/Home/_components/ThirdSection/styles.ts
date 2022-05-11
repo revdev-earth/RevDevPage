@@ -11,16 +11,12 @@ export const Container = styled.section<{ pag: number }>`
     ${({ theme }) => theme.colors.secondary} 45%
   );
 
-  h4 {
-    color: ${({ theme }) => theme.colors.secondary};
-  }
-
-  h3 {
-    margin-top: 20px;
+  h2 {
+    margin-top: 50px;
   }
 
   > div {
-    margin: 40px auto;
+    margin: 80px auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,11 +24,12 @@ export const Container = styled.section<{ pag: number }>`
 
     h4 {
       z-index: 3;
-      padding: 20px 40px;
+      padding: 15px 50px;
       transition: 0.3s all ease-in;
       border: 1px solid transparent;
       border-radius: 50px;
       cursor: pointer;
+      color:  ${({ theme }) => theme.colors.secondary};
 
       &:nth-child(${({ pag }) => pag + 1}) {
         border: 1px solid ${({ theme }) => theme.colors.secondary};
@@ -45,10 +42,11 @@ export const Container = styled.section<{ pag: number }>`
   }
 
   ul {
-    div {
-      display: flex;
-      justify-content: space-between;
-      gap: 40px;
+    div:nth-child(1)  {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 40px;
 
       li {
         z-index: 3;
@@ -57,9 +55,11 @@ export const Container = styled.section<{ pag: number }>`
         gap: 40px;
         padding: 5px;
         text-align: start;
+
         img {
           width: 100%;
-          max-height: 300px;
+          height: 297px;
+          width: 481px;
           border-radius: 24px;
         }
       }
@@ -73,7 +73,7 @@ export const Container = styled.section<{ pag: number }>`
   }
 
   @media (max-width: 1400px) {
-    padding: 100px;
+    padding: 50px 100px;
   }
   @media (max-width: 1024px) {
     padding: 50px;
@@ -83,7 +83,7 @@ export const Container = styled.section<{ pag: number }>`
     }
   }
   @media (max-width: 800px) {
-    padding: 0;
+    padding:  0;
     > div {
       flex-direction: column;
       gap: 0;
@@ -91,7 +91,8 @@ export const Container = styled.section<{ pag: number }>`
 
     ul {
       overflow: hidden;
-      div {
+      
+      div:nth-child(1) {
         position: relative;
         left: -200px;
 
@@ -103,16 +104,72 @@ export const Container = styled.section<{ pag: number }>`
       bottom: -25px;
     }
   }
+
+  @media (max-width: 400px){
+    ul {
+      overflow: hidden;
+      
+      div:nth-child(1) {
+        position: relative;
+        left: -400px;
+        padding-bottom: 100px;
+        width: 1200px;
+
+        
+      }
+    }
+  }
 `
 export const Circle = styled.img`
   z-index: 0;
   position: absolute;
-  width: 200px;
-  top: 200px;
-  left: 30%;
+  width: 450px;
+  top: 85px;
+  left: 386px;
 
-  @media (max-width) {
+  @media (max-width:800px) {
     top: calc(50% - 100px);
     left: 10%;
+  }
+`
+
+export const ControlLeft = styled.div`
+  display: none;
+  z-index: 5;
+  position: absolute;
+  top: calc(55% - 12px);
+  left: 10px;
+  padding: 30px;
+  height: 24px;
+  width: 30px;
+  background-color: ${({ theme }) => theme.colors.secondary};
+  border-radius: 100%;
+  box-shadow: 0px 4px 10px 0px #000;
+  transition: 0.2s all ease-in-out;
+
+  &:active {
+    box-shadow: 0px 4px 8px -2px #000;
+  }
+
+  img {
+    transform: rotate(180deg);
+  }
+
+  @media (max-width: 800px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } 
+
+  @media (max-width: 400px){
+    top: calc(48% - 12px);
+  }
+`
+export const ControlRigth = styled(ControlLeft)`
+  right: 10px;
+  left: auto;
+
+  img {
+    transform: rotate(0);
   }
 `

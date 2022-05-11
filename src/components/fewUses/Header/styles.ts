@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const Container = styled.header`
   margin: auto;
-  padding: 25px 80px;
+  padding: 26px 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,7 +28,7 @@ export const Container = styled.header`
 
 export const MenuMovil = styled.div`
   border: none;
-
+  z-index: 2;
   transition: 0.3s all ease-in-out;
 
   &:hover {
@@ -37,6 +37,7 @@ export const MenuMovil = styled.div`
 
   h3 {
     font-weight: 500;
+    font-size: 46px;
     color: ${({ theme }) => theme.colors.primary};
   }
   img {
@@ -48,7 +49,6 @@ export const MenuMovil = styled.div`
     justify-content: space-between;
     width: 100%;
     color: white;
-
     padding: 10px;
     cursor: pointer;
 
@@ -57,9 +57,7 @@ export const MenuMovil = styled.div`
       cursor: pointer;
       margin-right: 30px;
       width: 40px;
-
       background: transparent;
-
       color: white;
     }
     svg {
@@ -76,12 +74,13 @@ export const MenuMovil = styled.div`
 `
 
 export const Navigation = styled.nav<{ isOpen: boolean; selected: number }>`
+  z-index: 1;
   display: flex;
   justify-content: space-evenly;
 
   z-index: 10;
   ul {
-    gap: 30px;
+    gap: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -92,6 +91,9 @@ export const Navigation = styled.nav<{ isOpen: boolean; selected: number }>`
       float: right;
       transition: 0.3s all ease-in-out;
 
+      a{
+        font-size: 28px;
+      }
       &:nth-child(${({selected}) => selected + 1}) {
         a {
           color: ${({theme}) => theme.colors.primary};
@@ -111,14 +113,14 @@ export const Navigation = styled.nav<{ isOpen: boolean; selected: number }>`
 
   @media (max-width: 800px) {
     position: fixed;
-    top: 75px;
-    left: 100%;
+    left: 0;
+    top: -100%;;
     justify-content: center;
     width: 100%;
-    transition: left 0.5s;
+    transition: all 0.5s;
 
     ${({ isOpen }) => {
-      return isOpen && `left: 0;`
+      return isOpen && `top: 65px;`
     }}
 
     ul {

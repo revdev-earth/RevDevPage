@@ -57,21 +57,29 @@ a {
 
 
 h1 { font-size:${({ theme }) => theme.fonts.h1};
+color: ${({ theme }) => theme.colors.primary};
 font-weight: bold;}
 h2 { font-size:${({ theme }) => theme.fonts.h2};
-	font-weight: bold;}
+color: ${({ theme }) => theme.colors.primary};
+font-weight: bold;}
 h3 { font-size:${({ theme }) => theme.fonts.h3};
-	font-weight: bold;}
+color: ${({ theme }) => theme.colors.primary};
+font-weight: bold;}
 h4 { font-size:${({ theme }) => theme.fonts.h4};
-	font-weight: bold;}
+color: ${({ theme }) => theme.colors.primary};
+font-weight: bold;}
 h5 { font-size:${({ theme }) => theme.fonts.h5};
-	font-weight: bold;}
+color: ${({ theme }) => theme.colors.primary};
+font-weight: bold;}
 h6 { font-size:${({ theme }) => theme.fonts.h6};
-	font-weight: bold;}
+color: ${({ theme }) => theme.colors.primary};
+font-weight: bold;}
 
 p {
+	color: ${({ theme }) => theme.colors.primary};
 	font-size:${({ theme }) => theme.fonts.txt};
 	line-height: 160%;
+	
 	@media (max-width: 800px) {
 		font-size:${({ theme }) => theme.fonts.txtsm};
 	}
